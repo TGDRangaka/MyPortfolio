@@ -266,16 +266,24 @@
     <div>
         <img src="assests/img/mine_with_border.png" alt="dilshan rangaka">
 
-        <div>
-            <h3>Write me something</h3>
-            <p>Call me: <b>0770531993</b></p>
-            <p>Email: <b>tgdilshanrangaka2002@gmail.com</b></p>
-            <input type="text" value="Name">
-            <input type="text" value="Email">
-            <input type="text" value="Subject">
-            <input type="text" value="Description">
-            <button>Send Message</button>
-        </div>
+        <form action="mailto:tgdilshanrangaka2002@gmail.com" target="_blank" method="post">
+
+            <h3>Write Me Something</h3>
+            <label>Call Me: <b>+0770531993</b></label>
+            <br>
+            <label>Email: <b>tgdilshanrangaka2002@gmail.com</b></label>
+            <br>
+            <input type="text" placeholder="Name" name="name">
+            <br>
+            <input type="email" placeholder="Email" name="email">
+            <br>
+            <input type="text" placeholder="Subject" name="subject">
+            <br>
+            <textarea name="message" id="" cols="30" rows="5" placeholder="Message"></textarea>
+            <br>
+            <button type="submit">Send Message</button>
+
+        </form>
     </div>
 </main>
 <br>
