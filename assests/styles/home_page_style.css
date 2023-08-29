@@ -164,17 +164,29 @@ header>div>a>button:hover {
 }
 
 @keyframes rotate {
-    from {
+    0% {
         transform: rotateZ(0deg);
     }
 
-    to {
+    25% {
+        text-shadow:
+        -5px -5px 8px #306eff,
+        5px 5px 8px #ff3030;
+    }
+
+    75% {
+        text-shadow: 
+        5px 5px 8px #306eff,
+        -5px -5px 8px #ff3030;
+    }
+
+    100% {
         transform: rotateY(360deg);
     }
 }
 
 .social_medias>a>i:hover {
-    color: #000000;
+    color: #30FF68;
     text-shadow: 0 0 5px #30FF68;
 }
 
@@ -982,4 +994,137 @@ header>div>a>button:hover {
 
 #assignments>a>button:hover {
     box-shadow: 0 0 10px #30FF68;
+}
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ contact me \\\\\\\\\\\\\\\\\\\\\\ */
+
+#contactme>p {
+    margin: 30px 20%;
+    text-align: center;
+    color: #30FF68;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+}
+
+#contactme>section {
+    display: flex;
+    justify-content: center;
+}
+
+#contactme>section>img {
+    aspect-ratio:  0.86/1;
+}
+
+form {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+form>h3 {
+    font-size: 35px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    margin-bottom: 30px;
+}
+
+form>label {
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+form>input, form>textarea{
+    background-color: #2D2D2D;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+
+form>input {
+    height: 3rem;
+}
+
+form>textarea {
+    min-height: 8rem;
+}
+
+form>button {
+    color: #080A08;
+    background-color: #30FF68;
+    border-radius: 5px;
+    width: 200px;
+    aspect-ratio: 4/1;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    left: calc(50% - 100px);
+}
+
+form>button:hover {
+    box-shadow: 0 0 10px #30FF68;
+}
+
+footer>hr {
+    border: 1px solid #30FF68;
+}
+
+footer>p {
+    text-align: center;
+    margin-block: 30px;
+    font-size: 20px;
+    color: #30FF68;
+    font-family: 'Jura', sans-serif;
+}
+
+footer>div {
+    display: flex;
+    justify-content: center;
+    margin-block: 50px 30px;
+}
+
+footer>div>a>i {
+    font-size: 3vw;
+    margin-inline: 20px;
+
+    animation: float 2s ease-in-out infinite;
+}
+
+footer>div>a>i:hover {
+    color: #30FF68;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+footer>div>a:nth-child(2)>i {
+    animation-delay: .2s;
+}
+
+footer>div>a:nth-child(3)>i {
+    animation-delay: .4s;
+}
+
+footer>div>a:nth-child(4)>i {
+    animation-delay: .6s;
+}
+
+footer>div>a:nth-child(5)>i {
+    animation-delay: .8s;
+}
+
+footer>div>a:nth-child(6)>i {
+    animation-delay: 1s;
+}
+
+footer>div>a:nth-child(7)>i {
+    animation-delay: 1.2s;
 }
