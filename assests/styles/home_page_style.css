@@ -102,7 +102,7 @@ body::-webkit-scrollbar-thumb {
     background-color: #1f1f1f;
     z-index: 1000;
 
-    animation: close_preloader 5s ease-out reverse;
+    animation: close_preloader calc(var(--loading-duration) + .4s) ease-out reverse;
 }
 
 @keyframes close_preloader {
@@ -128,9 +128,10 @@ body::-webkit-scrollbar-thumb {
     text-align: justify;
     opacity: 10%;
     color: aliceblue;
+    font-size: 1em;
 }
 .preloader_grid {
-    width: 80vw;
+    width: 60vw;
     aspect-ratio: 19/6;
     display: grid;
     grid-template-columns: repeat(19, 1fr);
@@ -183,7 +184,7 @@ body::-webkit-scrollbar-thumb {
     position: absolute;
     left: -200%;
 
-    animation: load_line 8s linear;
+    animation: load_line calc(var(--loading-duration) * 2) linear;
 }
 
 @keyframes load_line {
@@ -197,6 +198,8 @@ body::-webkit-scrollbar-thumb {
 
 :root {
     --loading-delay: .6s;
+    --loading-duration: 2s;
+    --grid-col-animation-delay: calc(var(--loading-duration) / 20);
 }
 
 .preloader_grid> div:nth-child(1),
@@ -205,34 +208,34 @@ body::-webkit-scrollbar-thumb {
 .preloader_grid> div:nth-child(58),
 .preloader_grid> div:nth-child(77),
 .preloader_grid> div:nth-child(96) {
-    animation: flip var(--loading-delay) ease-in-out 0.0s ;
+    animation: flip var(--loading-delay) ease-in-out calc((var(--loading-duration) / 16) * 0);
 }
 
 .preloader_grid> div:nth-child(2),
 .preloader_grid> div:nth-child(97) {
-    animation: flip var(--loading-delay) ease-in-out 0.25s ;
+    animation: flip var(--loading-delay) ease-in-out calc((var(--loading-duration) / 16) * 1);
 }
 
 .preloader_grid> div:nth-child(3),
 .preloader_grid> div:nth-child(98) {
-    animation: flip var(--loading-delay) ease-in-out 0.5s ;
+    animation: flip var(--loading-delay) ease-in-out calc((var(--loading-duration) / 16) * 2);
 }
 
 .preloader_grid> div:nth-child(4),
 .preloader_grid> div:nth-child(99) {
-    animation: flip var(--loading-delay) ease-in-out 0.75s ;
+    animation: flip var(--loading-delay) ease-in-out calc((var(--loading-duration) / 16) * 3);
 }
 
 .preloader_grid> div:nth-child(24),
 .preloader_grid> div:nth-child(43),
 .preloader_grid> div:nth-child(62),
 .preloader_grid> div:nth-child(81) {
-    animation: flip var(--loading-delay) ease-in-out 1.0s ;
+    animation: flip var(--loading-delay) ease-in-out calc((var(--loading-duration) / 16) * 4);
 }
 
 .preloader_grid> div:nth-child(7),
 .preloader_grid> div:nth-child(102) {
-    animation: flip var(--loading-delay) ease-in-out 1.25s ;
+    animation: flip var(--loading-delay) ease-in-out calc((var(--loading-duration) / 16) * 5);
 }
 
 .preloader_grid> div:nth-child(8),
@@ -241,12 +244,12 @@ body::-webkit-scrollbar-thumb {
 .preloader_grid> div:nth-child(65),
 .preloader_grid> div:nth-child(84),
 .preloader_grid> div:nth-child(103) {
-    animation: flip var(--loading-delay) ease-in-out 1.50s ;
+    animation: flip var(--loading-delay) ease-in-out calc((var(--loading-duration) / 16) * 6);
 }
 
 .preloader_grid> div:nth-child(9),
 .preloader_grid> div:nth-child(104) {
-    animation: flip var(--loading-delay) ease-in-out 1.75s ;
+    animation: flip var(--loading-delay) ease-in-out calc((var(--loading-duration) / 16) * 7);
 }
 
 .preloader_grid> div:nth-child(11),
@@ -255,15 +258,15 @@ body::-webkit-scrollbar-thumb {
 .preloader_grid> div:nth-child(68),
 .preloader_grid> div:nth-child(87),
 .preloader_grid> div:nth-child(106) {
-    animation: flip var(--loading-delay) ease-in-out 2.0s ;
+    animation: flip var(--loading-delay) ease-in-out calc((var(--loading-duration) / 16) * 8);
 }
 
 .preloader_grid> div:nth-child(107) {
-    animation: flip var(--loading-delay) ease-in-out 02.25s ;
+    animation: flip var(--loading-delay) ease-in-out calc((var(--loading-duration) / 16) * 9);
 }
 
 .preloader_grid> div:nth-child(108) {
-    animation: flip var(--loading-delay) ease-in-out 02.50s ;
+    animation: flip var(--loading-delay) ease-in-out calc((var(--loading-duration) / 16) * 10);
 }
 
 .preloader_grid> div:nth-child(34),
@@ -271,22 +274,22 @@ body::-webkit-scrollbar-thumb {
 .preloader_grid> div:nth-child(72),
 .preloader_grid> div:nth-child(91),
 .preloader_grid> div:nth-child(110) {
-    animation: flip var(--loading-delay) ease-in-out 02.75s ;
+    animation: flip var(--loading-delay) ease-in-out calc((var(--loading-duration) / 16) * 11);
 }
 
 .preloader_grid> div:nth-child(16),
 .preloader_grid> div:nth-child(54) {
-    animation: flip var(--loading-delay) ease-in-out 03.0s ;
+    animation: flip var(--loading-delay) ease-in-out calc((var(--loading-duration) / 16) * 12);
 }
 
 .preloader_grid> div:nth-child(17),
 .preloader_grid> div:nth-child(55) {
-    animation: flip var(--loading-delay) ease-in-out 03.25s ;
+    animation: flip var(--loading-delay) ease-in-out calc((var(--loading-duration) / 16) * 13);
 }
 
 .preloader_grid> div:nth-child(18),
 .preloader_grid> div:nth-child(56) {
-    animation: flip var(--loading-delay) ease-in-out 03.50s ;
+    animation: flip var(--loading-delay) ease-in-out calc((var(--loading-duration) / 16) * 14);
 }
 
 .preloader_grid> div:nth-child(38),
@@ -294,7 +297,7 @@ body::-webkit-scrollbar-thumb {
 .preloader_grid> div:nth-child(76),
 .preloader_grid> div:nth-child(95),
 .preloader_grid> div:nth-child(114) {
-    animation: flip var(--loading-delay) ease-in-out 03.75s ;
+    animation: flip var(--loading-delay) ease-in-out calc((var(--loading-duration) / 16) * 15);
 }
 
 /*\\\\\\\\\\\\\\\\\\\\\\\\\\\\header\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
@@ -336,7 +339,6 @@ header>h2:hover {
         rgba(255, 255, 255, 0.1) 20px 8px, 
         rgba(255, 255, 255, 0.05) 25px 10px;
 }
-
 header>div {
     display: flex;
     height: fit-content;
@@ -352,20 +354,20 @@ header>div>a>button {
     background-color: transparent;
     display: inline-block;
     min-width: fit-content;
-    width: 10vw;
+    width: fit-content;
     height: 3vw;
-    border: 1px solid #30FF68;
+    border: none;
     border-radius: 5px;
-    margin-right: 2vw;
+    margin-right: 40px;
     font-family: 'Inter', sans-serif;
-    font-size: 1.5vw;
+    font-weight: lighter;
+    font-size: 1.2vw;
 }
 header>div>a>button:hover {
-    color: black;
-    background-color: #30ff68;
-    border: 1px solid black;
+    color: rgb(255, 255, 255);
+    /* background-color: #30ff68; */
+    border: none;
     border-radius: 5px;
-    font-weight: bolder;
 }
 
 .social_medias {
@@ -441,7 +443,7 @@ header>div>a>button:hover {
 
 #home {
     width: 100vw;
-    min-height: 715px;
+    min-height: 840px;
     background-image: url("/assests/img/hero_bg.png");
     background-size: cover;
     background-position: center;
@@ -450,8 +452,8 @@ header>div>a>button:hover {
 
 #home>section {
     position: absolute;
-    left: 7vw;
-    bottom: 7vw;
+    left: 10vw;
+    bottom: 8vw;
 }
 
 #home>section>h1 {
