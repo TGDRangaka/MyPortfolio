@@ -6,9 +6,8 @@
     position: relative;
 }
 body {
-    /* background-color: #1F1F1F;
-    background-image: url("/assests/img/black_leather_bg.png");
-    background-size: 100vw; */
+    background-color: #1F1F1F;
+    background-size: 100vw;
 
     overflow-x: hidden;
     min-width: 320px;
@@ -560,11 +559,8 @@ header>div>a>button:hover {
     width: 75%;
     aspect-ratio: 1/1;
     background-color: #30FF68;
-    /* border: 40px solid #30FF68; */
-    box-shadow: 0 0 15px #30FF68;
-    /* background-image: url("/assests/img/black_leather_bg.jpg");
-    background-size: cover; */
-    /* border-radius: 50%; */
+    /* box-shadow: 0 0 5px #30FF68; */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     border-radius: 63% 37% 62% 38% / 32% 50% 50% 68% ;
     position: absolute;
     top: 10%;
@@ -599,24 +595,6 @@ header>div>a>button:hover {
     bottom: 0;
     width: 54%;
     z-index: 3;
-}
-
-@keyframes rotate_img_animation {
-    0%,20% {
-        transform: rotate(0deg);
-    }
-    33% {
-        transform: rotate(120deg);
-    }
-    66% {
-        transform: rotate(240deg);
-    }
-    99.99% {
-        transform:rotate(360deg)
-    }
-    100% {
-        transform:rotate(0deg)
-    }
 }
 
 /*\\\\\\\\\\\\\\\\\\\\\\\\\\\\about me\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
@@ -672,7 +650,7 @@ header>div>a>button:hover {
 #gallery> .container {
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 200px;
     /* border: 1px solid white; */
 }
 .gallery {
@@ -687,11 +665,12 @@ header>div>a>button:hover {
 .gallery_body {
     height: 100%;
     /* border: 1px solid yellow; */
-    transform-origin: left center;
-    transform: rotateY(50deg) skewY(-5deg);
+    transform-origin: left;
+    transform: rotateY(50deg) skewY(-15deg) perspective(1000px);
     position: absolute;
     top: 0;
     transition-duration: .3s;
+    /* -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.11)); */
 }
 
 .gallery_img {
@@ -726,6 +705,8 @@ header>div>a>button:hover {
              skewY(-5deg)
              translateY(-50%);
     transition-duration: .5s;
+    
+    /* -webkit-box-reflect: below 50% linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.11)); */
 }
 
 .gallery_body:hover .darK_gradient {
@@ -1020,7 +1001,9 @@ header>div>a>button:hover {
 
 /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ My services \\\\\\\\\\\\\\\\\\\ */
 
-
+#myservices {
+    overflow: hidden;
+}
 #myservices>section {
     display: flex;
     align-items: center;
@@ -1048,6 +1031,7 @@ header>div>a>button:hover {
 
     transition-duration: 0.3s;
     transition-delay: 3s;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.11));
 }
 
  .service_card:active {
@@ -1190,17 +1174,13 @@ header>div>a>button:hover {
     margin-block: 25px;
 }
 
-.project_card:nth-child(2) {
-    align-self: center;
+.project_card:nth-child(even) {
+    align-self: self-end;
 }
 
 /* .project_card:nth-child(3) {
     align-self: self-end;
 } */
-
-.project_card:nth-child(4) {
-    align-self: center;
-}
 .project_icon {
     width: 70px;
     aspect-ratio: 1/1;
@@ -1273,20 +1253,33 @@ header>div>a>button:hover {
     bottom: 0;
     margin: auto;
     right: -50px;
+    transform: perspective(800px) rotateY(-25deg);
+    overflow: hidden;
 }
 
 .project_img img {
     height: 100%;
 }
 
-.project_img div {
+.project_img_glow {
+    background: linear-gradient(to left,
+    rgba(255, 255, 255, 0) 0%,
+     rgba(255, 255, 255, 0.5) 50%,
+       rgba(255, 255, 255, 0.3) 90%,
+       rgba(255, 255, 255, 0) 100%);
+    width: 20%;
+    height: 200%;
     position: absolute;
-    width: 100%;
-    height: 100%;
-    /* background: linear-gradient(to right, #080A08, rgba(0,0,0,0)); */
-    z-index: 1;
+    transform: rotate(30deg) translateX(-150px);
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transition-duration: 1s;
 }
 
+.project_card:hover .project_img_glow {
+    transform: rotate(30deg) translateX(500px);
+}
 
 #projects>a>button {
     color: #080A08;
