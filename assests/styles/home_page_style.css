@@ -144,17 +144,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .preloader_grid> .box {
-    /* background: linear-gradient(to right, rgb(17, 153, 142, 0.01), rgb(56, 239, 125, 0)); */
-    /* background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(1px);
-    -webkit-backdrop-filter: blur(1px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.1); */
-
     background-color: #30FF68;
-    /* border: 1px solid rgb(48, 255, 104, 0.2);
-    box-shadow: 0 0 30px rgb(48, 255, 104, 0.2); */
 }
 
 @keyframes flip {
@@ -168,22 +158,6 @@ body::-webkit-scrollbar-thumb {
         z-index: 200;
         box-shadow: 0 0 30px 1px #ffffff;
     }
-
-    /* 85% {
-        background-color: #30FF68;
-    }
-
-    90% {
-        transform: scale(1);
-        box-shadow: 0 0 0px 0 #ffffff;
-    }
-
-    95% {
-        
-        background-color: #fffadf;
-        z-index: 2;
-        box-shadow: 0 0 30px 1px #ffffff;
-    } */
 }
 
 .loading {
@@ -558,9 +532,10 @@ header>div>a>button:hover {
 .hero_img_body>.circle_line {
     width: 75%;
     aspect-ratio: 1/1;
-    background-color: #30FF68;
-    /* box-shadow: 0 0 5px #30FF68; */
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    background-color: black;
+    box-shadow: 0 0 5px #30FF68;
+    border: 10px solid #30FF68;
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
     border-radius: 63% 37% 62% 38% / 32% 50% 50% 68% ;
     position: absolute;
     top: 10%;
@@ -654,7 +629,9 @@ header>div>a>button:hover {
     /* border: 1px solid white; */
 }
 .gallery {
-    width: calc(14 * 85px);
+    /* width: calc(14 * 85px); */
+    width: 90%;
+    --gallery-width: 90%;
     height: 300px;
     /* border: 1px solid white; */
     position: relative;
@@ -666,7 +643,7 @@ header>div>a>button:hover {
     height: 100%;
     /* border: 1px solid yellow; */
     transform-origin: left;
-    transform: rotateY(50deg) skewY(-15deg) perspective(1000px);
+    transform: rotateY(50deg) skewY(-10deg);
     position: absolute;
     top: 0;
     transition-duration: .3s;
@@ -691,7 +668,7 @@ header>div>a>button:hover {
 }
 
 .gallery .gallery_body {
-    --left-offset: calc(70px * (var(--index) - 1));
+    --left-offset: calc((var(--gallery-width) / 14) * (var(--index) - 1));
     z-index: var(--index);
     left: var(--left-offset);
 
@@ -699,6 +676,7 @@ header>div>a>button:hover {
 }
 
 .gallery_body:hover {
+    transform-origin: center;
     transform:
              scale(1.2)
              rotateY(50deg)
@@ -714,98 +692,18 @@ header>div>a>button:hover {
 }
 
 .gallery_body:active {
+    transform-origin: center;
     transform: 
             scale(2.2) 
             rotateY(0deg) 
-            skewY(0deg)
-            ;
+            skewY(0deg);
     z-index: 50;
-    left: 100px;
+    left: calc(var(--gallery-width) / 2);
     box-shadow: 0 0 50px black;
 }
 
 .gallery_body:active .darK_gradient {
     display: none;
-}
-
-.gallery .gallery_body:nth-child(1) {
-    --index: 1;
-}
-
-.gallery .gallery_body:nth-child(2) {
-    --index: 2;
-}
-
-.gallery .gallery_body:nth-child(3) {
-    --index: 3;
-}
-
-.gallery .gallery_body:nth-child(4) {
-    --index: 4;
-}
-
-.gallery .gallery_body:nth-child(5) {
-    --index: 5;
-}
-
-.gallery .gallery_body:nth-child(6) {
-    --index: 6;
-}
-
-.gallery .gallery_body:nth-child(7) {
-    --index: 7;
-}
-
-.gallery .gallery_body:nth-child(8) {
-    --index: 8;
-}
-
-.gallery .gallery_body:nth-child(9) {
-    --index: 9;
-}
-
-.gallery .gallery_body:nth-child(10) {
-    --index: 10;
-}
-
-.gallery .gallery_body:nth-child(11) {
-    --index: 11;
-}
-
-.gallery .gallery_body:nth-child(12) {
-    --index: 12;
-}
-
-.gallery .gallery_body:nth-child(13) {
-    --index: 13;
-}
-
-.gallery .gallery_body:nth-child(14) {
-    --index: 14;
-}
-
-.gallery .gallery_body:nth-child(15) {
-    --index: 15;
-}
-
-.gallery .gallery_body:nth-child(16) {
-    --index: 16;
-}
-
-.gallery .gallery_body:nth-child(17) {
-    --index: 17;
-}
-
-.gallery .gallery_body:nth-child(18) {
-    --index: 18;
-}
-
-.gallery .gallery_body:nth-child(19) {
-    --index: 19;
-}
-
-.gallery .gallery_body:nth-child(20) {
-    --index: 20;
 }
 
 /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ resume \\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
@@ -1030,13 +928,7 @@ header>div>a>button:hover {
     overflow: hidden;
 
     transition-duration: 0.3s;
-    transition-delay: 3s;
     -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.11));
-}
-
- .service_card:active {
-    transform: scale(1.1);
-    transition-delay: 0s;
 }
 
 .service_card>.img {
@@ -1127,13 +1019,12 @@ header>div>a>button:hover {
     z-index: 3;
     padding: calc(var(--card-height) - 44px) 15px;
     border-radius: 20px;
-    transition-duration: 2s;
+    transition-duration: .6s;
 }
 
 .service_card>.text:hover {
     transform: translateY(calc(var(--card-height) / -2 - 50px));
     background-color: rgb(0, 0, 0, 0.8);
-    transition-duration: 0.5s;
 }
 
 .service_card>.text>h2 {
@@ -1168,7 +1059,7 @@ header>div>a>button:hover {
 .project_card {
     background-color: #080A08;
     border-left: 6px solid #30FF68;
-    width: 80%;
+    width: 70%;
     height: 400px;
     position: relative;
     margin-block: 25px;
@@ -1247,13 +1138,15 @@ header>div>a>button:hover {
 
 .project_img {
     height: 80%;
-    aspect-ratio: 4/3;
+    aspect-ratio: 5/3;
     position: absolute;
     top: 0;
     bottom: 0;
     margin: auto;
     right: -50px;
+    /* transform-origin: right; */
     transform: perspective(800px) rotateY(-25deg);
+    transition-duration: .4s;
     overflow: hidden;
 }
 
@@ -1268,13 +1161,21 @@ header>div>a>button:hover {
        rgba(255, 255, 255, 0.3) 90%,
        rgba(255, 255, 255, 0) 100%);
     width: 20%;
-    height: 200%;
+    height: 500%;
     position: absolute;
     transform: rotate(30deg) translateX(-150px);
     top: 0;
     bottom: 0;
     margin: auto;
-    transition-duration: 1s;
+    transition-duration: .4s;
+}
+
+.project_icon {
+    animation: float 3s ease-in-out infinite;
+}
+
+.project_card:hover .project_img {
+    transform: perspective(800px) rotateY(-15deg);
 }
 
 .project_card:hover .project_img_glow {
