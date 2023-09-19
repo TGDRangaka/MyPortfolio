@@ -1922,14 +1922,55 @@ footer>p {
 
     /* /////////////////////////// projects /////////////////////// */
 
+    
+    .project_body h1 {
+        font-size: 32px;
+    }
+    
+    .project_body p {
+        font-size: 16px;
+    }
+    .project_body a i {
+        font-size: 12px;
+    }
+
     .project_body {
-        width: 90%;
+        width: 100%;
         background: none;
     }
     .project_img {
         height: 60%;
         position: relative;
 
+    }
+
+    /* ////////////////////////////// assignments ///////////////////// */
+
+    .assignment_card {
+        flex-direction: column;
+        align-items: center;
+    }
+    .assignment_img {
+        margin-bottom: 20px;
+    }
+
+    #assignments>section>a>i {
+        font-size: 70px;
+    }
+
+    /* ///////////////////////////// contact me //////////////////////////////// */
+
+    .contact_container > section {
+        flex-direction: column;
+    }
+
+    .contact_container > section > img {
+        height: 60vw;
+        margin-bottom: 20px;
+    }
+
+    form {
+        margin: 0;
     }
     
 }
