@@ -350,6 +350,10 @@ header>div>a>button:hover {
     border-radius: 5px;
 }
 
+.menu i {
+    display: none;
+}
+
 .social_medias {
     display: flex;
     position: fixed;
@@ -613,6 +617,7 @@ header>div>a>button:hover {
 }
 /* //////////////////gallery ////////////////////////////////// */
 #gallery> .container {
+    height: 400px;
     display: flex;
     justify-content: center;
     margin-top: 200px;
@@ -636,7 +641,6 @@ header>div>a>button:hover {
     position: absolute;
     top: 0;
     transition-duration: .3s;
-    /* -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.11)); */
 }
 
 .gallery_img {
@@ -659,6 +663,7 @@ header>div>a>button:hover {
 .gallery .gallery_body {
     --left-offset: calc((var(--gallery-width) / 14) * (var(--index) - 1));
     z-index: var(--index);
+    top:  var(--left-offset);
     left: var(--left-offset);
 
     border: 3px solid #000000;
@@ -672,8 +677,6 @@ header>div>a>button:hover {
              skewY(-10deg)
              translateY(-50%);
     transition-duration: .5s;
-    
-    /* -webkit-box-reflect: below 50% linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.11)); */
 }
 
 .gallery_body:hover .darK_gradient {
@@ -723,7 +726,15 @@ header>div>a>button:hover {
     position: relative;
 }
 
-#resume>section>.points_with_line {
+.point_with_section1, .point_with_section2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.points_with_line {
+    width: var(--resume-point-width);
     height: calc(var(--resume-point-line-height) + var(--resume-point-width));
     position: relative;
     display: flex;
@@ -732,7 +743,7 @@ header>div>a>button:hover {
     margin-top: 65px;
 }
 
-#resume>section>.points_with_line>.line {
+.points_with_line>.line {
     height: var(--resume-point-line-height);
     width: 4px;
     background-color: white;
@@ -744,7 +755,7 @@ header>div>a>button:hover {
     margin: auto;
 }
 
-#resume>section>.points_with_line>.point {
+.points_with_line>.point {
     width: var(--resume-point-width);
     aspect-ratio: 1/1;
     border-radius: 50%;
@@ -761,7 +772,7 @@ header>div>a>button:hover {
     /* justify-content: space-between; */
 }
 
-#resume>section>section>h3 {
+.section1 > h3, .section2 > h3 {
     height: 60px;
     font-size: 45px;
     font-family: 'Jura', sans-serif;
@@ -839,22 +850,22 @@ header>div>a>button:hover {
     }
 }
 
-#resume>.skills>.points_with_line {
+.point_with_section2 > .points_with_line {
     opacity: 0%;
 }
 
-#resume>section>.section2>div {
+.section2>div {
     /* background-color: #080A08; */
     width: 550px;
     height: fit-content;
     padding: 3%;
     margin: 15px;
 }
-#resume>section>.soft_skills>div {
+.soft_skills>div {
     height: 613px;
 }
 
-#resume>section>.hard_skills>div {
+.hard_skills>div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -865,7 +876,7 @@ header>div>a>button:hover {
     color: #30FF68;
 }
 
-#resume>section>.section2 {
+.section2 {
     height: 800px;
     display: flex;
     flex-direction: column;
@@ -1461,6 +1472,16 @@ footer>p {
     box-shadow: 0 0 15px var(--glass-color);
 }
 
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
 /* -----------------media querries------------------------- */
 
 
@@ -1512,7 +1533,7 @@ footer>p {
 
     /* \\\\\\\\\\\\\\\\\\\ resume ///////////////// */
 
-    #resume>section>section>h3 {
+    #resume>section>section>section>h3 {
         font-size: 38px;
     }
 
@@ -1527,7 +1548,7 @@ footer>p {
     .hard_skills>div>h4 {
         font-size: 28px;
     }
-    #resume>section>.section2>div {
+    .section2>div {
         width: 480px;
     }
     /* /////////////////// services \\\\\\\\\\\\\\\\\ */
@@ -1598,6 +1619,9 @@ footer>p {
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 
 @media (max-width: 1100px) {
+    :root {
+        --header-height: 6vw;
+    }
     main>h1 {
         font-size: 35px;
     }
@@ -1643,7 +1667,7 @@ footer>p {
 
     /* \\\\\\\\\\\\\\\\\\\ resume ///////////////// */
 
-    #resume>section>section>h3 {
+    #resume>section>section>section>h3 {
         font-size: 28px;
     }
 
@@ -1658,7 +1682,7 @@ footer>p {
     .hard_skills>div>h4 {
         font-size: 18px;
     }
-    #resume>section>.section2>div {
+    .section2>div {
         width: 360px;
     }
     .hard_skills>div>div {
@@ -1733,7 +1757,180 @@ footer>p {
 
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 
-@media (max-width: 768) {
+@media (max-width: 850px) {
+    :root {
+        --header-height: 8vw;
+    }
+    
+    main>h1 {
+        font-size: 30px;
+    }
+    main>h2 {
+        font-size: 20px;
+    }
+    /* //////////////////////// header //////////////////////// */
+
+    .social_medias>a>i {
+        font-size: 3vw;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .menu i {
+        display: inline;
+        color: #00f260;
+        font-size: 26px;
+    }
+
+    /* ///////////////////////////// home ///////////////////////// */
+
+    #home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: fit-content;
+        padding-bottom: 0;
+    }
+
+    #home section {
+        position: relative;
+        padding: 0;
+    }
+
+    .hero_img_body {
+        width: 90vw;
+        position: relative;
+        right: 0;
+    }
+
+    #home section button {
+        width: 20vw;
+        font-size: 16px;
+    }
+
+    /* //////////////////////////////// about me ///////////////////// */
+
+    #aboutme section {
+        flex-direction: column;
+    }
+
+    #aboutme section .image {
+        width: 70vw;
+    }
+
+    #aboutme section .description {
+        align-self: center;
+        width: 90vw;
+        margin: 5vw 0;
+    }
+
+    /* ////////////////////////////// gallery //////////////// */
+
+    #gallery .container {
+        margin-top: 80px;
+        height: 850px;
+    }
+
+    .gallery {
+        width: 70%;
+        height: 320px;
+    }
+
+    .gallery .gallery_body {
+        --left-offset: calc((var(--gallery-width) / 14) * (var(--index) - 1));
+        z-index: var(--index);
+        left: calc(var(--left-offset) / 2);
+        top: calc(var(--left-offset) * 2);
+    
+        border: 3px solid #000000;
+    }
+
+    .gallery_body:active {
+        transform-origin: center;
+        transform: 
+                scale(1.6) 
+                rotateY(0deg) 
+                skewY(0deg);
+        z-index: 50;
+        left: 0;
+        box-shadow: 0 0 50px black;
+    }
+
+    /* //////////////////////////////// resume ////////////////////// */
+
+    
+    #resume>section>section>section>h3 {
+        font-size: 35px;
+    }
+
+    .edu-card>h4, .exp-card>h4 {
+        font-size: 24px;
+    }
+    
+    .edu-card>h5, .exp-card>h5, .edu-card>p, .exp-card>p {
+        font-size: 18px;
+    }
+
+    .hard_skills>div>h4 {
+        font-size: 28px;
+    }
+    #resume > section {
+        flex-direction: column;
+    }
+
+    .point_with_section2 > .points_with_line {
+        display: none;
+    }
+
+    .section1>div, .soft_skills>div, .hard_skills>div {
+        width: 80vw;
+    }
+
+    .hard_skills>div>div {
+        width: 70vw;
+    }
+
+    /* ///////////////////////////////// services ///////////////////////// */
+
+
+    .service_card>.text>h2 {
+        font-size: 22px;
+    }
+    
+    .service_card>.text>p {
+        font-size: 16px;
+    }
+    #myservices>section {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .service_card {
+        margin-block: 30px;
+        align-self: flex-start;
+    }
+
+    #myservices>section>div:nth-child(2) {
+        align-self: center;
+    }
+
+    #myservices>section>div:nth-child(3) {
+        align-self: flex-end;
+    }
+
+    /* /////////////////////////// projects /////////////////////// */
+
+    .project_body {
+        width: 90%;
+        background: none;
+    }
+    .project_img {
+        height: 60%;
+        position: relative;
+
+    }
     
 }
 
