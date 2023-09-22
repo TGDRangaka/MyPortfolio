@@ -84,7 +84,7 @@ body::-webkit-scrollbar-thumb {
 }
 /* \\\\\\\\\\\\\\\\\\\\\\\\\\ preloader \\\\\\\\\\\\\\\\\\\\\\ */
 .preloader {
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
