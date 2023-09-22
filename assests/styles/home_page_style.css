@@ -69,15 +69,15 @@ main>h1::before{
     height: var(--header-height);
 }
 
-body::-webkit-scrollbar {
+*::-webkit-scrollbar {
     width: 12px; /* Width of the scrollbar */
 }
 
-body::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
     background: #080A08; /* Track color */
 }
 
-body::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
     background: #30FF68; /* Thumb color */
     border-radius: 6px; /* Rounded corners */
     border: 3px solid #1F1F1F; /* Border around the thumb */
@@ -283,7 +283,7 @@ body::-webkit-scrollbar-thumb {
 /*\\\\\\\\\\\\\\\\\\\\\\\\\\\\header\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
 
 header {
-    width: 100%;
+    width: 100vw;
     height: var(--header-height);
     background-color: #080A08;
     position: fixed;
@@ -666,7 +666,7 @@ header>div>a>button:hover {
     top:  var(--left-offset);
     left: var(--left-offset);
 
-    border: 3px solid #000000;
+    border: 3px solid black;
 }
 
 .gallery_body:hover {
@@ -1379,13 +1379,6 @@ header>div>a>button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    /* background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) );
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1); */
 }
 
 .contact_container>section>img {
@@ -1769,9 +1762,15 @@ footer>p {
         font-size: 20px;
     }
     /* //////////////////////// header //////////////////////// */
+    header {
+        z-index: 1000;
+    }
 
+    .social_medias {
+        position: absolute;
+    }
     .social_medias>a>i {
-        font-size: 3vw;
+        font-size: 5vw;
     }
 
     .nav {
@@ -1806,7 +1805,7 @@ footer>p {
     }
 
     #home section button {
-        width: 20vw;
+        width: 30vw;
         font-size: 16px;
     }
 
@@ -1830,32 +1829,42 @@ footer>p {
 
     #gallery .container {
         margin-top: 80px;
-        height: 850px;
+        height: fit-content;
     }
 
     .gallery {
-        width: 70%;
-        height: 320px;
+        width: 100%;
+        height: fit-content;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        border: 1px solid black;
+        background-image: url("/assests/img/gallery_bg.jpg");
+        background-size: cover;
+        background-position: center;
     }
 
     .gallery .gallery_body {
-        --left-offset: calc((var(--gallery-width) / 14) * (var(--index) - 1));
-        z-index: var(--index);
-        left: calc(var(--left-offset) / 2);
-        top: calc(var(--left-offset) * 2);
-    
-        border: 3px solid #000000;
+        height: auto;
+        position: relative;
+        transform: none;
+        top: 0;
+        left: 0;
+        margin: 20px;
+        box-shadow: 0 0 20px black;
+        background-color: black;
     }
 
-    .gallery_body:active {
-        transform-origin: center;
-        transform: 
-                scale(1.6) 
-                rotateY(0deg) 
-                skewY(0deg);
-        z-index: 50;
-        left: 0;
-        box-shadow: 0 0 50px black;
+    .gallery_img {
+        width: 80vw;
+        height: auto;
+    }
+
+    .gallery_body:hover {
+        transform: none;
+    }
+
+    .darK_gradient {
+        display: none;
     }
 
     /* //////////////////////////////// resume ////////////////////// */
@@ -1951,7 +1960,8 @@ footer>p {
         align-items: center;
     }
     .assignment_img {
-        margin-bottom: 20px;
+        width: 35%;
+        margin: 0 0 20px 0;
     }
 
     #assignments>section>a>i {
@@ -1964,6 +1974,10 @@ footer>p {
         flex-direction: column;
     }
 
+    .contact_container>p {
+        font-size: 18px;
+    }
+
     .contact_container > section > img {
         height: 60vw;
         margin-bottom: 20px;
@@ -1972,11 +1986,159 @@ footer>p {
     form {
         margin: 0;
     }
+
+    /* //////////////////////////// footer ///////////////////////////// */
+    footer>p {
+        font-size: 16px;
+    }
     
 }
 
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 
-@media (max-width: 320) {
+@media (max-width: 580px) {
+    .social_medias {
+        display: none;
+    }
+
+    /* ///////////////////////////////// home /////////////// */
+
+    #home>section>h1 {
+        font-size: 80px;
+    }
+    #home>section>h3 {
+        font-size: 30px;
+    }
+    #home>section>h4 {
+        font-size: 25px;
+    }
+    #home>section>button {
+        font-size: 14px;
+    }
+    .hero_img_body>.circle_line {
+        border: 4px solid #30FF68;
+    }
+    #home section button {
+        width: 35vw;
+        font-size: 15px;
+    }
+
+    /* //////////////////project ////////////////// */
+    .project_img {
+        right: -30px;
+    }
+
+    /* //////////////////////// assignments ////////////////// */
     
+    .assignment_img {
+        width: 45%;
+    }
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+@media (max-width: 400px) {
+    
+
+    #home section button {
+        width: 38vw;
+        font-size: 13px;
+    }
+
+    
+
+    /* //////////////////////////////// resume ////////////////////// */
+
+    
+    #resume>section>section>section>h3 {
+        font-size: 25px;
+    }
+
+    .edu-card>h4, .exp-card>h4 {
+        font-size: 18px;
+    }
+    
+    .edu-card>h5, .exp-card>h5, .edu-card>p, .exp-card>p {
+        font-size: 15px;
+    }
+
+    .soft_skills, .hard_skills, .soft_skills div {
+        height: fit-content;
+    }
+
+    .soft_skills div ul li {
+        font-size: 18px;
+    }
+
+    .hard_skills, .soft_skills {
+        margin-top: 30px;
+    }
+
+    .hard_skills>div>h4 {
+        font-size: 20px;
+    }
+
+    .section1>div, .soft_skills>div, .hard_skills>div {
+        width: 80vw;
+    }
+
+    .hard_skills>div>div {
+        width: 70vw;
+    }
+
+    /* ///////////////////////// services /////////////////////// */
+
+    #myservices>section>div:first-child,
+    #myservices>section>div:last-child {
+        align-self: center;
+    }
+
+    /* /////////////////////////// project /////////////////// */
+
+    .project_icon {
+        top: 50px;
+        width: 50px;
+    }
+
+    .project_icon i {
+        font-size: 30px;
+    }
+
+    .project_body h2 {
+        font-size: 20px;
+    }
+
+    .project_body h1 {
+        font-size: 24px;
+    }
+
+    .project_body p {
+        font-size: 16px;
+    }
+
+    .project_img {
+        right: -20px;
+    }
+
+    /* ////////////////////////// assignments /////////////////////// */
+    .assignment_img {
+        width: 50%;
+        margin: 0 0 20px 0;
+    }
+    .assignment_desc>h3 {
+        font-size: 17px;
+    }
+    .assignment_desc>p {
+        font-size: 12px;
+    }
+
+    /* ////////////////////// contact me /////////////////// */
+
+    .contact_container p {
+        font-size: 16px;
+    }
+
+    .contact_container>section {
+        margin: 0;
+    }
 }
