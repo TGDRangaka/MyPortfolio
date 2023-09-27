@@ -24,11 +24,16 @@ body {
     }
 }
 
+:root{
+    --header-height: 4vw;
+}
+
 main {
     background-color: #1F1F1F;
     position: relative;
     width: 100vw;
     padding-inline: 7vw;
+    top: 1vw;
 }
 
 main>h2 {
@@ -69,14 +74,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ header \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
-
 header {
-    width: 100%;
-    height: 5vw;
+    width: 100vw;
+    height: var(--header-height);
     background-color: #080A08;
     position: fixed;
     z-index: 100;
-    top: 0px;
+    top: 0;
 }
 
 header>h2 {
@@ -107,7 +111,6 @@ header>h2:hover {
         rgba(255, 255, 255, 0.1) 20px 8px, 
         rgba(255, 255, 255, 0.05) 25px 10px;
 }
-
 header>div {
     display: flex;
     height: fit-content;
@@ -139,10 +142,14 @@ header>div>a>button:hover {
     border-radius: 5px;
 }
 
+.menu i {
+    display: none;
+}
+
 .social_medias {
     display: flex;
     position: fixed;
-    top: 5vw;
+    top: var(--header-height);
     left: 2.5vw;
     flex-direction: column;
     align-items: center;
@@ -217,19 +224,12 @@ header>div>a>button:hover {
 
 .line {
     height: 4px;
-    background: linear-gradient(to left, rgba(48,255,104,1) 0%,rgba(48,255,104,1) 50%,#8c8c8c 50%,rgba(140,140,140,1) 100%);;
+    background: linear-gradient(to right,rgba(48,255,104,1) 50%,#000000 50%);
     border-radius: 20px;
     margin-bottom: 20px;
 }
 
 /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ projects \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
-
-.projects {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .btn_container {
     height: 70px;
     display: flex;
@@ -255,6 +255,12 @@ header>div>a>button:hover {
     color: #30FF68;
     border-bottom: 5px solid #30FF68;
 }
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .project_section {
     width: 80%;
     display: flex;
@@ -268,8 +274,8 @@ header>div>a>button:hover {
 .project_card {
     background-color: #080A08;
     border-left: 6px solid #30FF68;
-    width: 70%;
-    height: 400px;
+    width: 80%;
+    height: fit-content;
     position: relative;
     margin-block: 25px;
 }
@@ -278,9 +284,6 @@ header>div>a>button:hover {
     align-self: self-end;
 }
 
-/* .project_card:nth-child(3) {
-    align-self: self-end;
-} */
 .project_icon {
     width: 70px;
     aspect-ratio: 1/1;
@@ -301,8 +304,8 @@ header>div>a>button:hover {
 }
 
 .project_body {
-    width: 55%;
-    height: 100%;
+    width: 60%;
+    height: fit-content;
     padding: 30px 55px 0;
     z-index: 2;
     background: linear-gradient(to right, #080A08 82%, rgba(0,0,0,0));
@@ -335,14 +338,12 @@ header>div>a>button:hover {
 .project_body a{
     color: #30FF68;
     padding: 2px 5px;
-
-    position: absolute;
-    bottom: 10%;
 }
 
 .project_body a i {
     color: #30FF68;
     font-size: 15px;
+    margin-block: 20px;
 }
 
 .project_img {
@@ -357,6 +358,8 @@ header>div>a>button:hover {
     transform: perspective(800px) rotateY(-25deg);
     transition-duration: .4s;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
 }
 
 .project_img img {
@@ -372,7 +375,7 @@ header>div>a>button:hover {
     width: 20%;
     height: 500%;
     position: absolute;
-    transform: rotate(30deg) translateX(-150px);
+    transform: rotate(30deg) translateX(-290px);
     top: 0;
     bottom: 0;
     margin: auto;
@@ -384,33 +387,16 @@ header>div>a>button:hover {
 }
 
 .project_card:hover .project_img {
-    transform: perspective(800px) rotateY(-15deg);
+    transform: perspective(800px) rotateY(-5deg) scale(1.1);
 }
 
 .project_card:hover .project_img_glow {
     transform: rotate(30deg) translateX(500px);
 }
-
-#projects>a>button {
-    color: #080A08;
-    background-color: #30FF68;
-    border-radius: 5px;
-    width: 200px;
-    aspect-ratio: 4/1;
-    font-family: 'Roboto', sans-serif;
-    position: relative;
-    left: calc(50% - 100px);
-}
-
-#projects>a>button>i {
-    color: black;
-}
-
-#projects>a>button:hover {
-    box-shadow: 0 0 10px #30FF68;
-}
 /* \\\\\\\\\\\\\\\\\\\\\\\\\\ footer \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
-
+footer {
+    margin-top: 80px;
+}
 
 footer>hr {
     border: 1px solid #30FF68;
@@ -424,53 +410,174 @@ footer>p {
     font-family: 'Jura', sans-serif;
 }
 
-footer>div {
-    display: flex;
-    justify-content: center;
-    margin-block: 50px 30px;
-}
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 
-footer>div>a>i {
-    font-size: 3vw;
-    margin-inline: 20px;
+@media (max-width: 1520px) {
+    main>h1 {
+        font-size: 50px;
+    }
+    main>h2 {
+        font-size: 28px;
+    }
+    
+    /* \\\\\\\\\\\\\\\\\\\ projects ////////////////// */
 
-    animation: float 2s ease-in-out infinite;
-}
-
-footer>div>a>i:hover {
-    color: #30FF68;
-}
-
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0);
+    .project_card {
+        width: 90%;
+    }
+    .project_body h2 {
+        margin: 0;
+        color: #30FF68;
+        font-family: 'Montserrat', sans-serif;
+    }
+    
+    .project_body h1 {
+        font-size: 35px;
+    }
+    
+    .project_body p {
+        font-size: 18px;
+    }
+    .project_body a i {
+        font-size: 13px;
     }
 
-    50% {
-        transform: translateY(-10px);
+    .project_img {
+        height: 75%;
     }
 }
 
-footer>div>a:nth-child(2)>i {
-    animation-delay: .2s;
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+@media (max-width: 1100px) {
+    :root {
+        --header-height: 6vw;
+    }
+    main>h1 {
+        font-size: 35px;
+    }
+    main>h2 {
+        font-size: 22px;
+    }
+    
+    /* \\\\\\\\\\\\\\\\\\\ projects ////////////////// */
+
+    .project_card {
+        width: 100%;
+    }
+    
+    .project_body h1 {
+        font-size: 28px;
+    }
+    
+    .project_body p {
+        font-size: 14px;
+    }
+    .project_body a i {
+        font-size: 10px;
+    }
+
+    .project_img {
+        height: 70%;
+    }
 }
 
-footer>div>a:nth-child(3)>i {
-    animation-delay: .4s;
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+@media (max-width: 850px) {
+    
+    main>h1 {
+        font-size: 30px;
+    }
+    main>h2 {
+        font-size: 20px;
+    }
+    /* //////////////////////// header //////////////////////// */
+    header {
+        z-index: 1000;
+    }
+
+    .social_medias {
+        display: none;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .menu i {
+        display: inline;
+        color: #00f260;
+        font-size: 26px;
+    }
+
+    /* /////////////////////////// projects /////////////////////// */
+    
+    .project_body h1 {
+        font-size: 32px;
+    }
+    
+    .project_body p {
+        font-size: 16px;
+    }
+    .project_body a i {
+        font-size: 12px;
+    }
+
+    .project_body {
+        width: 100%;
+        background: none;
+    }
+    .project_img {
+        height: 60%;
+        position: relative;
+
+    }
+
+    /* //////////////////////////// footer ///////////////////////////// */
+    footer>p {
+        font-size: 16px;
+    }
 }
 
-footer>div>a:nth-child(4)>i {
-    animation-delay: .6s;
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+@media (max-width: 580px) {
+
+    /* //////////////////project ////////////////// */
+    .project_img {
+        right: -30px;
+    }
 }
 
-footer>div>a:nth-child(5)>i {
-    animation-delay: .8s;
-}
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 
-footer>div>a:nth-child(6)>i {
-    animation-delay: 1s;
-}
+@media (max-width: 400px) {
 
-footer>div>a:nth-child(7)>i {
-    animation-delay: 1.2s;
+    /* /////////////////////////// project /////////////////// */
+
+    .project_icon {
+        top: 50px;
+        width: 50px;
+    }
+
+    .project_icon i {
+        font-size: 30px;
+    }
+
+    .project_body h2 {
+        font-size: 20px;
+    }
+
+    .project_body h1 {
+        font-size: 24px;
+    }
+
+    .project_body p {
+        font-size: 16px;
+    }
+
+    .project_img {
+        right: -20px;
+    }
 }

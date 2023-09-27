@@ -1195,7 +1195,7 @@ header>div>a>button:hover {
 }
 
 .project_card:hover .project_img {
-    transform: perspective(800px) rotateY(-5deg) scale(1.2);
+    transform: perspective(800px) rotateY(-5deg) scale(1.1);
 }
 
 .project_card:hover .project_img_glow {
