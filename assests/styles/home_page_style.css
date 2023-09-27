@@ -84,7 +84,7 @@ main>h1::before{
 }
 /* \\\\\\\\\\\\\\\\\\\\\\\\\\ preloader \\\\\\\\\\\\\\\\\\\\\\ */
 .preloader {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     width: 100vw;
@@ -1183,7 +1183,7 @@ header>div>a>button:hover {
     width: 20%;
     height: 500%;
     position: absolute;
-    transform: rotate(30deg) translateX(-250px);
+    transform: rotate(30deg) translateX(-290px);
     top: 0;
     bottom: 0;
     margin: auto;
@@ -1195,7 +1195,7 @@ header>div>a>button:hover {
 }
 
 .project_card:hover .project_img {
-    transform: perspective(800px) rotateY(-15deg);
+    transform: perspective(800px) rotateY(-5deg) scale(1.2);
 }
 
 .project_card:hover .project_img_glow {
@@ -1473,6 +1473,11 @@ footer>p {
     50% {
         transform: translateY(-10px);
     }
+}
+
+.green-text {
+    color: #00f260;
+    font-size: var(--size);
 }
 
 /* -----------------media querries------------------------- */
