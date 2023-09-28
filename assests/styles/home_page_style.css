@@ -951,7 +951,6 @@ header>div>a>button:hover {
     overflow: hidden;
 
     transition-duration: 0.3s;
-    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.11));
 }
 
 .service_card>.img {
