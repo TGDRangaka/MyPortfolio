@@ -40,12 +40,13 @@ main {
     position: relative;
     width: 100vw;
     padding: var(--header-height) 7vw 7vw 7vw;
+    overflow: hidden;
 }
 
 /* /////////////// title ///////////////////////// */
 
 .title {
-    margin-block: 150px 80px;
+    margin-block: 10vw 6vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -824,25 +825,26 @@ header>div>a>button:hover {
 
 #aboutme>section {
     display: flex;
-    /* align-items: center; */
+    align-items: center;
     position: relative;
     margin-top: 20px;
     border-radius: 25px;
-    padding: 35px;
+    padding: 2vw;
 }
 
 .insta-template {
     background-color: white;
     width: 30%;
     aspect-ratio: 2/3;
+    /* height: 650px; */
     border-radius: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     position: relative;
-    padding: 25px;
-    margin-right: 35px;
+    padding: 1vw;
+    margin-right: 2vw;
 }
 
 .upper-items {
@@ -902,6 +904,12 @@ header>div>a>button:hover {
 .insta-icons img {
     height: 90%;
     aspect-ratio: 1;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.insta-icons img:hover{
+    transform: scale(1.2);
 }
 
 .insta-icons img:last-child {
@@ -981,28 +989,23 @@ p span {
 }
 
 .informations p {
-    font-size: 28px;
+    font-size: 24px;
     font-family: 'Poppins', sans-serif;
     font-weight: 200;
 }
 
 .aboutme-details a button {
-    width: 12vw;
-    height: 3vw;
+    width: 15vw;
+    height: 4vw;
     background-color: #00f260;
     color: black;
-    font-size: 30px;
+    font-size: 28px;
     font-family: 'Poppins', sans-serif;
     border-radius: 5px;
     margin-top: 30px;
 }
 
 /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ resume \\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
-:root {
-    --resume-section-height: 700px;
-    --resume-point-line-height: 570px;
-    --resume-point-width: 30px;
-}
 
 #resume .bg-image {
     filter: opacity(40%);
@@ -1051,14 +1054,14 @@ p span {
 
 .edu-point {
     position: relative;
-    width: 30px;
+    width: 3%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .point {
-    width: 30px;
+    width: 100%;
     aspect-ratio: 1;
     border-radius: 50%;
     background-color: #121212;
@@ -1067,14 +1070,14 @@ p span {
 
 .edu-des {
     position: absolute;
-    width: 600px;
+    width: 40vw;
     /* border: 1px solid blue; */
     top: -5px;
-    right: -620px;
+    right: -41vw;
 }
 
 .edu-point:nth-child(odd) .edu-des{
-    left: -620px;
+    left: -41vw;
 }
 
 .edu-point:nth-child(odd) .edu-des h1, .edu-point:nth-child(odd) .edu-des p{
@@ -1152,9 +1155,13 @@ p span {
 
 .hard-skills {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     /* justify-content: center; */
     align-items: center;
+}
+.hard-skills img {
+    position: relative;
+    left: 20%;
 }
 /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ My services \\\\\\\\\\\\\\\\\\\ */
 
@@ -1173,7 +1180,7 @@ p span {
 
 .service-card {
     position: relative;
-    width: 26%;
+    width: 28%;
     aspect-ratio: 3/4;
     overflow: hidden;
     padding: 25px 30px;
@@ -1210,13 +1217,13 @@ p span {
 }
 
 .service-card h2 {
-    margin-block: 60px 60px;
-    font-size: 36px;
+    margin-block: 50px 50px;
+    font-size: 34px;
     font-family: 'Poppins', sans-serif;
 }
 
 .service-card p {
-    font-size: 28px;
+    font-size: 26px;
     font-family: 'Roboto Flex', sans-serif;
     font-weight: 100;
 }
@@ -1231,7 +1238,7 @@ p span {
     right: 0;
     bottom: 200px;
     margin: auto;
-    width: 80%;
+    width: 130%;
     height: 50%;
     transform-style: preserve-3d;
     transform: rotateX(75deg) rotateY(-10deg);
@@ -1389,7 +1396,7 @@ p span {
 }
 
 .project_body {
-    width: 60%;
+    width: 70%;
     height: fit-content;
     padding: 30px 55px 0;
     z-index: 2;
@@ -1444,7 +1451,6 @@ p span {
     bottom: 0;
     margin: auto;
     right: -50px;
-    /* transform-origin: right; */
     transform: perspective(800px) rotateY(-25deg);
     transition-duration: .4s;
     overflow: hidden;
@@ -1477,7 +1483,7 @@ p span {
 }
 
 .project_card:hover .project_img {
-    transform: perspective(800px) rotateY(-5deg) scale(1.1);
+    transform: perspective(800px) rotateY(0deg) scale(1.1);
 }
 
 .project_card:hover .project_img_glow {
@@ -1534,6 +1540,7 @@ p span {
     background: #414345;
     border: 2px solid #30FF68;
     position: relative;
+    cursor: pointer;
 }
 
 .assignment_img {
@@ -1642,7 +1649,7 @@ p span {
 }
 
 .contact_container>p {
-    margin: 30px 20%;
+    margin: 10px 20%;
     text-align: center;
     color: #30FF68;
     font-size: 25px;
@@ -1652,7 +1659,7 @@ p span {
 
 .contact_container>section {
     width: 60%;
-    padding: 50px;
+    padding: 40px;
     margin-inline: 10%;
     border-radius: 25px;
 }
@@ -1673,19 +1680,17 @@ form>h3 {
 form>label {
     font-size: 22px;
     font-family: 'Montserrat', sans-serif;
+    margin-block: 4px;
 }
 
 form>input, form>textarea{
     background-color: #2D2D2D;
-    font-size: 20px;
+    font-size: 16px;
     font-family: 'Montserrat', sans-serif;
-    padding-left: 10px;
+    padding: 10px;
     border-radius: 5px;
     border: 1px solid black;
-}
-
-form>input {
-    height: 3rem;
+    margin-block: 4px;
 }
 
 form>textarea {
@@ -1696,11 +1701,11 @@ form>button {
     color: #080A08;
     background-color: #30FF68;
     border-radius: 5px;
-    width: 200px;
-    aspect-ratio: 4/1;
+    width: 100%;
+    height: 50px;
     font-family: 'Roboto', sans-serif;
+    font-weight: 600;
     position: relative;
-    left: calc(50% - 100px);
 }
 
 form>button:hover {
@@ -1753,74 +1758,133 @@ footer>p {
 
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 @media (max-width: 1520px) {
-    main>h1 {
-        font-size: 50px;
+    .title {
+        margin-block: 6vw 4vw;
     }
-    main>h2 {
+    .title h2 {
         font-size: 28px;
+    }
+    .title h1 {
+        font-size: 70px;
+    }
+
+    .title-line {
+        height: 8px;
     }
 
     /* \\\\\\\\\\\\\\\\\\\\\ home \\\\\\\\\\\\\\\\\\\\\\\\\ */
 
     #home>section>h1 {
-        font-size: 150px;
+        font-size: 120px;
     }
     #home>section>h3 {
-        font-size: 60px;
+        font-size: 40px;
     }
     #home>section>h4 {
-        font-size: 40px;
+        font-size: 30px;
     }
     #home>section>button {
         font-size: 18px;
     }
 
     .hero_img_body>.circle_line {
-        border: 8px solid #30FF68;
+        border: 8px solid #00f260;
     }
 
     /* \\\\\\\\\\\\\\\\\\\\\\ about me \\\\\\\\\\\\\\\\\\\\ */
-
-    #aboutme>section>.description>h1 {
-        font-size: 40px;
+    .insta-template {
+        width: 28%;
     }
-    #aboutme>section>.description>h2 {
-        font-size: 26px;
+    .upper-items h3 {
+        font-size: 15px;
     }
-    #aboutme>section>.description>p {
-        font-size: 22px;
+    .upper-items i {
+        font-size: 18px;
+    }
+    .insta-description h3 {
+        font-size: 13px;
+    }
+    .insta-description h4 {
+        font-size: 12px;
+    }
+    .short-line{
+        height: 4px;
     }
 
-    /* \\\\\\\\\\\\\\\\\\ gallery \\\\\\\\\\\\\\\\\ */
+    .aboutme-details>p:first-child {
+        font-size: 24px;
+    }
 
-    .gallery {
-        height: 250px;
+    .aboutme-details>p {
+        font-size: 20px;
+    }
+
+    .informations {
+        gap: 20px;
+    }
+    .informations p {
+        font-size: 18px;
+    }
+        
+    .aboutme-details a button {
+        font-size: 20px;
     }
 
     /* \\\\\\\\\\\\\\\\\\\ resume ///////////////// */
 
-    #resume>section>section>section>h3 {
-        font-size: 38px;
+    .education>h1, .skills>h1 {
+        font-size: 35px;
     }
 
-    .edu-card>h4, .exp-card>h4 {
-        font-size: 20px;
-    }
-    
-    .edu-card>h5, .exp-card>h5, .edu-card>p, .exp-card>p {
-        font-size: 18px;
+    .education {
+        height: 1300px;
     }
 
-    .hard_skills>div>h4 {
-        font-size: 28px;
+    .h-line {
+        width: 4px;
     }
-    .section2>div {
-        width: 480px;
+    .point {
+        border: 4px solid #00f260;
+    }
+
+    .edu-des h1 {
+        font-size: 30px;
+    }
+    .edu-des p {
+        font-size: 22px;
+    }
+
+    .skills {
+        height: 550px;
+    }
+
+    .soft-skills h3 {
+        font-size: 24px;
+    }
+
+    .hard-skills img {
+        aspect-ratio: 1;
+        width: 90px;
     }
     /* /////////////////// services \\\\\\\\\\\\\\\\\ */
 
-    :root {
-        --card-height: 400px;
+    .service-card {
+        width: 26%;
+        padding: 20px 25px;
+    }
+
+    .service-card img {
+        width: 80px;
+        margin: 8px 0 0 25px;
+    }
+
+    .service-card h2 {
+        font-size: 24px;
+        margin-block: 40px 40px
+    }
+
+    .service-card p {
+        font-size: 17px;
     }
     
     /* \\\\\\\\\\\\\\\\\\\ projects ////////////////// */
@@ -1888,23 +1952,30 @@ footer>p {
     :root {
         --header-height: 6vw;
     }
-    main>h1 {
-        font-size: 35px;
+    .title {
+        margin-block: 3vw 1vw;
     }
-    main>h2 {
+    .title h2 {
         font-size: 22px;
+    }
+    .title h1 {
+        font-size: 50px;
+    }
+
+    .title-line {
+        height: 5px;
     }
 
     /* \\\\\\\\\\\\\\\\\\\\\ home \\\\\\\\\\\\\\\\\\\\\\\\\ */
 
     #home>section>h1 {
-        font-size: 100px;
+        font-size: 80px;
     }
     #home>section>h3 {
-        font-size: 40px;
+        font-size: 30px;
     }
     #home>section>h4 {
-        font-size: 30px;
+        font-size: 24px;
     }
     #home>section>button {
         font-size: 14px;
@@ -1915,57 +1986,110 @@ footer>p {
 
     /* \\\\\\\\\\\\\\\\\\\\\\ about me \\\\\\\\\\\\\\\\\\\\ */
 
-    #aboutme>section>.description>h1 {
-        font-size: 30px;
+    #aboutme>section {
+        flex-direction: column;
     }
-    #aboutme>section>.description>h2 {
-        font-size: 22px;
+
+    .insta-template {
+        padding: .6vw;
+        margin-right: 0;
+        margin-bottom: 2vw;
+        width: 35%;
+        aspect-ratio: 3/4;
     }
-    #aboutme>section>.description>p {
+
+    .upper-items h3 {
+        font-size: 15px;
+    }
+    .upper-items i {
+        font-size: 18px;
+    }
+
+    .insta-icons {
+        height: 8%;
+    }
+
+    .aboutme-details{
+        width: 100%;
+    }
+
+    .aboutme-details>p:first-child {
         font-size: 20px;
     }
 
-    /* \\\\\\\\\\\\\\\\\\ gallery \\\\\\\\\\\\\\\\\ */
+    .aboutme-details>p {
+        font-size: 17px;
+    }
 
-    .gallery {
-        height: 200px;
+    .informations {
+        gap: 10px;
+    }
+
+    .informations p {
+        font-size: 16px;
+    }
+        
+    .aboutme-details a button {
+        font-size: 15px;
     }
 
     /* \\\\\\\\\\\\\\\\\\\ resume ///////////////// */
 
-    #resume>section>section>section>h3 {
-        font-size: 28px;
+    .education>h1, .skills>h1 {
+        font-size: 26px;
     }
 
-    .edu-card>h4, .exp-card>h4 {
+    .education {
+        height: 800px;
+    }
+
+    .h-line {
+        width: 3px;
+    }
+    .point {
+        border: 3px solid #00f260;
+    }
+
+    .edu-des h1 {
+        font-size: 22px;
+    }
+    .edu-des p {
         font-size: 16px;
     }
-    
-    .edu-card>h5, .exp-card>h5, .edu-card>p, .exp-card>p {
-        font-size: 12px;
+
+    .skills {
+        height: 450px;
     }
 
-    .hard_skills>div>h4 {
+    .soft-skills h3 {
         font-size: 18px;
     }
-    .section2>div {
-        width: 360px;
+
+    .hard-skills img {
+        aspect-ratio: 1;
+        width: 60px;
+        left: 25%;
     }
-    .hard_skills>div>div {
-        width: 300px;
-    }
+
     /* /////////////////// services \\\\\\\\\\\\\\\\\ */
 
-    :root {
-        --card-height: 370px;
+    .service-card {
+        width: 28%;
+        padding: 10px 15px;
     }
 
-    .service_card>.text>h2 {
-        font-size: 20px;
+    .service-card img {
+        width: 50px;
+        margin: 4px 0 0 15px;
     }
-    
-    .service_card>.text>p {
-        font-size: 13px;
+
+    .service-card h2 {
+        font-size: 18px;
+        margin-block: 30px 30px
+    }
+
+    .service-card p {
+        font-size: 16px;
     }
     
     /* \\\\\\\\\\\\\\\\\\\ projects ////////////////// */
@@ -2028,11 +2152,18 @@ footer>p {
         --header-height: 8vw;
     }
     
-    main>h1 {
-        font-size: 30px;
+    .title {
+        margin-block: 2vw 1vw;
     }
-    main>h2 {
-        font-size: 20px;
+    .title h2 {
+        font-size: 16px;
+    }
+    .title h1 {
+        font-size: 40px;
+    }
+
+    .title-line {
+        height: 4px;
     }
     /* //////////////////////// header //////////////////////// */
     header {
@@ -2041,9 +2172,7 @@ footer>p {
 
     .social_medias {
         position: absolute;
-    }
-    .social_medias>a>i {
-        font-size: 5vw;
+        top: 25vh;
     }
 
     .nav {
@@ -2078,120 +2207,125 @@ footer>p {
     }
 
     #home section button {
-        width: 30vw;
+        width: 25vw;
         font-size: 16px;
+    }
+
+    #home>section> .btn-ani{
+        left: 22vw;
     }
 
     /* //////////////////////////////// about me ///////////////////// */
 
-    #aboutme section {
-        flex-direction: column;
+    .insta-template {
+        padding: 1vw;
+        width: 55%;
+        aspect-ratio: 3/4;
     }
 
-    #aboutme section .image {
-        width: 70vw;
+    .upper-items h3 {
+        font-size: 13px;
+    }
+    .upper-items i {
+        font-size: 16px;
     }
 
-    #aboutme section .description {
-        align-self: center;
-        width: 90vw;
-        margin: 5vw 0;
+    .insta-icons {
+        height: 7%;
     }
 
-    /* ////////////////////////////// gallery //////////////// */
-
-    #gallery .container {
-        margin-top: 80px;
-        height: fit-content;
-    }
-
-    .gallery {
+    .aboutme-details{
         width: 100%;
-        height: fit-content;
-        overflow-x: scroll;
-        overflow-y: hidden;
-        border: 1px solid black;
-        background-image: url("/assests/img/gallery_bg.jpg");
-        background-size: cover;
-        background-position: center;
     }
 
-    .gallery .gallery_body {
-        height: auto;
-        position: relative;
-        transform: none;
-        top: 0;
-        left: 0;
-        margin: 20px;
-        box-shadow: 0 0 20px black;
-        background-color: black;
+    .aboutme-details>p:first-child {
+        font-size: 17px;
     }
 
-    .gallery_img {
-        width: 80vw;
-        height: auto;
+    .aboutme-details>p {
+        font-size: 15px;
     }
 
-    .gallery_body:hover {
-        transform: none;
+    .informations {
+        gap: 10px;
     }
 
-    .darK_gradient {
-        display: none;
+    .informations p {
+        font-size: 16px;
+    }
+        
+    .aboutme-details a button {
+        width: 30%;
+        font-size: 14px;
     }
 
     /* //////////////////////////////// resume ////////////////////// */
-
     
-    #resume>section>section>section>h3 {
-        font-size: 35px;
+    .education>h1, .skills>h1 {
+        font-size: 23px;
     }
 
-    .edu-card>h4, .exp-card>h4 {
-        font-size: 24px;
+    .education {
+        height: 600px;
     }
-    
-    .edu-card>h5, .exp-card>h5, .edu-card>p, .exp-card>p {
+
+    .edu-des h1 {
         font-size: 18px;
     }
+    .edu-des p {
+        font-size: 13px;
+    }
 
-    .hard_skills>div>h4 {
+    .edu-point:last-child i {
+        top: -21px;
         font-size: 28px;
     }
-    #resume > section {
-        flex-direction: column;
+
+    .skills {
+        height: 600px;
     }
 
-    .point_with_section2 > .points_with_line {
-        display: none;
+    .soft-skills h3 {
+        font-size: 16px;
     }
 
-    .section1>div, .soft_skills>div, .hard_skills>div {
-        width: 80vw;
+    .hard-skills {
+        grid-template-columns: repeat(2, 1fr);
     }
-
-    .hard_skills>div>div {
-        width: 70vw;
+    .hard-skills img {
+        aspect-ratio: 1;
+        width: 50px;
+        left: 28%;
     }
 
     /* ///////////////////////////////// services ///////////////////////// */
 
+    .service-card {
+        width: 53%;
+        padding: 15px 20px;
+    }
 
-    .service_card>.text>h2 {
-        font-size: 22px;
+    .service-card img {
+        width: 70px;
+        margin: 10px 0 0 25px;
     }
-    
-    .service_card>.text>p {
-        font-size: 16px;
+
+    .service-card h2 {
+        font-size: 25px;
+        margin-block: 40px 40px
     }
+
+    .service-card p {
+        font-size: 18px;
+    }
+
     #myservices>section {
         flex-direction: column;
         align-items: start;
     }
 
-    .service_card {
-        margin-block: 30px;
-        align-self: flex-start;
+    .service-card {
+        margin-block: 10px;
     }
 
     #myservices>section>div:nth-child(2) {
@@ -2200,6 +2334,12 @@ footer>p {
 
     #myservices>section>div:nth-child(3) {
         align-self: flex-end;
+    }
+
+    .solar-system {
+        width: 150%;
+        transform: rotateX(75deg) rotateY(-20deg);
+        bottom: 500px;
     }
 
     /* /////////////////////////// projects /////////////////////// */
@@ -2218,12 +2358,10 @@ footer>p {
 
     .project_body {
         width: 100%;
-        background: none;
     }
     .project_img {
-        height: 60%;
+        width: 60%;
         position: relative;
-
     }
 
     /* ////////////////////////////// assignments ///////////////////// */
@@ -2243,21 +2381,23 @@ footer>p {
 
     /* ///////////////////////////// contact me //////////////////////////////// */
 
-    .contact_container > section {
-        flex-direction: column;
-    }
-
     .contact_container>p {
         font-size: 18px;
+        margin-bottom: 30px;
     }
 
-    .contact_container > section > img {
-        height: 60vw;
-        margin-bottom: 20px;
+    .contact_container>section {
+        padding: 15px;
+        border-radius: 10px;
+        width: 80%;
     }
 
     form {
         margin: 0;
+    }
+
+    form> h3 {
+        margin-bottom: 10px;
     }
 
     /* //////////////////////////// footer ///////////////////////////// */
@@ -2272,6 +2412,20 @@ footer>p {
 @media (max-width: 580px) {
     .social_medias {
         display: none;
+    }
+    
+    .title {
+        margin-block: 2vw 1vw;
+    }
+    .title h2 {
+        font-size: 16px;
+    }
+    .title h1 {
+        font-size: 40px;
+    }
+
+    .title-line {
+        height: 4px;
     }
 
     /* ///////////////////////////////// home /////////////// */
@@ -2296,8 +2450,165 @@ footer>p {
         font-size: 15px;
     }
 
+    #home>section> .btn-ani{
+        left: 31vw;
+        width: 9vw;
+    }
+    
+    .btn-ani .orbit .orbit-ring{
+        -webkit-mask: radial-gradient(circle at center, transparent 55%, white 55%);
+    }
+    /* /////////////////// about me /////////////////// */
+
+    #aboutme> section {
+        margin-top: 70px;
+    }
+
+    .insta-template {
+        padding: 2vw;
+        width: 100%;
+        margin-bottom: 5vw;
+    }
+    .upper-items i {
+        font-size: 18px;
+    }
+
+    .insta-icons {
+        height: 7%;
+    }
+
+    .informations {
+        gap: 15px;
+        grid-template-columns: 1fr;
+    }
+        
+    .aboutme-details a button {
+        margin-top: 10px;
+        width: 40%;
+        height: 40px;
+    }
+
+    /* //////////////////// resume //////////////// */
+
+    .points-line {
+        align-items: start;
+    }
+
+    .h-line {
+        right: auto;
+        left: 2.2%;
+        width: 2px;
+    }
+
+    .edu-point {
+        width: 5%;
+    }
+
+    .edu-des {
+        margin-top: 5px;
+        width: 70vw;
+        right: -71vw;
+    }
+
+    .point {
+        border: 2px solid #00f260;
+    }
+    .edu-point:nth-child(odd) .edu-des{
+        left: auto;
+    }
+    
+    .edu-point:nth-child(odd) .edu-des h1, .edu-point:nth-child(odd) .edu-des p{
+        text-align: left;
+    }
+
+    .skills {
+        flex-direction: column;
+    }
+
+    .soft-skills, .hard-skills {
+        margin-top: 40px;
+        width: 100%;
+        padding: 15px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hard-skills img {
+        width: 60px;
+        left: 22%;
+    }
+
+    /* ///////////////////////////////// services ///////////////////////// */
+
+    .service-card {
+        width: 50%;
+        padding: 15px 20px;
+    }
+
+    .service-card img {
+        width: 70px;
+        margin: 10px 0 0 25px;
+    }
+
+    .service-card h2 {
+        font-size: 25px;
+        margin-block: 40px 40px
+    }
+
+    .service-card p {
+        font-size: 18px;
+    }
+
+    #myservices>section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .service-card {
+        margin-block: 10px;
+        align-self: center;
+    }
+    /* ///////////////////////////////// services ///////////////////////// */
+
+    .service-card {
+        width: 75%;
+        padding: 15px 20px;
+    }
+
+    .service-card img {
+        width: 60px;
+        margin: 10px 0 0 25px;
+    }
+
+    .service-card h2 {
+        font-size: 25px;
+        margin-block: 30px 30px
+    }
+
+    .service-card p {
+        font-size: 18px;
+    }
+
+    #myservices>section {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .service-card {
+        margin-block: 30px;
+    }
+
+    #myservices>section>div:nth-child(3) {
+        align-self: center;
+    }
+
+    .solar-system {
+        bottom: 300px;
+        width: 200%;
+    }
     /* //////////////////project ////////////////// */
     .project_img {
+        width: 80%;
         right: -30px;
     }
 
@@ -2311,60 +2622,29 @@ footer>p {
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 
 @media (max-width: 400px) {
-    
+    .title h2 {
+        font-size: 14px;
+    }
+    .title h1 {
+        font-size: 30px;
+    }
+
+    .title-line {
+        height: 2px;
+    }
 
     #home section button {
         width: 38vw;
         font-size: 13px;
     }
 
-    
-
     /* //////////////////////////////// resume ////////////////////// */
 
-    
-    #resume>section>section>section>h3 {
-        font-size: 25px;
-    }
-
-    .edu-card>h4, .exp-card>h4 {
-        font-size: 18px;
-    }
-    
-    .edu-card>h5, .exp-card>h5, .edu-card>p, .exp-card>p {
-        font-size: 15px;
-    }
-
-    .soft_skills, .hard_skills, .soft_skills div {
-        height: fit-content;
-    }
-
-    .soft_skills div ul li {
-        font-size: 18px;
-    }
-
-    .hard_skills, .soft_skills {
-        margin-top: 30px;
-    }
-
-    .hard_skills>div>h4 {
-        font-size: 20px;
-    }
-
-    .section1>div, .soft_skills>div, .hard_skills>div {
-        width: 80vw;
-    }
-
-    .hard_skills>div>div {
-        width: 70vw;
+    .insta-template {
+        width: 100%;
     }
 
     /* ///////////////////////// services /////////////////////// */
-
-    #myservices>section>div:first-child,
-    #myservices>section>div:last-child {
-        align-self: center;
-    }
 
     /* /////////////////////////// project /////////////////// */
 
@@ -2408,6 +2688,7 @@ footer>p {
     /* ////////////////////// contact me /////////////////// */
 
     .contact_container p {
+        width: 100%;
         font-size: 16px;
     }
 
