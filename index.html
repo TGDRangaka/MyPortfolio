@@ -49,7 +49,16 @@
         <i class="fa-solid fa-bars"></i>
     </div>
 </header>
-
+<div class="mob-nav">
+    <div class="mob-nav-bg"></div>
+    <a style="--delay: 0s" style="--delay: 0s" href="#home"><button>Home</button></a>
+    <a style="--delay: .1s" href="#aboutme"><button>About Me</button></a>
+    <a style="--delay: .2s" href="#resume"><button>Resume</button></a>
+    <a style="--delay: .3s" href="#myservices"><button>Services</button></a>
+    <a style="--delay: .4s" href="#projects"><button>Projects</button></a>
+    <a style="--delay: .5s" href="#assignments"><button>Assignments</button></a>
+    <a style="--delay: .6s" href="#contactme"><button>Contact Me</button></a>
+</div>
 <div class="social_medias">
     <ul>
         <li class="glass_pane" style="--i:1">
@@ -113,7 +122,6 @@
     </section>
 
     <div data-aos="fade-up" data-aos-duration="3000" class="hero_img_body"> 
-        <!-- <div class="hero-circle-glow"></div> -->
         <div class="circle_line"></div>
         <img class="hero_img animate__animated" srcset="assests/img/mine2.png 800w"
             src="assests/img/mine2.png"
@@ -459,7 +467,7 @@
                 <a href="https://github.com/TGDRangaka/thogakade">Github <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
             <div class="project_img">
-                <img src="assests/img/thogakade_project.png" alt="">
+                <img src="assests/img/thogakade_project.PNG" alt="">
                 <div class="project_img_glow"></div>
             </div>
         </div>
@@ -574,12 +582,12 @@
         let letterAniDur = .8;
         let heroSectionAniDur = 1;
 
-        $(".letter").css("animation", `heartBeat ${letterAniDur}s linear`);
+        $(".letter").css("animation", `heartBeat ${letterAniDur}s linear .5s`);
 
-        $(".hello").css("animation", `flipInY ${heroSectionAniDur}s linear`);
-        $(".square").css("animation", `bounceInLeft ${heroSectionAniDur}s linear`);
-        $(".line").css("animation", `bounceInLeft ${heroSectionAniDur}s linear .2s`);
-        $(".i-am").css("animation", `bounceInLeft ${heroSectionAniDur}s linear .2s`);
+        $(".hello").css("animation", `flipInY ${heroSectionAniDur}s linear .2s`);
+        $(".square").css("animation", `bounceInLeft ${heroSectionAniDur}s linear .2s`);
+        $(".line").css("animation", `bounceInLeft ${heroSectionAniDur}s linear .3s`);
+        $(".i-am").css("animation", `bounceInLeft ${heroSectionAniDur}s linear .3s`);
         $("#home>section>h4").css("animation", `bounceInLeft ${heroSectionAniDur}s linear .4s`);
         $("#home>section>button").css("animation", `bounceInLeft ${heroSectionAniDur}s linear .4s`);
         $(".btn-ani").css("animation", `zoomIn ${heroSectionAniDur - 0.5}s linear .5s`)
@@ -603,6 +611,37 @@
     });
     document.addEventListener('readystatechange', updateProgress);
 
+    let isMenuOpened = false;
+    const openMenu = ()=>{
+        isMenuOpened = true;
+        $(".mob-nav").css("display", "flex");
+        setTimeout(()=>{
+            $(".mob-nav-bg").css("transform", "scale(40)");
+            $(".mob-nav a").css("filter", "blur(0px)");
+        }, 100); 
+    }
+    const closeMenu = ()=>{
+        isMenuOpened = false;
+        $(".mob-nav a").css("filter", "blur(100px)");
+        setTimeout(()=>{
+            $(".mob-nav-bg").css("transform", "scale(0)");
+            setTimeout(()=>{
+                $(".mob-nav").css("display", "none");
+            }, 500); 
+        }, 400);  
+    }
+
+    $(".menu").on('click', ()=>{
+        if(isMenuOpened){     
+            closeMenu(); 
+        }else{   
+            openMenu();   
+        }
+    });
+
+    $(".mob-nav").on('click', ()=>{
+        closeMenu();
+    });
 </script>
 
 </body>

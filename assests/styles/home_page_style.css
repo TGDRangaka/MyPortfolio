@@ -150,7 +150,7 @@ main {
     height: 100vh;
     z-index: 1000;
     position: fixed;
-    transition: 2s;
+    transition: .5s;
 }
 
 .glitch {
@@ -427,7 +427,7 @@ header {
     color: #ffffff;
     /* width: fit-content; */
     height: fit-content;
-    font-size: 6vw;
+    font-size: 7vw;
     font-family: 'Jomhuria', serif;
     letter-spacing: 6px;
     position: absolute;
@@ -448,7 +448,7 @@ header>div {
     margin: auto;
 }
 
-header>div>a>button {
+header>div>a>button, .mob-nav button {
     color: #30FF68;
     background-color: transparent;
     display: inline-block;
@@ -462,15 +462,55 @@ header>div>a>button {
     font-weight: lighter;
     font-size: 1.2vw;
 }
-header>div>a>button:hover {
+header>div>a>button:hover, .mob-nav button:hover {
     color: rgb(255, 255, 255);
     /* background-color: #30ff68; */
     border: none;
     border-radius: 5px;
 }
 
+.menu {
+    right: 20px;
+}
+
 .menu i {
     display: none;
+}
+
+.mob-nav {
+    display: none;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 101;
+    gap: 5vh;
+    padding: 50px;
+    transform-origin: top right;
+    transition: 1s;
+}
+
+.mob-nav-bg {
+    width: 16vw;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: black;
+    position: fixed;
+    top: -8vw;
+    right: -8vw;
+    transition: .5s;
+    transform: scale(0);
+}
+
+.mob-nav button {
+    font-size: 5vw;
+}
+
+.mob-nav a {
+    transition: .4s var(--delay);
+    filter: blur(100px);
 }
 
 .social_medias {
@@ -504,8 +544,12 @@ header>div>a>button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 15px;
+    border-radius: 1vw;
     overflow: hidden;
+}
+
+.social_medias img {
+    width: 2vw;
 }
 
 .social_medias li::before {
@@ -549,10 +593,6 @@ header>div>a>button:hover {
     transform: rotate(-45deg) translateY(4vw);
 }
 
-.social_medias li:hover::before {
-    /* transform: scale(17); */
-}
-
 .social_medias a{
     cursor: pointer;
     position: relative;
@@ -566,7 +606,7 @@ header>div>a>button:hover {
     transition: .6s;
 }
 
-.social_medias a:hover{
+.social_medias li:hover a{
     filter: drop-shadow(0 0 1px black)
     drop-shadow(0 0 2px black)
     drop-shadow(0 0 3px black);
@@ -766,14 +806,14 @@ header>div>a>button:hover {
     height: 100%;
     top: 0;
     right: 0;
-    filter: opacity(40%);
+    filter: opacity(20%);
 }
 
 .letter {
     position: absolute;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .letter:nth-child(1){
@@ -1258,7 +1298,7 @@ p span {
     border-radius: 50%;
     animation: orbit-animation var(--rotate-dur) linear infinite;
     
-    /* transform: rotateX(180deg) rotateZ(0deg); */
+    transform: rotateX(180deg) rotateZ(0deg); 
     transform-style: preserve-3d;
 }
 @keyframes orbit-animation {
@@ -1790,7 +1830,29 @@ footer>p {
     .hero_img_body>.circle_line {
         border: 8px solid #00f260;
     }
-
+    .letter:nth-child(1){
+        font-size: 200px;
+    }
+    
+    .letter:nth-child(2){
+        font-size: 130px;
+    }
+    
+    .letter:nth-child(3){
+        font-size: 180px;
+    }
+    
+    .letter:nth-child(4){
+        font-size: 100px;
+    }
+    
+    .letter:nth-child(5){
+        font-size: 200px;
+    }
+    
+    .letter:nth-child(6){
+        font-size: 200px;
+    }
     /* \\\\\\\\\\\\\\\\\\\\\\ about me \\\\\\\\\\\\\\\\\\\\ */
     .insta-template {
         width: 28%;
@@ -1869,7 +1931,7 @@ footer>p {
     /* /////////////////// services \\\\\\\\\\\\\\\\\ */
 
     .service-card {
-        width: 26%;
+        width: 280px;
         padding: 20px 25px;
     }
 
@@ -1983,7 +2045,32 @@ footer>p {
     .hero_img_body>.circle_line {
         border: 5px solid #30FF68;
     }
-
+    .letter:nth-child(1){
+        font-size: 150px;
+        top: -2%;
+    }
+    
+    .letter:nth-child(2){
+        font-size: 100px;
+    }
+    
+    .letter:nth-child(3){
+        font-size: 150px;
+    }
+    
+    .letter:nth-child(4){
+        font-size: 90px;
+    }
+    
+    .letter:nth-child(5){
+        font-size: 180px;
+    }
+    
+    .letter:nth-child(6){
+        font-size: 160px;
+        bottom: -13%;
+        left: 52%;
+    }
     /* \\\\\\\\\\\\\\\\\\\\\\ about me \\\\\\\\\\\\\\\\\\\\ */
 
     #aboutme>section {
@@ -2074,7 +2161,7 @@ footer>p {
     /* /////////////////// services \\\\\\\\\\\\\\\\\ */
 
     .service-card {
-        width: 28%;
+        width: 250px;
         padding: 10px 15px;
     }
 
@@ -2215,6 +2302,39 @@ footer>p {
         left: 22vw;
     }
 
+    .letter:nth-child(1){
+        font-size: 150px;
+        top: 0%;
+    }
+    
+    .letter:nth-child(2){
+        font-size: 100px;
+        top: 28%;
+        left: 60%;
+    }
+    
+    .letter:nth-child(3){
+        font-size: 130px;
+        top: 45%;
+    }
+    
+    .letter:nth-child(4){
+        font-size: 80px;
+        top: 4%;
+        right: 4%;
+    }
+    
+    .letter:nth-child(5){
+        font-size: 200px;
+        top: 14%;
+        left: -7%;
+    }
+    
+    .letter:nth-child(6){
+        font-size: 160px;
+        bottom: -3%;
+        left: 75%;
+    }
     /* //////////////////////////////// about me ///////////////////// */
 
     .insta-template {
@@ -2410,6 +2530,10 @@ footer>p {
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 
 @media (max-width: 580px) {
+    :root {
+        --header-height: 12vw;
+    }
+
     .social_medias {
         display: none;
     }
@@ -2457,6 +2581,39 @@ footer>p {
     
     .btn-ani .orbit .orbit-ring{
         -webkit-mask: radial-gradient(circle at center, transparent 55%, white 55%);
+    }
+    .letter:nth-child(1){
+        font-size: 150px;
+        top: 0%;
+    }
+    
+    .letter:nth-child(2){
+        font-size: 70px;
+        top: 34%;
+        left: 67%;
+    }
+    
+    .letter:nth-child(3){
+        font-size: 130px;
+        top: 45%;
+    }
+    
+    .letter:nth-child(4){
+        font-size: 80px;
+        top: 4%;
+        right: 4%;
+    }
+    
+    .letter:nth-child(5){
+        font-size: 200px;
+        top: 10%;
+        left: -20%;
+    }
+    
+    .letter:nth-child(6){
+        font-size: 150px;
+        bottom: -13%;
+        left: 70%;
     }
     /* /////////////////// about me /////////////////// */
 
@@ -2622,6 +2779,10 @@ footer>p {
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 
 @media (max-width: 400px) {
+    :root {
+        --header-height: 14vw;
+    }
+
     .title h2 {
         font-size: 14px;
     }
