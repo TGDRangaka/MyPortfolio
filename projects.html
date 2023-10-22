@@ -11,46 +11,92 @@
     <link rel="stylesheet" href="assests/styles/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Jura&family=Montserrat:wght@300&family=Roboto:wght@500&family=Viga&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans&family=Jomhuria&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600&display=swap" rel="stylesheet">
 </head>
 <body>
+    
+    <div class="bg-image"></div>
 
-    <header>
-        <h2>DILA</h2>
+    <header id="header" class="glass_pane">
+        <div class="logo">DILA</div>
         <div class="nav">
-            <a href="#home_space"><button>Home</button></a>
-            <a href="#aboutme"><button>About Me</button></a>
-            <a href="#resume"><button>Resume</button></a>
-            <a href="#projects"><button>Projects</button></a>
-            <a href="#assignments"><button>Assignments</button></a>
-            <a href="#contactme"><button>Contact Me</button></a>
+            <a href="index.html#home"><button>Home</button></a>
+            <a href="index.html#aboutme"><button>About Me</button></a>
+            <a href="index.html#resume"><button>Resume</button></a>
+            <a href="index.html#myservices"><button>Services</button></a>
+            <a href="index.html#projects"><button>Projects</button></a>
+            <a href="index.html#assignments"><button>Assignments</button></a>
+            <a href="index.html#contactme"><button>Contact Me</button></a>
         </div>
         <div class="menu">
             <i class="fa-solid fa-bars"></i>
         </div>
     </header>
     
+    <div class="mob-nav">
+        <div class="mob-nav-bg"></div>
+        <a style="--delay: 0s" style="--delay: 0s" href="index.html#home"><button>Home</button></a>
+        <a style="--delay: .1s" href="index.html#aboutme"><button>About Me</button></a>
+        <a style="--delay: .2s" href="index.html#resume"><button>Resume</button></a>
+        <a style="--delay: .3s" href="index.html#myservices"><button>Services</button></a>
+        <a style="--delay: .4s" href="index.html#projects"><button>Projects</button></a>
+        <a style="--delay: .5s" href="index.html#assignments"><button>Assignments</button></a>
+        <a style="--delay: .6s" href="index.html#contactme"><button>Contact Me</button></a>
+    </div>
+    
     <div class="social_medias">
-        <div class="vertical_line"></div>
-        <a href="https://www.facebook.com/dilshan.rangaka.52/"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="https://www.linkedin.com/in/dilshan-rangaka-854133227/"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="https://twitter.com/DilshanRangaka"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="https://www.pinterest.com/tgdilshanrangaka2002/"><i class="fa-brands fa-pinterest-p"></i></a>
-        <a href="https://github.com/TGDRangaka"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.instagram.com/dilshan_rangaka/"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://discord.gg/xxkTmwqV"><i class="fa-brands fa-discord"></i></a>
+        <ul>
+            <li class="glass_pane" style="--i:1">
+                <a href="https://www.facebook.com/dilshan.rangaka.52/">
+                    <img src="assests/img/fb.png" alt="facebook">
+                </a>
+            </li>
+            <li class="glass_pane" style="--i:2">
+                <a href="https://www.linkedin.com/in/dilshan-rangaka-854133227/">
+                    <img src="assests/img/linkedin.png" alt="linkedin">
+                </a>
+            </li>
+            <li class="glass_pane" style="--i:3">
+                <a href="https://twitter.com/DilshanRangaka">
+                    <img src="assests/img/x.png" alt="x">
+                </a>
+            </li>
+            <li class="glass_pane" style="--i:4">
+                <a href="https://github.com/TGDRangaka">
+                    <img src="assests/img/github.png" alt="github">
+                </a>
+            </li>
+            <li class="glass_pane" style="--i:5">
+                <a href="https://www.instagram.com/dilshan_rangaka/">
+                    <img src="assests/img/instagram.png" alt="instagram">
+                </a>
+            </li>
+            </li>
+            <li class="glass_pane" style="--i:6">
+                <a href="https://www.instagram.com/dilshan_rangaka/">
+                    <img src="assests/img/whatsapp.png" alt="whatsapp">
+                </a>
+            </li>
+        </ul>
     </div>
 
-<main class="title">
-    <h2>My</h2>
-    <h1>Projects</h1>
-    <div class="line"></div>
-</main>
+    <div class="title">
+        <span>
+            <div class="title-line"></div>
+            <h2>Completed</h2>
+            <h1>Projects</h1>
+            <div class="title-line"></div>
+        </span>
+    </div>
 
-<main class="projects">
     <div class="btn_container">
         <button>All</button>
         <button>Softwares</button>
@@ -59,101 +105,340 @@
         <button>Mobile Apps</button>
         <button>Other</button>
     </div>
-    <section class="project_section">
-        <div class="project_card">
-            <div class="project_icon">
-                <i class="fa-solid fa-display"></i>
-            </div>
-            <div class="project_body">
-                <h2>2023</h2>
-                <h1>Go Fish</h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quisquam at atque soluta vero vel perferendis consequuntur officiis ducimus cum dolor sed fugit ullam blanditiis, totam minima molestias voluptatibus quae.
-                </p>
-                <div class="project_langs">
-                    <span>Java</span>
-                    <span>CSS</span>
-                    <span>MySQL</span>
-                </div>
-                <a href="https://github.com/TGDRangaka/go-fish/tree/main">Github <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-            <div class="project_img">
-                <img src="assests/img/go_fish_project.png" alt="">
-                <div class="project_img_glow"></div>
-            </div>
-        </div>
-        
-        <div class="project_card">
-            <div class="project_icon">
-                <i class="fa-solid fa-display"></i>
-            </div>
-            <div class="project_body">
-                <h2>2022</h2>
-                <h1>Calculator</h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quisquam at atque soluta vero vel perferendis consequuntur officiis ducimus cum dolor sed fugit ullam blanditiis, totam minima molestias voluptatibus quae.
-                </p>
-                <div class="project_langs">
-                    <span>Java</span>
-                    <span>CSS</span>
-                </div>
-                <a href="https://github.com/TGDRangaka/Calculator">Github <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-            <div class="project_img">
-                <img src="assests/img/calculator_project.png" alt="">
-                <div class="project_img_glow"></div>
-            </div>
-        </div>
-        <div class="project_card">
-            <div class="project_icon">
-                <i class="fa-solid fa-display"></i>
-            </div>
-            <div class="project_body">
-                <h2>2023</h2>
-                <h1>Snakes & Ladders Game</h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quisquam at atque soluta vero vel perferendis consequuntur officiis ducimus cum dolor sed fugit ullam blanditiis, totam minima molestias voluptatibus quae.
-                </p>
-                <div class="project_langs">
-                    <span>Java</span>
-                    <span>CSS</span>
-                </div>
-                <a href="https://github.com/TGDRangaka/snakes-and-ladders-game/tree/main">Github <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-            <div class="project_img">
-                <img src="assests/img/snakes_&_ladders_game.png" alt="">
-                <div class="project_img_glow"></div>
-            </div>
-        </div>
-        <div class="project_card">
-            <div class="project_icon">
-                <i class="fa-solid fa-display"></i>
-            </div>
-            <div class="project_body">
-                <h2>2023</h2>
-                <h1>Thogakade</h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quisquam at atque soluta vero vel perferendis consequuntur officiis ducimus cum dolor sed fugit ullam blanditiis, totam minima molestias voluptatibus quae.
-                </p>
-                <div class="project_langs">
-                    <span>Java</span>
-                    <span>CSS</span>
-                    <span>MySQL</span>
-                </div>
-                <a href="https://github.com/TGDRangaka/thogakade">Github <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-            <div class="project_img">
-                <img src="assests/img/thogakade_project.png" alt="">
-                <div class="project_img_glow"></div>
-            </div>
-        </div>
-    </section>
-</main>
 
-<footer>
-    <hr>
-    <p>© Copyright 2023. Made by Dilshan</p>
-</footer>
+    <main id="projects">
 
+
+        <section class="project_section">
+
+            <div data-aos="fade-right" class="project_card glass_pane">
+                <div class="gradient-h-line"></div>
+                <div class="gradient-v-line"></div>
+                <div class="project_icon">
+                    <i class="fa-solid fa-display"></i>
+                </div>
+                <div class="project_body">
+                    <p>2023 <span>(1st Sem Final 2nd Place)</span></p>
+                    <h1>Go Fish</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quisquam at atque soluta vero vel perferendis consequuntur officiis ducimus cum dolor sed fugit ullam blanditiis, totam minima molestias voluptatibus quae.
+                    </p>
+                    <div class="project_langs">
+                        <span>Java</span>
+                        <span>CSS</span>
+                        <span>MySQL</span>
+                    </div>
+                    <a href="https://github.com/TGDRangaka/go-fish/tree/main">Github <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <div class="project_img">
+                    <img src="assests/img/go_fish_project.png" alt="">
+                    <div class="project_img_glow"></div>
+                </div>
+            </div>
+            
+            <div data-aos="fade-left" class="project_card glass_pane">
+                <div class="gradient-h-line"></div>
+                <div class="gradient-v-line"></div>
+                <div class="project_icon">
+                    <i class="fa-solid fa-display"></i>
+                </div>
+                <div class="project_body">
+                    <p>2022</p>
+                    <h1>Calculator</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quisquam at atque soluta vero vel perferendis consequuntur officiis ducimus cum dolor sed fugit ullam blanditiis, totam minima molestias voluptatibus quae.
+                    </p>
+                    <div class="project_langs">
+                        <span>Java</span>
+                        <span>CSS</span>
+                    </div>
+                    <a href="https://github.com/TGDRangaka/Calculator">Github <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <div class="project_img">
+                    <img src="assests/img/calculator_project.png" alt="">
+                    <div class="project_img_glow"></div>
+                </div>
+            </div>
+            <div data-aos="fade-right" class="project_card glass_pane">
+                <div class="gradient-h-line"></div>
+                <div class="gradient-v-line"></div>
+                <div class="project_icon">
+                    <i class="fa-solid fa-display"></i>
+                </div>
+                <div class="project_body">
+                    <p>2023</p>
+                    <h1>Snakes & Ladders Game</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quisquam at atque soluta vero vel perferendis consequuntur officiis ducimus cum dolor sed fugit ullam blanditiis, totam minima molestias voluptatibus quae.
+                    </p>
+                    <div class="project_langs">
+                        <span>Java</span>
+                        <span>CSS</span>
+                    </div>
+                    <a href="https://github.com/TGDRangaka/snakes-and-ladders-game/tree/main">Github <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <div class="project_img">
+                    <img src="assests/img/snakes_&_ladders_game.png" alt="">
+                    <div class="project_img_glow"></div>
+                </div>
+            </div>
+            <div data-aos="fade-left" class="project_card glass_pane">
+                <div class="gradient-h-line"></div>
+                <div class="gradient-v-line"></div>
+                <div class="project_icon">
+                    <i class="fa-solid fa-display"></i>
+                </div>
+                <div class="project_body">
+                    <p>2023</p>
+                    <h1>Thogakade</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quisquam at atque soluta vero vel perferendis consequuntur officiis ducimus cum dolor sed fugit ullam blanditiis, totam minima molestias voluptatibus quae.
+                    </p>
+                    <div class="project_langs">
+                        <span>Java</span>
+                        <span>CSS</span>
+                        <span>MySQL</span>
+                    </div>
+                    <a href="https://github.com/TGDRangaka/thogakade">Github <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <div class="project_img">
+                    <img src="assests/img/thogakade_project.PNG" alt="">
+                    <div class="project_img_glow"></div>
+                </div>
+            </div>
+            <div data-aos="fade-right" class="project_card glass_pane">
+                <div class="gradient-h-line"></div>
+                <div class="gradient-v-line"></div>
+                <div class="project_icon">
+                    <i class="fa-solid fa-display"></i>
+                </div>
+                <div class="project_body">
+                    <p>2023 <span>(1st Sem Final 2nd Place)</span></p>
+                    <h1>Go Fish</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quisquam at atque soluta vero vel perferendis consequuntur officiis ducimus cum dolor sed fugit ullam blanditiis, totam minima molestias voluptatibus quae.
+                    </p>
+                    <div class="project_langs">
+                        <span>Java</span>
+                        <span>CSS</span>
+                        <span>MySQL</span>
+                    </div>
+                    <a href="https://github.com/TGDRangaka/go-fish/tree/main">Github <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <div class="project_img">
+                    <img src="assests/img/go_fish_project.png" alt="">
+                    <div class="project_img_glow"></div>
+                </div>
+            </div>
+            
+            <div data-aos="fade-left" class="project_card glass_pane">
+                <div class="gradient-h-line"></div>
+                <div class="gradient-v-line"></div>
+                <div class="project_icon">
+                    <i class="fa-solid fa-display"></i>
+                </div>
+                <div class="project_body">
+                    <p>2022</p>
+                    <h1>Calculator</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quisquam at atque soluta vero vel perferendis consequuntur officiis ducimus cum dolor sed fugit ullam blanditiis, totam minima molestias voluptatibus quae.
+                    </p>
+                    <div class="project_langs">
+                        <span>Java</span>
+                        <span>CSS</span>
+                    </div>
+                    <a href="https://github.com/TGDRangaka/Calculator">Github <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <div class="project_img">
+                    <img src="assests/img/calculator_project.png" alt="">
+                    <div class="project_img_glow"></div>
+                </div>
+            </div>
+            <div data-aos="fade-right" class="project_card glass_pane">
+                <div class="gradient-h-line"></div>
+                <div class="gradient-v-line"></div>
+                <div class="project_icon">
+                    <i class="fa-solid fa-display"></i>
+                </div>
+                <div class="project_body">
+                    <p>2023</p>
+                    <h1>Snakes & Ladders Game</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quisquam at atque soluta vero vel perferendis consequuntur officiis ducimus cum dolor sed fugit ullam blanditiis, totam minima molestias voluptatibus quae.
+                    </p>
+                    <div class="project_langs">
+                        <span>Java</span>
+                        <span>CSS</span>
+                    </div>
+                    <a href="https://github.com/TGDRangaka/snakes-and-ladders-game/tree/main">Github <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <div class="project_img">
+                    <img src="assests/img/snakes_&_ladders_game.png" alt="">
+                    <div class="project_img_glow"></div>
+                </div>
+            </div>
+            <div data-aos="fade-left" class="project_card glass_pane">
+                <div class="gradient-h-line"></div>
+                <div class="gradient-v-line"></div>
+                <div class="project_icon">
+                    <i class="fa-solid fa-display"></i>
+                </div>
+                <div class="project_body">
+                    <p>2023</p>
+                    <h1>Thogakade</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quisquam at atque soluta vero vel perferendis consequuntur officiis ducimus cum dolor sed fugit ullam blanditiis, totam minima molestias voluptatibus quae.
+                    </p>
+                    <div class="project_langs">
+                        <span>Java</span>
+                        <span>CSS</span>
+                        <span>MySQL</span>
+                    </div>
+                    <a href="https://github.com/TGDRangaka/thogakade">Github <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <div class="project_img">
+                    <img src="assests/img/thogakade_project.PNG" alt="">
+                    <div class="project_img_glow"></div>
+                </div>
+            </div>
+            <div data-aos="fade-right" class="project_card glass_pane">
+                <div class="gradient-h-line"></div>
+                <div class="gradient-v-line"></div>
+                <div class="project_icon">
+                    <i class="fa-solid fa-display"></i>
+                </div>
+                <div class="project_body">
+                    <p>2023 <span>(1st Sem Final 2nd Place)</span></p>
+                    <h1>Go Fish</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quisquam at atque soluta vero vel perferendis consequuntur officiis ducimus cum dolor sed fugit ullam blanditiis, totam minima molestias voluptatibus quae.
+                    </p>
+                    <div class="project_langs">
+                        <span>Java</span>
+                        <span>CSS</span>
+                        <span>MySQL</span>
+                    </div>
+                    <a href="https://github.com/TGDRangaka/go-fish/tree/main">Github <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <div class="project_img">
+                    <img src="assests/img/go_fish_project.png" alt="">
+                    <div class="project_img_glow"></div>
+                </div>
+            </div>
+            
+            <div data-aos="fade-left" class="project_card glass_pane">
+                <div class="gradient-h-line"></div>
+                <div class="gradient-v-line"></div>
+                <div class="project_icon">
+                    <i class="fa-solid fa-display"></i>
+                </div>
+                <div class="project_body">
+                    <p>2022</p>
+                    <h1>Calculator</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quisquam at atque soluta vero vel perferendis consequuntur officiis ducimus cum dolor sed fugit ullam blanditiis, totam minima molestias voluptatibus quae.
+                    </p>
+                    <div class="project_langs">
+                        <span>Java</span>
+                        <span>CSS</span>
+                    </div>
+                    <a href="https://github.com/TGDRangaka/Calculator">Github <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <div class="project_img">
+                    <img src="assests/img/calculator_project.png" alt="">
+                    <div class="project_img_glow"></div>
+                </div>
+            </div>
+            <div data-aos="fade-right" class="project_card glass_pane">
+                <div class="gradient-h-line"></div>
+                <div class="gradient-v-line"></div>
+                <div class="project_icon">
+                    <i class="fa-solid fa-display"></i>
+                </div>
+                <div class="project_body">
+                    <p>2023</p>
+                    <h1>Snakes & Ladders Game</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quisquam at atque soluta vero vel perferendis consequuntur officiis ducimus cum dolor sed fugit ullam blanditiis, totam minima molestias voluptatibus quae.
+                    </p>
+                    <div class="project_langs">
+                        <span>Java</span>
+                        <span>CSS</span>
+                    </div>
+                    <a href="https://github.com/TGDRangaka/snakes-and-ladders-game/tree/main">Github <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <div class="project_img">
+                    <img src="assests/img/snakes_&_ladders_game.png" alt="">
+                    <div class="project_img_glow"></div>
+                </div>
+            </div>
+            <div data-aos="fade-left" class="project_card glass_pane">
+                <div class="gradient-h-line"></div>
+                <div class="gradient-v-line"></div>
+                <div class="project_icon">
+                    <i class="fa-solid fa-display"></i>
+                </div>
+                <div class="project_body">
+                    <p>2023</p>
+                    <h1>Thogakade</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quisquam at atque soluta vero vel perferendis consequuntur officiis ducimus cum dolor sed fugit ullam blanditiis, totam minima molestias voluptatibus quae.
+                    </p>
+                    <div class="project_langs">
+                        <span>Java</span>
+                        <span>CSS</span>
+                        <span>MySQL</span>
+                    </div>
+                    <a href="https://github.com/TGDRangaka/thogakade">Github <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <div class="project_img">
+                    <img src="assests/img/thogakade_project.PNG" alt="">
+                    <div class="project_img_glow"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <p>© Copyright 2023. Made by Dilshan</p>
+    </footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+<script>
+    let isMenuOpened = false;
+    const openMenu = ()=>{
+        isMenuOpened = true;
+        $(".mob-nav").css("display", "flex");
+        setTimeout(()=>{
+            $(".mob-nav-bg").css("transform", "scale(40)");
+            $(".mob-nav a").css("filter", "blur(0px)");
+        }, 100); 
+    }
+    const closeMenu = ()=>{
+        isMenuOpened = false;
+        $(".mob-nav a").css("filter", "blur(100px)");
+        setTimeout(()=>{
+            $(".mob-nav-bg").css("transform", "scale(0)");
+            setTimeout(()=>{
+                $(".mob-nav").css("display", "none");
+            }, 500); 
+        }, 400);  
+    }
+
+    $(".menu").on('click', ()=>{
+        if(isMenuOpened){     
+            closeMenu(); 
+        }else{   
+            openMenu();   
+        }
+    });
+
+    $(".mob-nav").on('click', ()=>{
+        closeMenu();
+    });
+</script>
 </body>
 </html>
