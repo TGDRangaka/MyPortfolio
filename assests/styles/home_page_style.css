@@ -926,20 +926,35 @@ header>div>a>button:hover, .mob-nav button:hover {
     aspect-ratio: 1; 
 }
 
-.aboutme-img {
+.aboutme-imgs {
     width: 100%;
     aspect-ratio: 1;
     background-color: #121212;
     position: relative;
 }
+.aboutme-imgs-swiper {
+    height: 150%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+}
 
-.aboutme-img img {
+.aboutme-imgs .swiper-slide {
+    position: relative;
+}
+
+.aboutme-imgs img {
     width: 91%;
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
+}
+
+#aboutme .aboutme-imgs-swiper-pagination {
+    transform: scale(.5);
 }
 
 .insta-icons {
@@ -1627,7 +1642,7 @@ p span {
     position: relative;
 }
 
-.assignments .assignment_card, .swiper-slide {
+.assignments .assignment_card {
     width: 100%;
     aspect-ratio: 4/1;
     padding: 20px;

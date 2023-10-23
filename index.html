@@ -151,8 +151,26 @@
                 <h3>dilshan_rangaka</h3>
                 <i class="fa-solid fa-ellipsis-vertical"></i>
             </div>
-            <div class="aboutme-img">
-                <img src="assests/img/aboutme-img.png" alt="">
+            <div class="aboutme-imgs">
+
+                <div class="mySwiper aboutme-imgs-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="assests/img/aboutme-img.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assests/img/aboutme-img3.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assests/img/aboutme-img4.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assests/img/aboutme-img5.png" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination aboutme-imgs-swiper-pagination"></div>
+                </div>
+                
             </div>
             <div class="insta-icons">
                 <img id="heartBtn" src="assests/img/insta-heart.png" alt="heart" data-aos="flip-left" data-aos-delay="300">
@@ -806,19 +824,8 @@
         }
     });
 
-    // swiper pane
-    // var swiper = new Swiper(".mySwiper", {
-    //   effect: "flip",
-    //   grabCursor: true,
-    //   pagination: {
-    //     el: ".swiper-pagination",
-    //   },
-    //   navigation: {
-    //     nextEl: ".swiper-button-next",
-    //     prevEl: ".swiper-button-prev",
-    //   },
-    // });
-    var swiper = new Swiper(".mySwiper", {
+    // assignments swiper pane
+    var swiper = new Swiper(".assignments", {
       effect: "coverflow",
       grabCursor: true,
       centeredSlides: true,
@@ -836,6 +843,19 @@
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
+      },
+    });
+
+    // aboutme imgs swiper pane
+    var swiper = new Swiper(".aboutme-imgs-swiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".aboutme-imgs-swiper-pagination",
       },
     });
 </script>
