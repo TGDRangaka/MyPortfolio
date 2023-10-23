@@ -536,6 +536,7 @@ header>div>a>button:hover, .mob-nav button:hover {
 
 .social_medias img {
     width: 2vw;
+    filter: drop-shadow(0 0 5px #00f260);
 }
 
 .social_medias li::after {
@@ -657,37 +658,83 @@ header>div>a>button:hover, .mob-nav button:hover {
 }
 
 #home>section>h4::before {
-    content: "Professional ";
+    content: "I'm a ";
     color: #30FF68;
 }
 
-.download-cv {
-    color: #080A08;
-    background-color: rgb(48, 255, 104);
-    border-radius: 5px;
+#home a {
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    margin-top: 15px;
+}
+
+.hire-btn {
+    color: #ffffff;
+    border-radius: 15px;
     width: 14vw;
     aspect-ratio: 4/1;
     display: flex;
     justify-content: center;
-    margin-top: 10px;
     align-items: center;
     font-family: 'Roboto', sans-serif;
-    font-size: 22px;
+    font-size: 26px;
     z-index: 5;
+    transition: .2s ease-in-out;
+    overflow: hidden;
+    position: relative;
 }
 
-.download-cv:hover {
-    color: #080A08;
-    background-color: white;
+.hire-btn::before, .hire-btn::after{
+    content: "";
+    position: absolute;
 }
 
-.download-cv:hover section{
+.hire-btn::before {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-45deg) translateY(-8vw);
+    background: linear-gradient(to top,
+    rgba(255, 255, 255, 0) 0%,
+     rgba(255, 255, 255, 0.5) 50%,
+       rgba(255, 255, 255, 0.3) 90%,
+       rgba(255, 255, 255, 0) 100%);
+    transition: .4s ease-in-out;
+    filter: opacity(50%);
+    z-index: -2;
+}
+
+.hire-btn:hover::before {
+    transform: rotate(-45deg) translateY(8vw);
+}
+
+#home a:after {
+    content: "";
+    position: absolute;
+    top: -8%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 20%;
+    height: 116%;
+    border-radius: 15px;
+    background-color: #00f260;
+    box-shadow: 0 0 100px #00f260;
+    z-index: -1;
+    transition: .6s ease-in-out;
+}
+
+#home a:hover::after{
+    width: 101%;
+}
+.hire-btn:hover {
+    /* color: #000000;
+    background-color: white; */
+    font-size: 28px;
+}
+
+.hire-btn:hover section{
     color: black;
-}
-
-.download-cv>i {
-    color: #1f1f1f;
-    margin-right: 10px;
 }
 
 #home>section> .btn-ani{
@@ -718,23 +765,12 @@ header>div>a>button:hover, .mob-nav button:hover {
     /* overflow: hidden; */
 }
 
-.hero-circle-glow {
-    /* border: 1px solid red; */
-    border-radius: 50%;
-    width:100vw;
-    aspect-ratio: 1;
-    position: absolute;
-    background: radial-gradient(ellipse at center,  rgba(38,255,47,1) 0%,rgba(79,254,86,.1) 60%,rgba(38,255,47,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-
-    filter: opacity(8%);
-}
-
 .hero_img_body>.circle_line {
     width: 75%;
     aspect-ratio: 1/1;
-    background-color: black;
-    box-shadow: 0 0 5px #30FF68;
-    border: 10px solid #30FF68;
+    background-color: #000000;
+    /* box-shadow: 0 0 15px #30FF68, inset 0 0 15px #30FF68; */
+    /* border: 10px solid #ffffff; */
     /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
     border-radius: 63% 37% 62% 38% / 32% 50% 50% 68% ;
     position: absolute;
@@ -752,13 +788,13 @@ header>div>a>button:hover, .mob-nav button:hover {
         border-radius: 46% 54% 50% 50% / 31% 51% 49% 69%  ;
     }
     25% {
-        border-radius: 53% 47% 67% 33% / 63% 44% 56% 37%  ;
+        border-radius: 65% 35% 47% 53% / 55% 26% 74% 45% ;
     }
     50% {
         border-radius: 53% 47% 37% 63% / 49% 68% 32% 51% ;
     }
     75% {
-        border-radius: 65% 35% 47% 53% / 55% 26% 74% 45% ;
+        border-radius: 53% 47% 67% 33% / 63% 44% 56% 37% ;
     }
     to {
         border-radius: 46% 54% 50% 50% / 31% 51% 49% 69%  ;
@@ -918,6 +954,7 @@ header>div>a>button:hover, .mob-nav button:hover {
     aspect-ratio: 1;
     cursor: pointer;
     transition: .5s;
+    z-index: 20;
 }
 
 .insta-icons img:hover{
@@ -1017,6 +1054,52 @@ p span {
     margin-top: 30px;
 }
 
+.heart-animation {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* border: 1px solid red; */
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: end;
+    overflow: hidden;
+}
+
+.heart-animation i {
+    transform: translateY(70px);
+    font-size: 40px;
+    color: #00f260;
+    filter: drop-shadow(0 0 10px #00f260);
+    animation: heart-animation 2.5s linear var(--delay) infinite;
+    z-index: 10;
+}
+
+.heart-animation i:nth-child(2n){
+    font-size: 60px;
+}
+
+#heartBtn {
+    animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes heart-animation {
+    0% {
+        transform: translateY(70px) translateX(0px) scale(0) rotate(0deg);
+    }
+
+    33% {
+        transform: translateY(-250px) translateX(-15px) scale(.3) rotate(30deg);
+    }
+
+    66% {
+        transform: translateY(-550px) translateX(15px) scale(.7) rotate(-30deg);
+    }
+
+    100% {
+        transform: translateY(-800px) translateX(-10px) scale(1) rotate(0deg);
+    }
+}
 /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ resume \\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
 
 #resume .bg-image {
@@ -1528,10 +1611,7 @@ p span {
 }
 
 .assignments {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
+    padding: 100px 200px;
     margin-top: 50px;
 }
 
@@ -1543,13 +1623,16 @@ p span {
     color: #30FF68;
 }
 
-.assignment_card {
-    width: 80%;
+.swiper-wrapper {
+    position: relative;
+}
+
+.assignments .assignment_card, .swiper-slide {
+    width: 100%;
     aspect-ratio: 4/1;
     padding: 20px;
     display: flex;
     justify-content: center;
-    background: #414345;
     border: 2px solid #30FF68;
     position: relative;
     cursor: pointer;
@@ -1636,7 +1719,7 @@ p span {
     font-family: 'Roboto', sans-serif;
     position: relative;
     left: calc(50% - 100px);
-    margin-bottom: 20px;
+    margin-block: 20px;
 }
 
 #assignments>a>button>i {
@@ -1645,6 +1728,35 @@ p span {
 
 #assignments>a>button:hover {
     box-shadow: 0 0 10px #30FF68;
+}
+
+.swiper-button-next i, .swiper-button-prev i {
+    position: absolute;
+    right: 0;
+    font-size: 100px;
+    color: #00f260;
+    filter: drop-shadow(0 0 10px #00f260);
+}
+
+.swiper-button-prev i{
+    left: 0;
+    right: auto;
+    transform: rotateY(180deg);
+}
+
+.swiper-pagination {
+    --swiper-theme-color: #30FF68;
+    scale: 2;
+}
+
+#assignments .swiper-pagination-bullet {
+    background-color: #30FF68;
+    opacity: 40%;
+}
+
+#assignments .swiper-pagination-bullet-active {
+    scale: 1.5;
+    opacity: 100%;
 }
 
 /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ contact me \\\\\\\\\\\\\\\\\\\\\\ */

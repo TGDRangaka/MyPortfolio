@@ -22,6 +22,7 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <link rel="stylesheet" href="assests/styles/home_page_style.css">
+    <link rel="stylesheet" href="assests/styles/swiper-bundle.min.css">
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -110,9 +111,9 @@
     <section>
         <h1 class="hello">Hello</h1><div class="square"></div>
         <br>
-        <div class="line"></div><h3 class="i-am">I'am Dilshan Rangaka</h3>
+        <div class="line"></div><h3 class="i-am">I'm Dilshan Rangaka</h3>
         <h4>Full-stack Developer</h4>
-        <button class="download-cv"><i class="fa-solid fa-download"></i>Download CV</button>
+        <a href="#contactme"><button class="hire-btn glass_pane">Hire Me</button></a>
         <div class="btn-ani">
             <div class="orbit" style="--orbit-width: 100%; --rotate-dur: 8s;">
                 <div class="orbit-ring"></div>
@@ -154,16 +155,16 @@
                 <img src="assests/img/aboutme-img.png" alt="">
             </div>
             <div class="insta-icons">
-                <img src="assests/img/insta-heart.png" alt="heart">
+                <img id="heartBtn" src="assests/img/insta-heart.png" alt="heart" data-aos="flip-left" data-aos-delay="300">
                 <img src="assests/img/insta-comment.png" alt="comment">
                 <img src="assests/img/insta-send.png" alt="send">
                 <img src="assests/img/insta-bookmark.png" alt="bookmark">
             </div>
             <div class="insta-description">
-                <h3>10,328 views</h3>
+                <h3>10,328 likes</h3>
                 <h3>👻👾🤖.</h3>
                 <h4>View all 452 comments</h4>
-                <h4>6 DAYS AGO</h4>
+                <h4>69 DAYS AGO</h4>
             </div>
         </div>
 
@@ -189,6 +190,40 @@
             </a>
         </div>
 
+    <div class="heart-animation">
+        <i class="fa-solid fa-heart" style="--delay: .3s"></i>
+        <i class="fa-solid fa-heart" style="--delay: .8s"></i>
+        <i class="fa-solid fa-heart" style="--delay: 1.6s"></i>
+        <i class="fa-solid fa-heart" style="--delay: .1s"></i>
+        <i class="fa-solid fa-heart" style="--delay: 1s"></i>
+        <i class="fa-solid fa-heart" style="--delay: .6s"></i>
+        <i class="fa-solid fa-heart" style="--delay: 1.8s"></i>
+        <i class="fa-solid fa-heart" style="--delay: .2s"></i>
+        <i class="fa-solid fa-heart" style="--delay: 1.3s"></i>
+        <i class="fa-solid fa-heart" style="--delay: .8s"></i>
+        <i class="fa-solid fa-heart" style="--delay: 1.6s"></i>
+        <i class="fa-solid fa-heart" style="--delay: .1s"></i>
+        <i class="fa-solid fa-heart" style="--delay: 1s"></i>
+        <i class="fa-solid fa-heart" style="--delay: .6s"></i>
+        <i class="fa-solid fa-heart" style="--delay: 1.8s"></i>
+        <i class="fa-solid fa-heart" style="--delay: .2s"></i>
+        <i class="fa-solid fa-heart" style="--delay: 1.4s"></i>
+        <i class="fa-solid fa-heart" style="--delay: .8s"></i>
+        <i class="fa-solid fa-heart" style="--delay: 1.6s"></i>
+        <i class="fa-solid fa-heart" style="--delay: .1s"></i>
+        <i class="fa-solid fa-heart" style="--delay: 1s"></i>
+        <i class="fa-solid fa-heart" style="--delay: .6s"></i>
+        <i class="fa-solid fa-heart" style="--delay: 1.8s"></i>
+        <i class="fa-solid fa-heart" style="--delay: .2s"></i>
+        <i class="fa-solid fa-heart" style="--delay: .5s"></i>
+        <i class="fa-solid fa-heart" style="--delay: .8s"></i>
+        <i class="fa-solid fa-heart" style="--delay: 1.6s"></i>
+        <i class="fa-solid fa-heart" style="--delay: .1s"></i>
+        <i class="fa-solid fa-heart" style="--delay: 1s"></i>
+        <i class="fa-solid fa-heart" style="--delay: .6s"></i>
+        <i class="fa-solid fa-heart" style="--delay: 1.8s"></i>
+        <i class="fa-solid fa-heart" style="--delay: .2s"></i>
+    </div>
     </section>
 </main>
 
@@ -490,41 +525,161 @@
 
     <div class="bg-image" data-aos="zoom-in-down"></div>
 
-    <section class="assignments">
-        <a href="" data-aos="fade-left" data-aos-delay="300"><i class="fa-solid fa-angle-right fa-rotate-180"></i></a>
-        <div class="assignment_card glass_pane" data-aos="zoom-in-up" data-aos-delay="300">
-            <div class="assignment_img"></div>
-            <div class="assignment_desc">
-                <h3>Java FX Application</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                    ea commodo consequat.
-                </p>
+    <section class="assignments mySwiper">
+
+        <div class="swiper-wrapper">
+
+            <div class="assignment_card glass_pane swiper-slide" data-aos="zoom-in-up" data-aos-delay="300">
+                <div class="assignment_img"></div>
+                <div class="assignment_desc">
+                    <h3>Java FX Application</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                        ea commodo consequat.
+                    </p>
+                </div>
+                <div class="gradient-h-line"></div>
+                <div class="gradient-h-line" style="
+                    top: auto;
+                    bottom: 0;
+                    transform: rotate(180deg);
+                "></div>
+                <div class="gradient-v-line"></div>
+                <div class="gradient-v-line" style=
+                    "left: auto;
+                    right: 0;
+                    transform: rotate(180deg);"
+                ></div>
             </div>
-            <div class="gradient-h-line"></div>
-            <div class="gradient-h-line" style="
-                top: auto;
-                bottom: 0;
-                transform: rotate(180deg);
-            "></div>
-            <div class="gradient-v-line"></div>
-            <div class="gradient-v-line" style=
-                "left: auto;
-                right: 0;
-                transform: rotate(180deg);"
-            ></div>
+
+            <div class="assignment_card glass_pane swiper-slide" data-aos="zoom-in-up" data-aos-delay="300">
+                <div class="assignment_img"></div>
+                <div class="assignment_desc">
+                    <h3>Java FX Application</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                        ea commodo consequat.
+                    </p>
+                </div>
+                <div class="gradient-h-line"></div>
+                <div class="gradient-h-line" style="
+                    top: auto;
+                    bottom: 0;
+                    transform: rotate(180deg);
+                "></div>
+                <div class="gradient-v-line"></div>
+                <div class="gradient-v-line" style=
+                    "left: auto;
+                    right: 0;
+                    transform: rotate(180deg);"
+                ></div>
+            </div>
+
+            <div class="assignment_card glass_pane swiper-slide" data-aos="zoom-in-up" data-aos-delay="300">
+                <div class="assignment_img"></div>
+                <div class="assignment_desc">
+                    <h3>Java FX Application</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                        ea commodo consequat.
+                    </p>
+                </div>
+                <div class="gradient-h-line"></div>
+                <div class="gradient-h-line" style="
+                    top: auto;
+                    bottom: 0;
+                    transform: rotate(180deg);
+                "></div>
+                <div class="gradient-v-line"></div>
+                <div class="gradient-v-line" style=
+                    "left: auto;
+                    right: 0;
+                    transform: rotate(180deg);"
+                ></div>
+            </div>
+
+            <div class="assignment_card glass_pane swiper-slide" data-aos="zoom-in-up" data-aos-delay="300">
+                <div class="assignment_img"></div>
+                <div class="assignment_desc">
+                    <h3>Java FX Application</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                        ea commodo consequat.
+                    </p>
+                </div>
+                <div class="gradient-h-line"></div>
+                <div class="gradient-h-line" style="
+                    top: auto;
+                    bottom: 0;
+                    transform: rotate(180deg);
+                "></div>
+                <div class="gradient-v-line"></div>
+                <div class="gradient-v-line" style=
+                    "left: auto;
+                    right: 0;
+                    transform: rotate(180deg);"
+                ></div>
+            </div>
+
+            <div class="assignment_card glass_pane swiper-slide" data-aos="zoom-in-up" data-aos-delay="300">
+                <div class="assignment_img"></div>
+                <div class="assignment_desc">
+                    <h3>Java FX Application</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                        ea commodo consequat.
+                    </p>
+                </div>
+                <div class="gradient-h-line"></div>
+                <div class="gradient-h-line" style="
+                    top: auto;
+                    bottom: 0;
+                    transform: rotate(180deg);
+                "></div>
+                <div class="gradient-v-line"></div>
+                <div class="gradient-v-line" style=
+                    "left: auto;
+                    right: 0;
+                    transform: rotate(180deg);"
+                ></div>
+            </div>
+
+            <div class="assignment_card glass_pane swiper-slide" data-aos="zoom-in-up" data-aos-delay="300">
+                <div class="assignment_img"></div>
+                <div class="assignment_desc">
+                    <h3>Java FX Application</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                        ea commodo consequat.
+                    </p>
+                </div>
+                <div class="gradient-h-line"></div>
+                <div class="gradient-h-line" style="
+                    top: auto;
+                    bottom: 0;
+                    transform: rotate(180deg);
+                "></div>
+                <div class="gradient-v-line"></div>
+                <div class="gradient-v-line" style=
+                    "left: auto;
+                    right: 0;
+                    transform: rotate(180deg);"
+                ></div>
+            </div>
+
         </div>
-        <a href="" data-aos="fade-right" data-aos-delay="300"><i class="fa-solid fa-angle-right"></i></a>
+
+        <div class="swiper-button-next"><i class="fa-solid fa-chevron-right"></i></div>
+        <div class="swiper-button-prev"><i class="fa-solid fa-chevron-right"></i></div>
+        <div class="swiper-pagination"></div>
     </section>
     
-    <span>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-    </span><br>
     <a href="assignments.html"><button>See More <i class="fa-solid fa-angle-right"></i></button></a>
 </main>
 
@@ -573,8 +728,10 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="assests/js/swiper-bundle.min.js"></script>
 <script>AOS.init();</script>
 <script>
+    // preloader close
     const closePreloader = () => {
         $(".preloader").css("opacity", "0%");
         setTimeout(function(){
@@ -599,20 +756,12 @@
 
         $(".social_medias li").css("animation", `zoomIn .6s`);
     }
-        
-    function updateProgress() {
-        var percentage = (document.readyState === 'complete') ? 100 : (performance.now() / 1000);
-        if (percentage < 100) {
-            requestAnimationFrame(updateProgress);
-        }else if(percentage == 100){
-            setTimeout(closePreloader, 500);
-        }
-    }
-    window.addEventListener('load', function() {
-        updateProgress();
-    });
-    document.addEventListener('readystatechange', updateProgress);
 
+    window.onload = () =>{
+        setTimeout(closePreloader, 500);
+    };
+
+    // mobile navigation menu
     let isMenuOpened = false;
     const openMenu = ()=>{
         isMenuOpened = true;
@@ -643,6 +792,51 @@
 
     $(".mob-nav").on('click', ()=>{
         closeMenu();
+    });
+
+    // aboutme heartBtn action
+    let isHeartBtnClicked = false;
+    $("#heartBtn").on('click', ()=>{
+        if(isHeartBtnClicked){
+            isHeartBtnClicked = false;
+            $(".heart-animation").css('display', 'none');
+        }else {
+            isHeartBtnClicked = true;
+            $(".heart-animation").css('display', 'flex');
+        }
+    });
+
+    // swiper pane
+    // var swiper = new Swiper(".mySwiper", {
+    //   effect: "flip",
+    //   grabCursor: true,
+    //   pagination: {
+    //     el: ".swiper-pagination",
+    //   },
+    //   navigation: {
+    //     nextEl: ".swiper-button-next",
+    //     prevEl: ".swiper-button-prev",
+    //   },
+    // });
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
     });
 </script>
 
