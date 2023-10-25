@@ -113,7 +113,7 @@ main {
     position: absolute;
     top: 0;
     width: 100%;
-    height: 6px;
+    height: .3vw;
     background: linear-gradient(to right, #30FF68, rgba(0, 0, 0, 0) 80%);
 }
 
@@ -121,7 +121,7 @@ main {
     position: absolute;
     top: 0;
     left: 0;
-    width: 6px;
+    width: .3vw;
     height: 100%;
     background: linear-gradient(to bottom, #30FF68, rgba(0, 0, 0, 0) 80%)
 }
@@ -422,7 +422,12 @@ header {
     left: 2%;
     margin: auto;
     text-decoration: none;
-    transform: scale(1);
+}
+
+#logo::after {
+    content: ";";
+    color: #00f260;
+    filter: drop-shadow(0 0 5px #00f260);
 }
 
 header>div {
@@ -632,8 +637,9 @@ header>div>a>button:hover, .mob-nav button:hover {
 
 #home>section>.square {
     display: inline-block;
-    width: 30px;
-    height: 30px;
+    width: 2vw;
+    aspect-ratio: 1;
+    border-radius: 50%;
     background-color: #30FF68;
 }
 
@@ -641,8 +647,8 @@ header>div>a>button:hover, .mob-nav button:hover {
     display: inline-block;
     width: 40px;
     height: 0;
-    border: 2px solid #30FF68;
-    margin: 0 5px 15px 0;
+    border: 3px solid #30FF68;
+    margin: 0 5px 25px 0;
 }
 
 #home>section>h3 {
@@ -722,6 +728,7 @@ header>div>a>button:hover, .mob-nav button:hover {
     transition: .2s ease-in-out;
     overflow: hidden;
     position: relative;
+    text-shadow: 0 0 5px black;
 }
 
 .hire-btn::before, .hire-btn::after{
@@ -750,12 +757,13 @@ header>div>a>button:hover, .mob-nav button:hover {
 #home a:after {
     content: "";
     position: absolute;
-    top: -8%;
+    top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
     width: 20%;
-    height: 116%;
+    height: 97%;
     border-radius: 15px;
     background-color: #00f260;
     box-shadow: 0 0 100px #00f260;
@@ -781,6 +789,7 @@ header>div>a>button:hover, .mob-nav button:hover {
     left: 11vw;
     width: 7vw;
     transform: rotateX(70deg) rotateY(-25deg);
+    filter: drop-shadow(0 0 10px #00f260);
 }
 .btn-ani .orbit .orbit-ring{
     background: conic-gradient(
@@ -1333,6 +1342,11 @@ p span {
     aspect-ratio: 3/4;
     overflow: hidden;
     padding: 25px 30px;
+    transition: .5s;
+}
+
+.service-card:hover {
+    scale: 1.1;
 }
 
 .service-card .card-bg {
@@ -1346,7 +1360,7 @@ p span {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    border: 1px solid rgba(0, 242, 96, .3);
+    border: 1px solid rgba(0, 242, 96, .15);
 }
 
 .card-bg div {
@@ -1515,7 +1529,7 @@ p span {
 .project_card {
     background-color: #080A08;
     border-left: 6px solid #30FF68;
-    width: 65%;
+    width: 1000px;
     height: fit-content;
     position: relative;
     margin-block: 60px;
@@ -1526,11 +1540,11 @@ p span {
 }
 
 .project_icon {
-    width: 70px;
+    width: 3.4vw;
     aspect-ratio: 1/1;
     position: absolute;
     top: 30px;
-    left: -25px;
+    left: -1vw;
     font-size: 40px;
     color: #000000;
     background-color: #30FF68;
@@ -1540,14 +1554,14 @@ p span {
     z-index: 5;
 }
 .project_icon i {
-    font-size: 40px;
+    font-size: 60%;
     color: #000000;
 }
 
 .project_body {
     width: 70%;
     height: fit-content;
-    padding: 30px 55px 0;
+    padding: 30px 3vw 0;
     z-index: 2;
 }
 
@@ -1687,7 +1701,6 @@ p span {
     padding: 20px;
     display: flex;
     justify-content: center;
-    border: 2px solid #30FF68;
     position: relative;
     cursor: pointer;
 }
@@ -1905,7 +1918,7 @@ footer>p {
     background: linear-gradient(to right, var(--glass-color), var(--glass-color) );
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(7px);
-    border: 1px solid rgba(48, 255, 104, .25);
+    border: 1px solid rgba(48, 255, 104, .15);
 }
 
 @keyframes float {
@@ -2086,7 +2099,7 @@ footer>p {
     /* \\\\\\\\\\\\\\\\\\\ projects ////////////////// */
 
     .project_card {
-        width: 90%;
+        width: 900px;
     }
     .project_body h2 {
         margin: 0;
@@ -2320,7 +2333,7 @@ footer>p {
     /* \\\\\\\\\\\\\\\\\\\ projects ////////////////// */
 
     .project_card {
-        width: 100%;
+        width: 700px;
     }
     
     .project_body h1 {
@@ -2569,22 +2582,22 @@ footer>p {
 
     .service-card {
         width: 380px;
-        padding: 15px 20px;
-        margin-block: 30px;
+        padding: 25px 20px;
+        margin-block: 100px;
     }
 
     .service-card img {
-        width: 70px;
+        width: 90px;
         margin: 10px 0 0 25px;
     }
 
     .service-card h2 {
-        font-size: 25px;
-        margin-block: 40px 40px
+        font-size: 30px;
+        margin-block: 80px 50px
     }
 
     .service-card p {
-        font-size: 18px;
+        font-size: 24px;
     }
 
     #myservices>section {
@@ -2608,6 +2621,14 @@ footer>p {
 
     /* /////////////////////////// projects /////////////////////// */
 
+    .project_card {
+        width: 500px;
+    }
+
+    .project_icon {
+        width: 5vw;
+        left: -2vw;
+    }
     
     .project_body h1 {
         font-size: 32px;
@@ -2622,6 +2643,7 @@ footer>p {
 
     .project_body {
         width: 100%;
+        padding-left: 4vw;
     }
     .project_img {
         width: 60%;
@@ -2851,35 +2873,10 @@ footer>p {
     /* ///////////////////////////////// services ///////////////////////// */
 
     .service-card {
-        width: 380px;
+        width: 300px;
         padding: 15px 20px;
         align-self: center;
-    }
-
-    .service-card img {
-        width: 70px;
-        margin: 10px 0 0 25px;
-    }
-
-    .service-card h2 {
-        font-size: 25px;
-        margin-block: 40px 40px
-    }
-
-    .service-card p {
-        font-size: 18px;
-    }
-
-    #myservices>section {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    /* ///////////////////////////////// services ///////////////////////// */
-
-    .service-card {
-        width: 75%;
-        padding: 15px 20px;
+        margin-block: 60px;
     }
 
     .service-card img {
@@ -2889,7 +2886,7 @@ footer>p {
 
     .service-card h2 {
         font-size: 25px;
-        margin-block: 30px 30px
+        margin-block: 60px 40px
     }
 
     .service-card p {
@@ -2899,10 +2896,7 @@ footer>p {
     #myservices>section {
         flex-direction: column;
         align-items: start;
-    }
-
-    .service-card {
-        margin-block: 30px;
+        justify-content: center;
     }
 
     #myservices>section>div:nth-child(3) {
@@ -2914,6 +2908,16 @@ footer>p {
         width: 200%;
     }
     /* //////////////////project ////////////////// */
+
+    #projects .project_card {
+        width: 400px;
+        align-self: center;
+    }
+
+    .project_body {
+        padding: 20px;
+    }
+
     .project_img {
         width: 80%;
         right: -30px;
@@ -2967,13 +2971,17 @@ footer>p {
 
     /* /////////////////////////// project /////////////////// */
 
-    .project_icon {
-        top: 50px;
-        width: 50px;
+    .project_card {
+        scale: .8;
     }
 
-    .project_icon i {
-        font-size: 30px;
+    .project_icon {
+        width: 10vw;
+        left: -3vw;
+    }
+
+    .project_body {
+        padding-left: 8vw;
     }
 
     .project_body h2 {
@@ -2989,7 +2997,7 @@ footer>p {
     }
 
     .project_img {
-        right: -20px;
+        right: -10px;
     }
 
     /* ////////////////////////// assignments /////////////////////// */
