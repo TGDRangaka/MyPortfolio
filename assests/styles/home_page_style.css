@@ -1819,52 +1819,6 @@ p span {
     box-shadow: 5px 5px 0px #00f260;
 }
 
-:root {
-    --assignment-border: 7px;
-}
-
-.assignment_card>span {
-    border-radius: 20px;
-    box-shadow: 0 0 10px #30FF68;
-}
-
-.bn1 {
-    left: calc(var(--assignment-border) / -2);
-    top: calc(var(--assignment-border) / -2);
-}
-
-.bn2 {
-    right: calc(var(--assignment-border) / -2);
-    bottom: calc(var(--assignment-border) / -2);
-}
-
-#assignments>span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-block: 20px;
-}
-
-#assignments>a>button {
-    color: #080A08;
-    background-color: #30FF68;
-    border-radius: 5px;
-    width: 200px;
-    aspect-ratio: 4/1;
-    font-family: 'Roboto', sans-serif;
-    position: relative;
-    left: calc(50% - 100px);
-    margin-block: 50px;
-}
-
-#assignments>a>button>i {
-    color: black;
-}
-
-#assignments>a>button:hover {
-    box-shadow: 0 0 10px #30FF68;
-}
-
 #assignments .swiper-button-next:after, .swiper-button-prev:after {
     display: none;
 }
