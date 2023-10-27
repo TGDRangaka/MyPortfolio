@@ -1,0 +1,44 @@
+* {
+    /*box-sizing: border-box;*/
+}
+body {
+    background-color: cornflowerblue;
+}
+
+div {
+    width: 20vw;
+    aspect-ratio: 1/1;
+    background-color: lightgreen;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.circle2 {
+    border:20px solid white;
+    border-top: 20px solid red;
+    background-color: grey;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+
+.circle2:hover {
+    transform: rotate(360deg);
+}
+h1 {
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+
