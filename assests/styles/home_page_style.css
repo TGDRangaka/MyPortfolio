@@ -1227,7 +1227,7 @@ p span {
 
 :root {
     --gallery-ani-length: -1300px;
-    --gallery-ani-duration: 18s;
+    --gallery-ani-duration: 20s;
 }
 
 .gallery div:nth-child(even) {
@@ -1833,7 +1833,7 @@ p span {
 
 .assignments .assignment_card {
     width: 100%;
-    aspect-ratio: 4/1;
+    /* aspect-ratio: 4/1; */
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -1847,11 +1847,13 @@ p span {
     aspect-ratio: 1/1;
     background-image: url("/assests/img/assignment_image.jpg");
     background-size: cover;
+    background-position: center;
     margin-right: 20px;
     box-shadow: 0 0 6px black;
 }
 
 .assignment_desc {
+    width: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1886,7 +1888,7 @@ p span {
 .cases button {
     background-color: #121212;
     border: 1px solid #ffffff;
-    padding: 10px;
+    padding: 5px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     border-radius: 15px 0 0 0;
@@ -2098,10 +2100,6 @@ footer>p {
     #home>section>button {
         font-size: 18px;
     }
-
-    .hero_img_body>.circle_line {
-        border: 8px solid #00f260;
-    }
     .letter:nth-child(1){
         font-size: 200px;
     }
@@ -2168,7 +2166,7 @@ footer>p {
 
     :root {
         --gallery-ani-length: -1600px;
-        --gallery-ani-duration: 20s;
+        --gallery-ani-duration: 22s;
     }
 
     /* \\\\\\\\\\\\\\\\\\\ resume ///////////////// */
@@ -2325,9 +2323,6 @@ footer>p {
     #home>section>button {
         font-size: 14px;
     }
-    .hero_img_body>.circle_line {
-        border: 5px solid #30FF68;
-    }
     .letter:nth-child(1){
         font-size: 150px;
         top: -2%;
@@ -2411,7 +2406,7 @@ footer>p {
 
     :root {
         --gallery-ani-length: -2000px;
-        --gallery-ani-duration: 22s;
+        --gallery-ani-duration: 25s;
     }
 
     /* \\\\\\\\\\\\\\\\\\\ resume ///////////////// */
@@ -2692,7 +2687,7 @@ footer>p {
 
     :root {
         --gallery-ani-length: -2200px;
-        --gallery-ani-duration: 23s;
+        --gallery-ani-duration: 30s;
     }
 
     /* //////////////////////////////// resume ////////////////////// */
@@ -2825,6 +2820,10 @@ footer>p {
         margin: 0 0 20px 0;
     }
 
+    .assignment_desc {
+        width: 100%;
+    }
+
     #assignments>section>a>i {
         font-size: 70px;
     }
@@ -2908,9 +2907,6 @@ footer>p {
     }
     #home>section>button {
         font-size: 14px;
-    }
-    .hero_img_body>.circle_line {
-        border: 4px solid #30FF68;
     }
     #home section button {
         width: 35vw;
@@ -2996,7 +2992,7 @@ footer>p {
 
     :root {
         --gallery-ani-length: -2300px;
-        --gallery-ani-duration: 24s;
+        --gallery-ani-duration: 35s;
     }
 
     /* //////////////////// resume //////////////// */
@@ -3165,7 +3161,7 @@ footer>p {
 
     :root {
         --gallery-ani-length: -2500px;
-        --gallery-ani-duration: 26s;
+        --gallery-ani-duration: 40s;
     }
 
     /* //////////////////////////////// resume ////////////////////// */
