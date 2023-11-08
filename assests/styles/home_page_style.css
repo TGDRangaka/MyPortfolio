@@ -1729,11 +1729,15 @@ p span {
     border-radius: 5px;
     background-color: rgba(48, 255, 48, 0.3);
     padding: 2px 5px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .project_body a{
     color: #30FF68;
-    padding: 2px 5px;
+    padding: 2px 0px;
+    margin-right: 20px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
 }
 
 .project_body a i {
