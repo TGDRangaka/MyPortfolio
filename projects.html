@@ -534,26 +534,38 @@
 
     $("#all").on('click', ()=>{
         showProjects(allProjects);
+        removeBorder();
+        $("#all").css('borderBottom', '5px solid #30FF68')
     });
 
     $("#java").on('click', ()=>{
         showProjects(javaProjects);
+        removeBorder();
+        $("#java").css('borderBottom', '5px solid #30FF68')
     });
 
     $("#web").on('click', ()=>{
         showProjects(webProjects);
+        removeBorder();
+        $("#web").css('borderBottom', '5px solid #30FF68')
     });
 
     $("#games").on('click', ()=>{
         showProjects(gamesProjects);
+        removeBorder();
+        $("#games").css('borderBottom', '5px solid #30FF68')
     });
 
     $("#mobile").on('click', ()=>{
         showProjects(mobileProjects);
+        removeBorder();
+        $("#mobile").css('borderBottom', '5px solid #30FF68')
     });
 
     $("#other").on('click', ()=>{
         showProjects(otherProjects);
+        removeBorder();
+        $("#other").css('borderBottom', '5px solid #30FF68')
     });
 
     function showProjects(type){
@@ -562,6 +574,10 @@
             console.log(type[i]);
             $(".project_section").append(type[i]);
         }
+    }
+
+    function removeBorder(){
+        $(".btn_container button").css('border', 'none');
     }
 
     $("#all").click();
