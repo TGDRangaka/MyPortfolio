@@ -1,0 +1,790 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+    position: relative;
+}
+html {
+    scroll-behavior: smooth;
+}
+  
+body {
+    background-color: #121212;
+    background-size: 100vw;
+
+    overflow-x: hidden;
+    min-width: 320px;
+    min-height: 100vh;
+}
+
+:root{
+    --header-height: 4vw;
+}
+
+main {
+    position: relative;
+    width: 100vw;
+    padding: var(--header-height) 7vw 7vw 7vw;
+    overflow: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: #080A08; /* Track color */
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #30FF68; /* Thumb color */
+    border-radius: 6px; /* Rounded corners */
+    border: 3px solid #1F1F1F; /* Border around the thumb */
+}
+
+.gradient-h-line{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(to right, #30FF68, rgba(0, 0, 0, 0) 80%);
+}
+
+.gradient-v-line{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(to bottom, #30FF68, rgba(0, 0, 0, 0) 80%)
+}
+
+.bg-image{
+    width: 100%;
+    height: calc(100% + 300px);
+    position: absolute;
+    top: -300px;
+    left: 0;
+    background-size: 100vw;
+    background-position: top;
+    filter: opacity(30%) saturate(0);
+    background-image: url('/assests/img/project_page_bg.jpg');
+}
+/* /////////////// title ///////////////////////// */
+
+.title {
+    margin: 10vw 7vw 7vw 7vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.title-line {
+    position: absolute;
+    width: 1000px;
+    height: 10px;
+    background-color: #00f260;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 5px;
+}
+.title-line:first-child {
+    left: -1015px;
+}
+.title-line:last-child {
+    right: -1015px;
+}
+
+.title span {
+    display: flex;
+    flex-direction: column;
+}
+
+.title h1, .title h2 {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.title h2 {
+    font-size: 48px;
+    color: #30FF68;
+}
+
+.title h1 {
+    font-size: 110px;
+    color: white;
+}
+
+.title h1::before{
+    color: #30FF68;
+    content: "#";
+}
+
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\header\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+header {
+    width: 100vw;
+    height: var(--header-height);
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
+
+#header {
+    border-width: 0 0 1px 0;
+}
+
+.logo {
+    color: #ffffff;
+    /* width: fit-content; */
+    height: fit-content;
+    font-size: 7vw;
+    font-family: 'Jomhuria', serif;
+    letter-spacing: 6px;
+    position: absolute;
+    display: inline-block;
+    top: 20px;
+    bottom: 0;
+    left: 2%;
+    margin: auto;
+}
+
+header>div {
+    display: flex;
+    height: fit-content;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 2%;
+    margin: auto;
+}
+
+header>div>a>button, .mob-nav button {
+    color: #30FF68;
+    background-color: transparent;
+    display: inline-block;
+    min-width: fit-content;
+    width: fit-content;
+    height: 3vw;
+    border: none;
+    border-radius: 5px;
+    margin-right: 40px;
+    font-family: 'Inter', sans-serif;
+    font-weight: lighter;
+    font-size: 1.2vw;
+}
+header>div>a>button:hover, .mob-nav button:hover {
+    color: rgb(255, 255, 255);
+    /* background-color: #30ff68; */
+    border: none;
+    border-radius: 5px;
+}
+
+.menu {
+    right: 20px;
+}
+
+.menu i {
+    display: none;
+}
+
+.mob-nav {
+    display: none;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 150;
+    gap: 5vh;
+    padding: 50px;
+    transform-origin: top right;
+    transition: 1s;
+}
+
+.mob-nav-bg {
+    width: 16vw;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: black;
+    position: fixed;
+    top: -8vw;
+    right: -8vw;
+    transition: .5s;
+    transform: scale(0);
+}
+
+.mob-nav button {
+    font-size: 5vw;
+}
+
+.mob-nav a {
+    transition: .4s var(--delay);
+    filter: blur(100px);
+}
+
+.social_medias {
+    display: flex;
+    position: fixed;
+    top: 20%;
+    left: 0;
+    width: 6.5vw;
+    /* left: 2.5vw; */
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100;
+    /* border: 1px solid rgb(100, 255, 79); */
+    padding-block: 30px;
+    border-radius: 0 25px 25px 0;
+    /* background-color: #242323; */
+}
+
+.social_medias ul {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.social_medias li {
+    display: block;
+    position: relative;
+    width: 3.5vw;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1vw;
+    overflow: hidden;
+}
+
+.social_medias img {
+    width: 2vw;
+}
+
+.social_medias li::after {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 70%;
+    transform: rotate(-45deg) translateY(-5vw);
+    background: linear-gradient(to top,
+    rgba(255, 255, 255, 0) 0%,
+     rgba(255, 255, 255, 0.5) 50%,
+       rgba(255, 255, 255, 0.3) 90%,
+       rgba(255, 255, 255, 0) 100%);
+    transition: .4s;
+}
+
+@keyframes glass-shine-animation{
+    from{
+        transform: rotate(-45deg) translateY(-5vw);
+    }
+    to {
+        transform: rotate(-45deg) translateY(5vw);
+    }
+}
+
+.social_medias li:hover::after {
+    transform: rotate(-45deg) translateY(4vw);
+}
+
+.social_medias a{
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    width: 130%;
+    aspect-ratio: 1;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .6s;
+}
+
+.social_medias li:hover a{
+    filter: drop-shadow(0 0 1px black)
+    drop-shadow(0 0 2px black)
+    drop-shadow(0 0 3px black);
+    animation: wobble 1s ease-in-out;
+}
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ projects \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+.btn_container {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn_container> button {
+    width: fit-content;
+    height: fit-content;
+    color: white;
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    background: transparent;
+    border: none;
+    margin: 10px;
+    padding: 5px;
+    cursor: pointer;
+
+    transition-duration: .4s;
+}
+
+.btn_container> button:hover {
+    color: #30FF68;
+    border-bottom: 5px solid #30FF68;
+}
+
+#projects {
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.project_section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    position: relative;
+    align-self: center;
+
+}
+
+.project_card {
+    background-color: #080A08;
+    border-left: 6px solid #30FF68;
+    width: 65%;
+    height: fit-content;
+    position: relative;
+    margin-block: 60px;
+}
+
+.project_card:nth-child(even) {
+    align-self: self-end;
+}
+
+.project_icon {
+    width: 70px;
+    aspect-ratio: 1/1;
+    position: absolute;
+    top: 30px;
+    left: -25px;
+    font-size: 40px;
+    color: #000000;
+    background-color: #30FF68;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+.project_icon i {
+    font-size: 40px;
+    color: #000000;
+}
+
+.project_body {
+    width: 70%;
+    height: fit-content;
+    padding: 30px 55px 0;
+    z-index: 2;
+}
+
+.project_body p:first-child {
+    margin: 0;
+    color: #30FF68;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.project_body p:first-child span{
+    font-weight: 300;
+}
+
+.project_body h1 {
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+    margin: 5px 0 20px;
+}
+
+.project_body p {
+    font-size: 20px;
+    font-family: 'Roboto Flex', sans-serif;
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+
+.project_langs span {
+    border-radius: 5px;
+    background-color: rgba(48, 255, 48, 0.3);
+    padding: 2px 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.project_body a{
+    color: #30FF68;
+    padding: 2px 0px;
+    margin-right: 20px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.project_body a i {
+    color: #30FF68;
+    font-size: 15px;
+    margin-block: 20px;
+}
+
+.project_img {
+    height: 80%;
+    aspect-ratio: 5/3;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: -50px;
+    transform: perspective(800px) rotateY(-25deg);
+    transition-duration: .4s;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.project_img img {
+    height: 100%;
+}
+
+.project_img_glow {
+    background: linear-gradient(to left,
+    rgba(255, 255, 255, 0) 0%,
+     rgba(255, 255, 255, 0.5) 50%,
+       rgba(255, 255, 255, 0.3) 90%,
+       rgba(255, 255, 255, 0) 100%);
+    width: 20%;
+    height: 500%;
+    position: absolute;
+    transform: rotate(30deg) translateX(-290px);
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transition-duration: .4s;
+}
+
+.project_icon {
+    animation: float 3s ease-in-out infinite;
+}
+
+.project_card:hover .project_img {
+    transform: perspective(800px) rotateY(0deg) scale(1.1);
+}
+
+.project_card:hover .project_img_glow {
+    transform: rotate(30deg) translateX(500px);
+}
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\ footer \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+footer {
+    margin-top: 80px;
+    width: 100vw;
+    left: 0;
+    position: absolute;
+    bottom: 0;
+}
+
+footer>hr {
+    border: 1px solid #30FF68;
+}
+
+footer>p {
+    text-align: center;
+    margin-block: 30px;
+    font-size: 20px;
+    color: #30FF68;
+    font-family: 'Jura', sans-serif;
+}
+
+/* ==================================================== */
+.glass_pane {
+    --glass-color: rgba(255, 255, 255, 0.01);
+
+    background: linear-gradient(to right, var(--glass-color), var(--glass-color) );
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(7px);
+    border: 1px solid rgba(48, 255, 104, .25);
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+@media (max-width: 1520px) {
+    .title {
+        margin-block: 11vw 4vw;
+    }
+    .title h2 {
+        font-size: 28px;
+    }
+    .title h1 {
+        font-size: 70px;
+    }
+
+    .title-line {
+        height: 8px;
+    }
+
+    .logo {
+        font-size: 7vw;
+    }
+    
+    /* \\\\\\\\\\\\\\\\\\\ projects ////////////////// */
+    
+    .btn_container> button {
+        font-size: 22px;
+    }
+
+    .project_card {
+        width: 90%;
+    }
+    .project_body h2 {
+        margin: 0;
+        color: #30FF68;
+        font-family: 'Montserrat', sans-serif;
+    }
+    
+    .project_body h1 {
+        font-size: 35px;
+    }
+    
+    .project_body p {
+        font-size: 18px;
+    }
+    .project_body a i {
+        font-size: 13px;
+    }
+
+    .project_img {
+        height: 75%;
+    }
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+@media (max-width: 1100px) {
+    :root {
+        --header-height: 6vw;
+    }
+    .title {
+        margin-block: 13vw 1vw;
+    }
+    .title h2 {
+        font-size: 22px;
+    }
+    .title h1 {
+        font-size: 50px;
+    }
+
+    .title-line {
+        height: 5px;
+    }
+
+    .logo {
+        font-size: 9.5vw;
+    }
+    
+    /* \\\\\\\\\\\\\\\\\\\ projects ////////////////// */
+    .btn_container> button {
+        font-size: 18px;
+    }
+
+    .project_card {
+        width: 100%;
+    }
+    
+    .project_body h1 {
+        font-size: 28px;
+    }
+    
+    .project_body p {
+        font-size: 14px;
+    }
+    .project_body a i {
+        font-size: 10px;
+    }
+
+    .project_img {
+        height: 70%;
+    }
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+@media (max-width: 850px) {
+    :root {
+        --header-height: 8vw;
+    }
+    
+    .title {
+        margin-block: 15vw 1vw;
+    }
+    .title h2 {
+        font-size: 16px;
+    }
+    .title h1 {
+        font-size: 40px;
+    }
+
+    .title-line {
+        height: 4px;
+    }
+
+    .logo {
+        font-size: 11.5vw;
+    }
+    /* //////////////////////// header //////////////////////// */
+
+    .social_medias {
+        display: none;
+    }
+
+    .social_medias img {
+        width: 5vw;
+    }
+
+    .social_medias li {
+        width: 6vw;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .menu i {
+        display: inline;
+        color: #00f260;
+        font-size: 26px;
+    }
+
+    /* /////////////////////////// projects /////////////////////// */
+    .btn_container {
+        margin-top: 50px;
+    }
+
+    .btn_container> button {
+        font-size: 16px;
+    }
+    
+    .project_body h1 {
+        font-size: 32px;
+    }
+    
+    .project_body p {
+        font-size: 16px;
+    }
+    .project_body a i {
+        font-size: 12px;
+    }
+
+    .project_body {
+        width: 100%;
+    }
+    .project_img {
+        width: 60%;
+        position: relative;
+    }
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+@media (max-width: 580px) {
+    :root {
+        --header-height: 12vw;
+    }
+
+    .social_medias {
+        /* display: none; */
+        right: 1vw;
+    }
+    
+    .title {
+        margin-block: 20vw 1vw;
+    }
+    .title h2 {
+        font-size: 16px;
+    }
+    .title h1 {
+        font-size: 40px;
+    }
+
+    .title-line {
+        height: 4px;
+    }
+
+    .logo {
+        font-size: 15vw;
+    }
+
+    /* //////////////////project ////////////////// */
+    .btn_container>button {
+        font-size: 14px;
+    }
+    .project_img {
+        width: 80%;
+        right: -30px;
+    }
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+@media (max-width: 400px) {
+    :root {
+        --header-height: 14vw;
+    }
+
+    .title h2 {
+        font-size: 14px;
+    }
+    .title h1 {
+        font-size: 30px;
+    }
+
+    .title-line {
+        height: 2px;
+    }
+
+    .logo {
+        font-size: 17.5vw;
+    }
+
+    /* /////////////////////////// project /////////////////// */
+
+    .project_icon {
+        top: 50px;
+        width: 50px;
+    }
+
+    .project_icon i {
+        font-size: 30px;
+    }
+
+    .project_body h2 {
+        font-size: 20px;
+    }
+
+    .project_body h1 {
+        font-size: 24px;
+    }
+
+    .project_body p {
+        font-size: 16px;
+    }
+
+    .project_img {
+        right: -20px;
+    }
+}

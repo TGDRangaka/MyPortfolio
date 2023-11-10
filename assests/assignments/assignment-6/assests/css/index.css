@@ -1,0 +1,41 @@
+#nav_bar {
+    padding: 0;
+}
+
+nav div {
+    padding: 10px;
+    background-color: #9C9C9C;
+}
+
+#dashboard, #customer, #item, #order {
+    font-weight: 600;
+    color: #1f1f1f;
+}
+.card {
+    border: none;
+    display: flex;
+    align-items: center;
+}
+
+.card_body {
+    width: 90%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #1f1f1f;
+    border-radius: 20px;
+    color: white;
+}
+
+.card_body h1 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+.chart {
+    width: 85%;
+    height: 80%;
+}

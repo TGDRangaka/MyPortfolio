@@ -1,0 +1,42 @@
+* {
+    position: relative;
+}
+#nav_bar {
+    padding: 0;
+}
+
+nav div {
+    padding: 10px;
+    background-color: #9C9C9C;
+}
+
+#dashboard, #customer, #item, #order {
+    font-weight: 600;
+    color: #1f1f1f;
+}
+
+#search {
+    border: 1px solid black;
+    border-radius: 50px;
+    height: 50px;
+}
+
+.search-btn {
+    font-size: 2.2rem;
+    position: absolute;
+    top: calc(50% - 1.2rem);
+    margin: auto;
+    right: 20px;
+}
+
+#id, #name, #address, #salary, #price, #qty {
+    border: 1px solid black;
+}
+
+.buttons button {
+    width: 32%;
+}
+
+table tbody, table thead {
+    border: 1px solid black;
+}

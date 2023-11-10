@@ -1,0 +1,37 @@
+section {
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+section>div {
+    width: 30vw;
+    height: 10vh;
+    background-color: mediumpurple;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 2vh 0 2vh -26vw;
+    box-shadow: 3px 3px 10px black;
+    border-radius: 20px;
+
+    transition-duration: 1s;
+}
+
+section>div>h1 {
+    color: white;
+    font-family: Arial;
+    padding-left: 20px;
+}
+
+section>div>img {
+    width: 8vh;
+}
+
+section>div:hover {
+    transform: translateX(24.5vw);
+}
+
