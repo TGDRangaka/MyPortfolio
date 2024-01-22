@@ -890,13 +890,13 @@ header>div>a>button:hover, .mob-nav button:hover {
     height: 100%;
     top: 0;
     right: 0;
-    filter: opacity(20%);
 }
 
 .letter {
     position: absolute;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
+    filter: opacity(20%);
     color: rgb(255, 255, 255);
 }
 
@@ -936,6 +936,25 @@ header>div>a>button:hover, .mob-nav button:hover {
     font-size: 300px;
     bottom: -13%;
     left: 52%;
+}
+
+@keyframes blink-letter {
+    0%{
+        filter: opacity(20%);
+        text-shadow: 0 0 0 white;
+    }
+    20%{
+        filter: opacity(40%);
+        text-shadow: 0 0 10px white;
+    }
+    30%{
+        filter: opacity(40%);
+        text-shadow: 0 0 10px white;
+    }
+    100%{
+        filter: opacity(20%);
+        text-shadow: 0 0 0 white;
+    }
 }
 
 /*\\\\\\\\\\\\\\\\\\\\\\\\\\\\about me\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/

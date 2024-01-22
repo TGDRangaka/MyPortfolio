@@ -938,6 +938,8 @@
         $(".hero_img_body").css("animation", `bounceIn 1s linear`);
 
         $(".social_medias li").css("animation", `zoomIn .6s`);
+
+        setTimeout(blinkLetters, 1300);
     }
 
     window.onload = () =>{
@@ -1023,6 +1025,15 @@
         el: ".aboutme-imgs-swiper-pagination",
       },
     });
+
+    function blinkLetters(){
+        let letters = $(".letter");
+        let dur = 5;
+        letters.each(i => {
+            $(".letter").eq(i).css("animation", `blink-letter ${dur}s ease infinite ${dur / 6 * i}s`);
+        })
+    }
+
 </script>
 
 </body>
