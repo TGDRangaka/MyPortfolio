@@ -668,7 +668,7 @@ header>div>a>button:hover, .mob-nav button:hover {
     aspect-ratio: 1;
     border-radius: 50%;
     background-color: #30FF68;
-    filter: drop-shadow(0 0 10px #00f260);
+    /* filter: drop-shadow(0 0 10px #00f260); */
 }
 
 #home>section>.line {
@@ -845,9 +845,6 @@ header>div>a>button:hover, .mob-nav button:hover {
     width: 75%;
     aspect-ratio: 1/1;
     background-color: #000000;
-    /* box-shadow: 0 0 15px #30FF68, inset 0 0 15px #30FF68; */
-    /* border: 10px solid #ffffff; */
-    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
     border-radius: 63% 37% 62% 38% / 32% 50% 50% 68% ;
     position: absolute;
     top: 10%;
@@ -988,7 +985,7 @@ header>div>a>button:hover, .mob-nav button:hover {
     align-items: center;
     justify-content: space-evenly;
     position: relative;
-    padding: 1vw;
+    padding: .5vw;
     margin-right: 2vw;
 }
 
@@ -1042,7 +1039,7 @@ header>div>a>button:hover, .mob-nav button:hover {
 }
 
 .aboutme-imgs img {
-    width: 91%;
+    width: 100%;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -1300,105 +1297,6 @@ p span {
 #resume .bg-image {
     filter: opacity(40%);
     background-image: url('/assests/img/resume_bg2.jpg');
-}
-
-.education {
-    width: 100%;
-    height: 1700px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    padding: 30px;
-    border-radius: 25px;
-    overflow: hidden;
-}
-
-.education>h1, .skills>h1 {
-    font-size: 64px;
-    font-family: 'Poppins', sans-serif;
-}
-
-.education>h1::before, .education>h1::after,  .skills>h1::before,  .skills>h1::after {
-    content: "-";
-    color: #00f260;
-}
-
-.points-line {
-    width: 100%;
-    height: 80%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
-.h-line {
-    width: 5px;
-    height: 100%;
-    background-color: #00f260;
-    position: absolute;
-    right: 0;
-    left: 0;
-    margin: auto;
-}
-
-.edu-point {
-    position: relative;
-    width: 3%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.point {
-    width: 100%;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background-color: #121212;
-    border: 5px solid #00f260;
-}
-
-.edu-des {
-    position: absolute;
-    width: 40vw;
-    /* border: 1px solid blue; */
-    top: -5px;
-    right: -41vw;
-}
-
-.edu-point:nth-child(odd) .edu-des{
-    left: -41vw;
-}
-
-.edu-point:nth-child(odd) .edu-des h1, .edu-point:nth-child(odd) .edu-des p{
-    text-align: right;
-}
-
-.edu-des h1 {
-    margin: 0;
-    font-size: 48px;
-    font-family: 'Poppins', sans-serif;
-    color: #00f260;
-    font-weight: 700;
-}
-
-.edu-des p {
-    font-size: 32px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 200;
-}
-
-.edu-point:last-child .point {
-    display: none;
-}
-
-.edu-point:last-child i {
-    position: absolute;
-    top: -28px;
-    /* transform: rotate(90deg); */
-    font-size: 46px;
-    color: #00f260;
 }
 
 .skills {
@@ -1664,60 +1562,39 @@ p span {
 
 #projects .bg-image {
     filter: opacity(40%);
-    background-image: url('/assests/img/project_bg2.jpg');
+    background-image: url('/assests/img/project_bg.jpg');
+    filter: saturate(0%) brightness(40%) contrast(80%) opacity(60%);
 }
 
 .project_section {
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* align-items: center; */
-    align-self: center;
-    position: relative;
+    display: flex;
+    justify-content: space-around;
 
 }
 
-.project_card {
-    background-color: #080A08;
-    border-left: 6px solid #30FF68;
-    width: 400px;
+#projects .project_card {
+    width: 300px;
     height: fit-content;
     position: relative;
     margin-top: 20px;
+    border: 1px solid #30ff676c;
+    border-radius: 8px;
 }
 
 .project_card:hover .shine {
-    left: 180%;
+    left: 240%;
 }
 
-.project_icon {
-    width: 3.4vw;
-    aspect-ratio: 1/1;
-    position: absolute;
-    top: 30px;
-    left: -1vw;
-    font-size: 40px;
-    color: #000000;
-    background-color: #30FF68;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 5;
-}
-.project_icon i {
-    font-size: 60%;
-    color: #000000;
-}
-
-.project_icon {
-    animation: float 3s ease-in-out infinite;
+.project_card .gradient-h-line, .project_card .gradient-v-line {
+    display: none;
 }
 
 .project_card .body{
     padding: 15px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 15px;
 }
 
 .top-bar {
@@ -1725,49 +1602,75 @@ p span {
 }
 
 .top-bar .prj-lang {
-    /* padding-inline: 8px;
-    border-right: 1px solid white; */
+    display: flex;
     font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    gap: 3px;
+    flex-grow: 1;
 }
 
-.top-bar .prj-lang:last-child{
-    border-right: none;
+.prj-lang span {
+    height: fit-content;
+    padding: 2px 5px;
+    border-radius: 4px;
+    background-color: #d3d3d3;
+    color: black;
+    font-weight: 500;
 }
 
 .top-bar .prj-link {
+    font-size: 13px;
     font-family: 'Poppins', sans-serif;
-    flex-grow: 1;
     text-align: right;
 }
 
 .prj-img {
-    height: 205px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .prj-img img {
-    height: 100%;
+    width: 100%;
 }
 
 .bottom-bar {
     display: flex;
-    align-items: end;
+    align-items: start;
 }
 
 .prj-year {
-    font-size: 22px;
-    font-weight: bold;
+    font-size: 18px;
     font-family: 'Poppins', sans-serif;
 }
 
 .bottom-bar .prj-title {
+    color: #00f260;
     flex-grow: 1;
     text-align: right;
-    font-size: 26px;
-    font-weight: bold;
+    font-size: 20px;
+    font-weight: 500;
     font-family: 'Poppins', sans-serif;
+}
+
+.prj-info {
+    font-weight: 300;
+    font-size: 16px;
+    font-family: 'Roboto Flex', sans-serif;
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+}
+
+.project_card:hover .prj-info {
+    height: 110px;
+    overflow-y: auto;
+}
+
+.project-column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ contact me \\\\\\\\\\\\\\\\\\\\\\ */

@@ -1,0 +1,137 @@
+import projects from "./data/projects.js";
+
+// preloader close
+const closePreloader = () => {
+    $(".preloader").css("opacity", "0%");
+    setTimeout(function () {
+        $(".preloader").css("display", "none");
+    }, 2000);
+
+    let letterAniDur = .8;
+    let heroSectionAniDur = 1;
+
+    $(".letter").css("animation", `heartBeat ${letterAniDur}s linear .5s`);
+
+    $(".hello").css("animation", `flipInY ${heroSectionAniDur}s linear .2s`);
+    $(".square").css("animation", `bounceInLeft ${heroSectionAniDur}s linear .2s`);
+    $(".line").css("animation", `bounceInLeft ${heroSectionAniDur}s linear .3s`);
+    $(".i-am").css("animation", `bounceInLeft ${heroSectionAniDur}s linear .3s`);
+    $("#home>section>h4").css("animation", `bounceInLeft ${heroSectionAniDur}s linear .4s`);
+    $("#home>section>button").css("animation", `bounceInLeft ${heroSectionAniDur}s linear .4s`);
+    $(".btn-ani").css("animation", `zoomIn ${heroSectionAniDur - 0.5}s linear .5s`)
+
+    $(".hero_img").css("animation", `bounceInUp 1s linear`);
+    $(".hero_img_body").css("animation", `bounceIn 1s linear`);
+
+    $(".social_medias li").css("animation", `zoomIn .6s`);
+
+    setTimeout(blinkLetters, 1300);
+}
+
+window.onload = () => {
+    setTimeout(closePreloader, 500);
+};
+
+// mobile navigation menu
+let isMenuOpened = false;
+const openMenu = () => {
+    isMenuOpened = true;
+    $(".mob-nav").css("display", "flex");
+    setTimeout(() => {
+        $(".mob-nav-bg").css("transform", "scale(40)");
+        $(".mob-nav a").css("filter", "blur(0px)");
+    }, 100);
+}
+const closeMenu = () => {
+    isMenuOpened = false;
+    $(".mob-nav a").css("filter", "blur(100px)");
+    setTimeout(() => {
+        $(".mob-nav-bg").css("transform", "scale(0)");
+        setTimeout(() => {
+            $(".mob-nav").css("display", "none");
+        }, 500);
+    }, 400);
+}
+
+$(".menu").on('click', () => {
+    if (isMenuOpened) {
+        closeMenu();
+    } else {
+        openMenu();
+    }
+});
+
+$(".mob-nav").on('click', () => {
+    closeMenu();
+});
+
+// aboutme heartBtn action
+let isHeartBtnClicked = false;
+$("#heartBtn").on('click', () => {
+    if (isHeartBtnClicked) {
+        isHeartBtnClicked = false;
+        $(".heart-animation").css('display', 'none');
+    } else {
+        isHeartBtnClicked = true;
+        $(".heart-animation").css('display', 'flex');
+    }
+});
+
+
+// aboutme imgs swiper pane
+var swiper = new Swiper(".aboutme-imgs-swiper", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".aboutme-imgs-swiper-pagination",
+    },
+});
+
+function blinkLetters() {
+    let letters = $(".letter");
+    let dur = 5;
+    letters.each(i => {
+        $(".letter").eq(i).css("animation", `blink-letter ${dur}s ease infinite ${dur / 6 * i}s`);
+    })
+}
+
+// projects
+const columns = 4;
+$('.project_section').html("");
+for (let i = 0; i < columns; i++) {
+    $('.project_section').append(`<div class="project-column project-column-${i}"></div>`)
+}
+let index = 0;
+projects.map(project => {
+    $(`.project-column-${index++}`).append(`
+        <div data-aos="fade-right" class="project_card glass_pane">
+            <div class="absolute-full">
+                <div class="absolute-full shine"></div>
+            </div>
+    
+            <div class="gradient-h-line"></div>
+            <div class="gradient-v-line"></div>
+            <div class="body">
+                <div class="bottom-bar">
+                    <span class="prj-year">${project.year}</span>
+                    <span class="prj-title">${project.name}</span>
+                </div>
+                <div class="prj-img">
+                    <img src="${project.image}" alt="project image">
+                </div>
+                <p class="prj-info">${project.description}</p>
+                <div class="top-bar">
+                <span class="prj-lang"><span>${project.languages.join('</span><span>')}</span></span>
+                <a href="${project.github}" target="_blank" class="prj-link">Github <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+    `);
+    if(index === 4) index = 0;
+})
+
+
