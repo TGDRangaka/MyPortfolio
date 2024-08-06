@@ -10,6 +10,7 @@ export default [
         imageView: 'landscape',
         livelink: '',
         other: '',
+        type: ['java'],
     },
     {
         name: 'Calculator',
@@ -22,6 +23,7 @@ export default [
         imageView: 'portrait',
         livelink: '',
         other: '',
+        type: ['java'],
     },
     {
         name: 'Snakes & Ladders Game',
@@ -34,6 +36,7 @@ export default [
         imageView: 'landscape',
         livelink: '',
         other: '',
+        type: ['java', 'game'],
     },
     {
         name: 'Thogakade',
@@ -46,6 +49,7 @@ export default [
         imageView: 'landscape',
         livelink: '',
         other: '',
+        type: ['java'],
     },
     {
         name: 'Connect 4 Game',
@@ -58,6 +62,7 @@ export default [
         imageView: 'landscape',
         livelink: '',
         other: '',
+        type: ['java', 'game'],
     },
     {
         name: 'Gecko (Chat Room)',
@@ -70,6 +75,7 @@ export default [
         imageView: 'landscape',
         livelink: '',
         other: '',
+        type: ['java'],
     },
     {
         name: 'Customer Form',
@@ -82,6 +88,7 @@ export default [
         imageView: 'landscape',
         livelink: '',
         other: '',
+        type: ['java'],
     },
     {
         name: 'Student Management',
@@ -94,6 +101,7 @@ export default [
         imageView: 'landscape',
         livelink: '',
         other: '',
+        type: ['java'],
     },
     {
         name: 'Solar System',
@@ -106,6 +114,7 @@ export default [
         imageView: 'landscape',
         livelink: 'https://codepen.io/TGDRangaka/pen/OJdbGNO',
         other: '',
+        type: ['web'],
     },
     {
         name: 'Aqua Buddy',
@@ -118,6 +127,7 @@ export default [
         imageView: 'landscape',
         livelink: '',
         other: '',
+        type: ['java'],
     },
     {
         name: 'Tic Tac Toe Game',
@@ -130,6 +140,7 @@ export default [
         imageView: 'landscape',
         livelink: '',
         other: '',
+        type: ['java', 'game'],
     },
     {
         name: 'Tic Tac Toe Game',
@@ -142,6 +153,7 @@ export default [
         imageView: 'landscape',
         livelink: 'https://tgdrangaka.github.io/Tic-Tac-Toe-JS/',
         other: '',
+        type: ['web', 'game'],
     },
     {
         name: 'Digital Watch',
@@ -154,5 +166,6 @@ export default [
         imageView: 'landscape',
         livelink: 'https://tgdrangaka.github.io/Digital-Watch-js/',
         other: '',
+        type: ['web'],
     },
 ]

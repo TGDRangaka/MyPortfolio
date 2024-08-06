@@ -91,6 +91,7 @@ var swiper = new Swiper(".aboutme-imgs-swiper", {
     },
 });
 
+// home latters animation
 function blinkLetters() {
     let letters = $(".letter");
     let dur = 5;
@@ -100,62 +101,60 @@ function blinkLetters() {
 }
 
 // projects
-const columns = 4;
-$('.projects').html("");
-// for (let i = 0; i < columns; i++) {
-//     $('.project_section').append(`<div class="project-column project-column-${i}"></div>`)
-// }
-let index = 0;
-// projects.map(project => {
-//     $(`.project_section`).append(`
-//         <div data-aos="fade-right" class="project_card glass_pane">
-//             <div class="absolute-full">
-//                 <div class="absolute-full shine"></div>
-//             </div>
-    
-//             <div class="gradient-h-line"></div>
-//             <div class="gradient-v-line"></div>
-//             <div class="body">
-//                 <div class="bottom-bar">
-//                     <span class="prj-year">${project.year}</span>
-//                     <span class="prj-title">${project.name}</span>
-//                 </div>
-//                 <div class="prj-img">
-//                     <img src="${project.image}" alt="project image">
-//                 </div>
-//                 <p class="prj-info">${project.description}</p>
-//                 <div class="top-bar">
-//                 <span class="prj-lang"><span>${project.languages.join('</span><span>')}</span></span>
-//                 <a href="${project.github}" target="_blank" class="prj-link">Github <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-//                 </div>
-//             </div>
-//         </div>
-//     `);
-//     if(index === 4) index = 0;
-// })
+const setProjectCards = () => {
+    // projects.map(project => {
+    //     $('.projects').append(`
+    //     <div class="prj-card glass_pane">
+    //         <div class="prj-title">
+    //             <span class="prj-year">${project.year}</span>
+    //             <span class="prj-name">${project.name}</span>
+    //         </div>
+    //         <div class="prj-info">
+    //             <div class="prj-langs">
+    //                 <span>${project.languages.join('</span><span>')}</span>
+    //             </div>
+    //             <p class="prj-desc">${project.description}</p>
+    //             <div class="links">
+    //                 <a href="${project.github}" >Github</a>
+    //                 ${project.livelink && `<a href="${project.livelink}" >Github</a>`}
+    //             </div>
+    //         </div>
 
-projects.map(project => {
-    $('.projects').append(`
-        <div class="prj-card ">
-            <div class="prj-title">
-                <span class="prj-year">${project.year}</span>
-                <span class="prj-name">${project.name}</span>
+    //         <div class="prj-imgs ${project.imageView}">
+    //             <img src="${project.image}" alt="">
+    //         </div>
+    //     </div>
+    // `)
+    // });
+    projects.map(project => {
+        $('.project_section').append(`
+        <div data-aos="fade-right" data-aos-delay="200" class="project_card glass_pane web">
+            <div class="absolute-full">
+                <div class="absolute-full shine"></div>
             </div>
-            <div class="prj-info">
-                <div class="prj-langs">
+
+            <div class="gradient-h-line"></div>
+            <div class="gradient-v-line"></div>
+            <!-- <div class="project_icon">
+                <i class="fa-solid fa-globe"></i>
+            </div> -->
+            <div class="project_body">
+                <p>${project.year}</p>
+                <h1>${project.name}</h1>
+                <p>${project.description}</p>
+                <div class="project_langs">
                     <span>${project.languages.join('</span><span>')}</span>
                 </div>
-                <p class="prj-desc">${project.description}</p>
-                <div class="links">
-                    <a href="${project.github}" >Github</a>
-                    ${project.livelink && `<a href="${project.livelink}" >Github</a>`}
-                </div>
+                <a href="${project.github}" target="_blank">Github <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                ${project.livelink && `<a href="${project.livelink}" target="_blank">View <i class="fa-solid fa-globe"></i></a>`}
             </div>
-
-            <div class="prj-imgs ${project.imageView}">
+            <div class="project_img">
                 <img src="${project.image}" alt="">
+                <div class="project_img_glow"></div>
             </div>
         </div>
     `)
-})
+    })
+}
 
+setProjectCards();

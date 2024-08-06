@@ -428,6 +428,7 @@ header>div>a>button:hover, .mob-nav button:hover {
     background-color: rgba(48, 255, 48, 0.3);
     padding: 2px 5px;
     font-family: 'Poppins', sans-serif;
+    margin-right: 5px;
 }
 
 .project_body a{
