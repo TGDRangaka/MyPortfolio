@@ -1565,14 +1565,7 @@ p span {
     background-image: url('/assests/img/project_bg.jpg');
     filter: saturate(0%) brightness(40%) contrast(80%) opacity(60%);
 }
-
-.project_section {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-
-}
-
+/* 
 #projects .project_card {
     width: 300px;
     height: fit-content;
@@ -1671,8 +1664,114 @@ p span {
     display: flex;
     flex-direction: column;
     gap: 30px;
+} */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    justify-items: center;
 }
 
+.prj-card {
+    width: 500px;
+    height: 400px ;
+    /* background: linear-gradient(to right, #1b1b1b, #000000); */
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 8px;
+    transform-style: preserve-3d;
+    perspective: 30cm;
+    font-family: 'Poppins', sans-serif;
+    transition-duration: .6s;
+    overflow: hidden;
+}
+
+.prj-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.prj-year {
+    font-size: 20px;
+}
+
+.prj-name {
+    font-size: 28px;
+    font-weight: 700;
+    color: #00f260;
+}
+
+.prj-info {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    opacity: 0%;
+    transition-duration: .6s;
+}
+
+.prj-desc {
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.prj-langs span {
+    font-size: 13px;
+    height: fit-content;
+    padding: 2px 5px;
+    border-radius: 4px;
+    background-color: #00f260;
+    color: #000000;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.prj-links a {
+    font-size: 13px;
+    font-weight: 500;
+    color: #00f260;
+    margin-right: 10px;
+}
+
+.landscape {
+    bottom: 10px;
+    left: 0;
+    width: 500px;
+    aspect-ratio: 2/1;
+}
+
+.portrait {
+    right: 80px;
+    bottom: 0px;
+    height: 320px;
+    aspect-ratio: 1/2;
+    /* border: 1px solid red; */
+}
+
+.prj-imgs {
+    position: absolute;
+    transform-origin: top;
+    transition-duration: .6s;
+    /* border: 1px solid red; */
+}
+
+.prj-imgs img {
+    height: 100%;
+}
+
+.prj-card:hover {
+    scale: 1.1;
+}
+
+.prj-card:hover .prj-imgs {
+    /* transform: rotateX(80deg); */
+    transform: translateX(50px);
+    opacity: 0;
+}
+
+.prj-card:hover .prj-info {
+    opacity: 100%;
+}
 /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ contact me \\\\\\\\\\\\\\\\\\\\\\ */
 
 #contactme .bg-image{
@@ -1984,14 +2083,6 @@ footer>p {
         height: 75%;
     }
 
-    /* //////////////////// assignments ///////////////////// */
-    .assignment_desc>h3 {
-        font-size: 28px;
-    }
-    .assignment_desc>p {
-        font-size: 18px;
-    }
-
 
     /* /////////////////////// contact me ////////////////////// */
 
@@ -2219,14 +2310,6 @@ footer>p {
 
     .project_img {
         height: 70%;
-    }
-
-    /* //////////////////// assignments ///////////////////// */
-    .assignment_desc>h3 {
-        font-size: 20px;
-    }
-    .assignment_desc>p {
-        font-size: 14px;
     }
 
 
@@ -2540,29 +2623,6 @@ footer>p {
     .project_card:hover .shine {
         left: 200%;
     }
-
-    /* ////////////////////////////// assignments ///////////////////// */
-
-    .assignment_card {
-        flex-direction: column;
-        align-items: center;
-    }
-    .assignment_img {
-        width: 35%;
-        margin: 0 0 20px 0;
-    }
-
-    .assignment_desc {
-        width: 100%;
-    }
-
-    #assignments>section>a>i {
-        font-size: 70px;
-    }
-
-    .assignment_card:hover .shine {
-        left: 180%;
-    }
     /* ///////////////////////////// contact me //////////////////////////////// */
 
     .contact_container>p {
@@ -2841,16 +2901,6 @@ footer>p {
         left: 220%;
     }
 
-    /* //////////////////////// assignments ////////////////// */
-    
-    .assignment_img {
-        width: 45%;
-    }
-
-    .assignment_card:hover .shine {
-        left: 230%;
-    }
-
     /* ////////////////////////// contact me //////////////////// */
 
     #contactme>section>section:hover .shine {
@@ -2935,18 +2985,6 @@ footer>p {
 
     .project_img {
         right: -10px;
-    }
-
-    /* ////////////////////////// assignments /////////////////////// */
-    .assignment_img {
-        width: 50%;
-        margin: 0 0 20px 0;
-    }
-    .assignment_desc>h3 {
-        font-size: 17px;
-    }
-    .assignment_desc>p {
-        font-size: 12px;
     }
 
     /* ////////////////////// contact me /////////////////// */
