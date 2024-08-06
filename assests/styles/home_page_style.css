@@ -1296,7 +1296,7 @@ p span {
 }
 #resume .bg-image {
     filter: opacity(40%);
-    /* background-image: url('/assests/img/resume_bg2.jpg'); */
+    background-image: url('/assests/img/resume_bg2.jpg');
 }
 
 .skills {
@@ -1816,7 +1816,7 @@ p span {
 }
 
 .project_img {
-    height: 80%;
+    height: 90%;
     aspect-ratio: 5/3;
     position: absolute;
     top: 0;

@@ -102,32 +102,10 @@ function blinkLetters() {
 
 // projects
 const setProjectCards = () => {
-    // projects.map(project => {
-    //     $('.projects').append(`
-    //     <div class="prj-card glass_pane">
-    //         <div class="prj-title">
-    //             <span class="prj-year">${project.year}</span>
-    //             <span class="prj-name">${project.name}</span>
-    //         </div>
-    //         <div class="prj-info">
-    //             <div class="prj-langs">
-    //                 <span>${project.languages.join('</span><span>')}</span>
-    //             </div>
-    //             <p class="prj-desc">${project.description}</p>
-    //             <div class="links">
-    //                 <a href="${project.github}" >Github</a>
-    //                 ${project.livelink && `<a href="${project.livelink}" >Github</a>`}
-    //             </div>
-    //         </div>
+    const latestProjects = [22, 23, 24]
 
-    //         <div class="prj-imgs ${project.imageView}">
-    //             <img src="${project.image}" alt="">
-    //         </div>
-    //     </div>
-    // `)
-    // });
     projects.map(project => {
-        $('.project_section').append(`
+        latestProjects.includes(project.id) && $('.project_section').append(`
         <div data-aos="fade-right" data-aos-delay="200" class="project_card glass_pane web">
             <div class="absolute-full">
                 <div class="absolute-full shine"></div>

@@ -446,8 +446,8 @@ header>div>a>button:hover, .mob-nav button:hover {
 }
 
 .project_img {
-    height: 80%;
-    aspect-ratio: 5/3;
+    height: 90%;
+    /* aspect-ratio: 5/3; */
     position: absolute;
     top: 0;
     bottom: 0;
@@ -486,6 +486,7 @@ header>div>a>button:hover, .mob-nav button:hover {
 
 .project_card:hover .project_img {
     transform: perspective(800px) rotateY(0deg) scale(1.1);
+    z-index: 100;
 }
 
 .project_card:hover .project_img_glow {
