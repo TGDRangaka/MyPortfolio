@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  background: #000;
+}
+
+* {
+  color: white;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.gradient {
+  background: radial-gradient(rgba(48, 255, 103, 0.1), #0000 65%);
+  z-index: -1;
+}
+
+.gradient-line {
+  background: linear-gradient(to bottom, rgb(48, 255, 103), #0000 70%);
+}
+
+.service-card {
+  clip-path: polygon(0 0, 79% 0, 100% 15%, 100% 100%, 21% 100%, 0 84%);
+}
+
+.service-card-body {
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+  clip-path: polygon(0 0, 79% 0, 100% 15%, 100% 100%, 21% 100%, 0 84%);
+}

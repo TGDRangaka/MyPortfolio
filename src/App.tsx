@@ -1,11 +1,13 @@
-import './App.css'
+import Home from  './pages/Home';
+import MobileNavbar from './componets/MobileNavbar';
 
 function App() {
 
   return (
-    <>
-      <h1>Dilshan Rangaka</h1>
-    </>
+    <div className='w-screen overflow-hidden'>
+      <MobileNavbar />
+      <Home />
+    </div>
   )
 }
 
