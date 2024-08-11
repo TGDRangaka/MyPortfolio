@@ -641,7 +641,7 @@ header>div>a>button:hover, .mob-nav button:hover {
 }
 
 #home .bg-image{
-    background-image: url("/assests/img/disort_effect.jpg");
+    /* background-image: url("/assests/img/disort_effect.jpg"); */
     mix-blend-mode: color-dodge;
     animation: float 5s ease-in-out infinite;
 }
@@ -961,7 +961,7 @@ header>div>a>button:hover, .mob-nav button:hover {
 }
 
 #aboutme .bg-image {
-    background-image: url('/assests/img/aboutme_bg2.jpg');
+    /* background-image: url('/assests/img/aboutme_bg2.jpg'); */
     filter: opacity(50%);
 }
 
@@ -1212,7 +1212,7 @@ p span {
 /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ gallery \\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
 
 #gallery .bg-image {
-    background-image: url('/assests/img/gallery_bg.jpg');
+    /* background-image: url('/assests/img/gallery_bg.jpg'); */
     opacity: 50%;
 }
 .gallery-container {
@@ -1296,7 +1296,7 @@ p span {
 }
 #resume .bg-image {
     filter: opacity(40%);
-    background-image: url('/assests/img/resume_bg2.jpg');
+    /* background-image: url('/assests/img/resume_bg2.jpg'); */
 }
 
 .skills {
@@ -1411,7 +1411,7 @@ p span {
 /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ My services \\\\\\\\\\\\\\\\\\\ */
 
 #myservices .bg-image {
-    background-image: url('/assests/img/service_bg.jpg');
+    /* background-image: url('/assests/img/service_bg.jpg'); */
     filter: opacity(40%);
 }
 
@@ -1614,7 +1614,7 @@ p span {
 #projects .bg-image {
     filter: opacity(40%);
     /* background-image: url('/assests/img/project_bg.jpg'); */
-    background-image: url('/assests/img/project_page_bg.jpg');
+    /* background-image: url('/assests/img/project_page_bg.jpg'); */
     filter: saturate(0%) brightness(40%) contrast(80%) opacity(60%);
 }
 
@@ -1732,7 +1732,7 @@ p span {
 
 .project_card {
     background-color: #080A08;
-    border-left: 6px solid #30FF68;
+    /* border-left: 6px solid #30FF68; */
     width: 65%;
     height: fit-content;
     position: relative;
@@ -1856,6 +1856,7 @@ p span {
 
 .project_card:hover .project_img {
     transform: perspective(800px) rotateY(0deg) scale(1.1);
+    z-index: 100;
 }
 
 .project_card:hover .project_img_glow {
@@ -1865,7 +1866,7 @@ p span {
 /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ contact me \\\\\\\\\\\\\\\\\\\\\\ */
 
 #contactme .bg-image{
-    background-image: url('/assests/img/contactme_bg.jpg');
+    /* background-image: url('/assests/img/contactme_bg.jpg'); */
     filter: opacity(50%);
 }
 
@@ -1961,12 +1962,12 @@ footer>p {
 
 
 .glass_pane {
-    --glass-color: rgba(255, 255, 255, 0.01);
+    /* --glass-color: rgba(255, 255, 255, 0.01);
 
     background: linear-gradient(to right, var(--glass-color), var(--glass-color) );
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(7px);
-    border: 1px solid rgba(48, 255, 104, .15);
+    border: 1px solid rgba(48, 255, 104, .15); */
 }
 
 @keyframes float {
