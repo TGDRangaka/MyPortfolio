@@ -14,7 +14,7 @@ export default function ServiceSection() {
                 <hr className='-z-10 border-green/20 w-line absolute rotate-12 bottom-20' />
             </div>
 
-            <div className='flex flex-col gap-8 items-center'>
+            <div className='flex flex-col gap-8 items-center  lg:flex-row lg:justify-center lg:gap-12  xl:gap-32'>
                 {
                     services.map(service => <ServiceCard icon={service.icon} title={service.title} description={service.description} />)
                 }

@@ -6,16 +6,19 @@ export default {
   ],
   theme: {
     screens: {
-      'xm' : '430px',
+      'xsm' : '430px',
       'sm': '640px',
       'md': '768px',
-      'lg': '1024px',
+      'lg': '1000px',
       'xl': '1280px',
       '2xl': '1536px',
     },
     extend: {
       width: {
+        '120': '460px',
+        '574': '574px',
         '400': '600px',
+        '800': '890px',
         'line': '2000px'
       },
       rotate: {

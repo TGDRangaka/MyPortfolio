@@ -8,6 +8,7 @@ html {
 
 body{
   background: #000;
+  overflow-x: hidden;
 }
 
 * {
@@ -41,7 +42,7 @@ body{
 }
 
 .prj-img-3d {
-  transform: perspective(800px) rotateY(-25deg);
+  transform: perspective(800px) rotateY(-30deg);
 }
 
 .glow {
