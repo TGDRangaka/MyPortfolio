@@ -3,13 +3,17 @@ import ProjectCard from "./cards/ProjectCard";
 import Title from "./Title";
 
 export default function ProjectsSection() {
-  return (
-    <div className="">
-      <Title title="Projects" />
 
-      <div className="flex flex-col gap-14">
+    const latestProjectsIds = [23, 24, 22, 20]
+    const latestProjects = projects.filter(p => latestProjectsIds.includes(p.id));
+
+  return (
+    <div id="projects" className="">
+      <Title text="Latest" title="Projects" />
+
+      <div className="flex flex-col gap-28 items-center">
         {
-            projects.map(project => <ProjectCard project={project} />)
+            latestProjects.map(project => <ProjectCard project={project} />)
         }
       </div>
     </div>

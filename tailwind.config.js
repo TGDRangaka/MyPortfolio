@@ -23,7 +23,12 @@ export default {
       },
       colors: {
         'green': '#30FF68',
+        'grey': '#171717',
       },
+      aspectRatio: {
+        'project-img': '3/1'
+      },
+      
     },
   },
   plugins: [],

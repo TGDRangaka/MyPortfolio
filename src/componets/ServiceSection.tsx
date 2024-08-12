@@ -4,8 +4,8 @@ import services from '../data/services'
 
 export default function ServiceSection() {
     return (
-        <div id='service' className=''>
-            <Title title='Services' />
+        <div id='services' className=''>
+            <Title text='Area of' title='Services' />
 
             <div className='flex flex-col gap-8 items-center'>
                 {

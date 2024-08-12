@@ -1,7 +1,7 @@
 
 export default function HomeSection() {
   return (
-    <div id='home' className='w-screen h-screen flex flex-col overflow-hidden relative'>
+    <div id='home' className='w-screen h-dvh flex flex-col overflow-hidden relative'>
       <span className='absolute w-line border-y border-green/10 top-1/3 origin-left rotate-45'></span>
       <div className='flex-grow flex flex-col justify-center relative px-5'>
         <span className='gradient w-400 aspect-square absolute rounded-full -left-1/2 -top-1/2'></span>
@@ -15,9 +15,10 @@ export default function HomeSection() {
           <button type='button' className='bg-green text-black rounded px-8 '>
             <a href="#contactme" className='font-bold text-base '>Hire Me</a>
           </button>
-          <img className='h-full' src="/linkedin.png" alt="" />
-          <img className='h-full' src="/github.png" alt="" />
-          <img className='h-full' src="/instagram.png" alt="" />
+          <a href=""><img className='h-full' src="/linkedin.png" alt="" /></a>
+          <a href=""><img className='h-full' src="/github.png" alt="" /></a>
+          <a href=""><img className='h-full' src="/instagram.png" alt="" /></a>
+          <a href="https://wa.me/0770531993"><img className='h-full' src="/whatsapp.png" alt="" /></a>
         </div>
       </div>
 
