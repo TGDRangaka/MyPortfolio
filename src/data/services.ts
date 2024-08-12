@@ -2,16 +2,16 @@ export default [
     {
         icon: `/pos.png`,
         title: 'POS Systems',
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        description: "Streamlined POS solutions to enhance business efficiency and customer satisfaction, tailored to your specific needs."
     },
     {
         icon: `/web.png`,
         title: 'Web Development',
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        description: "Innovative, responsive websites that elevate your online presence and drive engagement, designed with your business in mind."
     },
     {
         icon: `/mobile.png`,
         title: 'Mobile Development',
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        description: "High-performance mobile apps that connect with your audience, delivering seamless user experiences across all devices."
     },
 ]
