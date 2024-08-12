@@ -1,12 +1,12 @@
 import Home from  './pages/Home';
-import MobileNavbar from './componets/MobileNavbar';
+import Navbar from './componets/Navbar';
 import Footer from './componets/Footer';
 
 function App() {
 
   return (
     <div className='w-screen overflow-hidden'>
-      <MobileNavbar />
+      <Navbar />
       <Home />
       <Footer />
     </div>

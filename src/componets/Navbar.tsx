@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function MobileNavbar() {
+export default function Navbar() {
 
   const [isNavbarOpen, setNavbar] = useState(false);
 

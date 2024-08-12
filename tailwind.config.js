@@ -19,10 +19,13 @@ export default {
         '574': '574px',
         '400': '600px',
         '800': '890px',
-        'line': '2000px'
+        'line': '2000px',
+        'xline': '4000px',
       },
       rotate: {
+        'line': '28deg',
         'aboutme-line': '48deg',
+        'service-line': '55deg',
       },
       colors: {
         'green': '#30FF68',
