@@ -16,7 +16,7 @@ export default {
     extend: {
       width: {
         '400': '600px',
-        'line': '1000px'
+        'line': '2000px'
       },
       rotate: {
         'aboutme-line': '48deg',

@@ -1,3 +1,4 @@
+import SocialIcons from "./SocialIcons";
 
 export default function HomeSection() {
   return (
@@ -15,10 +16,7 @@ export default function HomeSection() {
           <button type='button' className='bg-green text-black rounded px-8 '>
             <a href="#contactme" className='font-bold text-base '>Hire Me</a>
           </button>
-          <a href=""><img className='h-full' src="/linkedin.png" alt="" /></a>
-          <a href=""><img className='h-full' src="/github.png" alt="" /></a>
-          <a href=""><img className='h-full' src="/instagram.png" alt="" /></a>
-          <a href="https://wa.me/0770531993"><img className='h-full' src="/whatsapp.png" alt="" /></a>
+          <SocialIcons />
         </div>
       </div>
 

@@ -21,7 +21,7 @@ export default function ProjectCard({ project }: Props) {
     const { name, year, description, github, languages, image, livelink} = project;
 
     return (
-        <div className="border border-green/10 w-72 bg-grey p-2 pl-3 relative flex flex-col gap-3">
+        <div className="border border-green/10 w-72 bg-black p-2 pl-3 relative flex flex-col gap-3">
             <span className="absolute gradient-line w-1 h-full top-0 left-0"></span>
             <span className="absolute gradient-line-h h-1 w-full top-0 left-0"></span>
             <div className="flex flex-col">
