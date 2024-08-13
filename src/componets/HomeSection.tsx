@@ -3,8 +3,8 @@ import SocialIcons from "./SocialIcons";
 export default function HomeSection() {
   return (
     <div id='home' className='w-screen min-h-svh flex flex-col overflow-hidden relative  lg:flex-row'>
-      <span className='absolute w-line border-y border-green/10 bottom-0 origin-bottom-left -rotate-45  lg:-rotate-line animate-pulse'></span>
-      <div className='flex-grow flex flex-col justify-center relative px-5 lg:px-10  xl:flex-grow-0'>
+      <span className='absolute w-line border-y border-green/10 bottom-0 origin-bottom-left -rotate-45  lg:-rotate-line'></span>
+      <div className='flex-grow flex flex-col justify-center relative px-5 lg:px-10  xl:flex-grow-0  animate__animated animate__bounceInLeft'>
         <span className='gradient w-400 aspect-square absolute rounded-full -left-1/2 -top-1/2  md:-left-1/3  lg:w-800 lg:-left-96'></span>
 
         <p className='text-4xl font-bold mt-28  xsm:text-5xl  sm:text-6xl lg:text-7xl  2xl:text-8xl'>Dilshan Rangaka</p>
@@ -21,7 +21,7 @@ export default function HomeSection() {
         </div>
       </div>
 
-      <div className=' relative flex justify-center  lg:items-end lg:flex-grow'>
+      <div className=' relative flex justify-center  lg:items-end lg:flex-grow  animate__animated animate__bounceInRight'>
 
         <span className='gradient w-400 aspect-square absolute rounded-full -right-1/2 -bottom-1/2  md:left-1/2  lg:w-800 lg:left-52'></span>
 

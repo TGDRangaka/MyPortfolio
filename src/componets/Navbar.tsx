@@ -8,7 +8,7 @@ export default function Navbar() {
     <>
     {/* Mobile Navbar */}
       <header className='w-full  fixed z-50'>
-        <div className="bg-black/10 backdrop-blur-md flex justify-between py-1 px-4 border-b border-green/15 sm:hidden">
+        <div className="bg-black/10 backdrop-blur-md flex justify-between py-1 px-4 border-b border-green/15 sm:hidden  animate__animated animate__zoomIn">
           <a href="#home"><img src='/logo.png' alt='logo' className='h-8' /></a>
           <button type="button" onClick={() => setNavbar(!isNavbarOpen)}>
             <img src='/menu.png' alt='logo' className='h-8' />
@@ -30,14 +30,14 @@ export default function Navbar() {
       {/* Table/Desktop Navbar */}
       <header className='w-full  fixed z-50 '>
         <div className="bg-black/10 backdrop-blur-md justify-between py-1 px-10 border-b border-green/15 hidden  sm:flex">
-          <a href="#home"><img src='/logo.png' alt='logo' className='h-8  md:h-10  lg:h-12' /></a>
+          <a href="#home"><img src='/logo.png' alt='logo' className='h-8  md:h-10  lg:h-12   animate__animated animate__zoomIn' /></a>
 
-          <ul className="flex gap-8 items-center font-semibold  md:text-lg md:gap-10  lg:text-xl lg:gap-14">
-            <li className="text-white/50 hover:text-white duration-75"><a href="#home">Home</a></li>
-            <li className="text-white/50 hover:text-white duration-75"><a href="#aboutme">About</a></li>
-            <li className="text-white/50 hover:text-white duration-75"><a href="#services">Services</a></li>
-            <li className="text-white/50 hover:text-white duration-75"><a href="#projects">Projects</a></li>
-            <li className="text-white/50 hover:text-white duration-75"><a href="#contactme">Contact</a></li>
+          <ul className="flex gap-8 items-center font-semibold  md:text-lg md:gap-10  lg:text-xl lg:gap-14  animate__animated animate__zoomIn">
+            <li className="text-white/50 hover:text-white duration-75"><a href="/#home">Home</a></li>
+            <li className="text-white/50 hover:text-white duration-75"><a href="/#aboutme">About</a></li>
+            <li className="text-white/50 hover:text-white duration-75"><a href="/#services">Services</a></li>
+            <li className="text-white/50 hover:text-white duration-75"><a href="/#projects">Projects</a></li>
+            <li className="text-white/50 hover:text-white duration-75"><a href="/#contactme">Contact</a></li>
           </ul>
         </div>
       </header>

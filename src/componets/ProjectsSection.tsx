@@ -20,7 +20,10 @@ export default function ProjectsSection() {
         {
           latestProjects.map((project, i) => <ProjectCard isLeft={i % 2 == 0 ? true : false} project={project} />)
         }
+
+        <a className="bg-green rounded-md text-black font-bold text-lg w-fit px-10 py-2  2xl:text-2xl 2xl:px-14 2xl:py-3  hover:scale-110 duration-150 hover:-rotate-6 hover:translate-y-2 hover:bg-white" href="/projects">More Projects</a>
       </div>
+
     </div>
   )
 }
