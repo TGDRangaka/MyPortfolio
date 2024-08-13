@@ -7,7 +7,7 @@ export default function Projects() {
     const reversArray = projects.reverse();
 
     return (
-        <div className="w-screen min-h-screen">
+        <div className="w-screen min-h-screen pb-20">
             <Title text="My" title="Projects" />
 
             <div className="flex flex-col gap-28 items-center justify-center  lg:px-10  xl:px-60">

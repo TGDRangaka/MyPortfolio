@@ -1,19 +1,5 @@
 export default [
     {
-        id: 1,
-        name: 'Go Fish',
-        year: 2023,
-        platform: 'Desktop',
-        description: 'Go Fish is a fishery management POS system developed as my 1st-semester final project. It allows fishermen to register, manage profits, and provides analytics for optimized operations.',
-        github: 'https://github.com/TGDRangaka/go-fish/tree/main',
-        languages: ['Java', 'JavaFX', 'MySQL'],
-        image: '/projects/go_fish_project.png',
-        imageView: 'landscape',
-        livelink: '',
-        other: '',
-        type: ['java'],
-    },
-    {
         id: 2,
         name: 'Calculator',
         year: 2022,
@@ -273,7 +259,7 @@ export default [
         description: 'A full-stack e-commerce application using the MERN stack (MongoDB, Express.js, React, and Node.js) that offers a comprehensive shopping experience. Users can order, add items to cart, create shop, sell items, review items, etc...',
         github: 'https://github.com/TGDRangaka/bingo-mern-backend',
         livelink: 'https://github.com/TGDRangaka/bingo-mern-frontend',
-        languages: ['ReactJS', 'ExpressJS', 'MongoDB', 'RestAPI', 'Tailwind'],
+        languages: ['ReactJS', 'ExpressJS', 'MongoDB', 'RestAPI', 'Tailwind', 'Redux'],
         image: '/projects/bingo.png',
         imageView: 'landscape',
         other: '',
@@ -330,10 +316,9 @@ export default [
         github: 'https://github.com/TGDRangaka/game-store-app?tab=readme-ov-file',
         livelink: '',
         languages: ['Expo', 'Tailwind', 'Firebase-Auth'],
-        // image: '',
         image: '/projects/game-heaven.png',
         imageView: 'landscape',
         other: '',
         type: ['mobile', 'game'],
-    }
+    },
 ]

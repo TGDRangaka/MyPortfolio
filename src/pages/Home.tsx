@@ -3,6 +3,7 @@ import AboutMeSection from '../componets/AboutMeSection';
 import ServiceSection from '../componets/ServiceSection';
 import ProjectsSection from '../componets/ProjectsSection';
 import Contact from '../componets/Contact';
+import AwardedProjects from '../componets/AwardedProjects';
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <HomeSection/>
       <AboutMeSection />
       <ServiceSection />
+      <AwardedProjects/>
       <ProjectsSection />
       <Contact/>
     </div>

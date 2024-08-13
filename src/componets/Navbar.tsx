@@ -21,6 +21,7 @@ export default function Navbar() {
             <li><a href="#home">Home</a></li>
             <li><a href="#aboutme">About</a></li>
             <li><a href="#services">Services</a></li>
+            <li><a href="#achivements">Achivements</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contactme">Contact</a></li>
           </ul>
@@ -36,6 +37,7 @@ export default function Navbar() {
             <li className="text-white/50 hover:text-white duration-75"><a href="/#home">Home</a></li>
             <li className="text-white/50 hover:text-white duration-75"><a href="/#aboutme">About</a></li>
             <li className="text-white/50 hover:text-white duration-75"><a href="/#services">Services</a></li>
+            <li className="text-white/50 hover:text-white duration-75"><a href="/#achivements">Achivements</a></li>
             <li className="text-white/50 hover:text-white duration-75"><a href="/#projects">Projects</a></li>
             <li className="text-white/50 hover:text-white duration-75"><a href="/#contactme">Contact</a></li>
           </ul>
