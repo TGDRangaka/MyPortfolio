@@ -7,14 +7,24 @@ import Projects from './pages/Projects';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import 'animate.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import PreLoader from './componets/PreLoader';
 
 function App() {
+
+  const [isLoading, setLoading] = useState(true);
+
   useEffect(() => {
       Aos.init();
+      setTimeout(() => {
+        setLoading(false);
+      }, 1800);
   },[])
 
-  return (
+  return isLoading ? (
+    <PreLoader/>
+  )
+  : (
     <BrowserRouter>
       <div className='w-screen overflow-hidden'>
         <Navbar />

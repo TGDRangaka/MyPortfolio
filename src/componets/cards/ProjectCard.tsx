@@ -34,7 +34,7 @@ export default function ProjectCard({ project, isLeft }: Props) {
                 <div className="flex gap-2 mt-2 flex-wrap lg:mt-4">
                     {
                         languages.map((lang, index) => (
-                            <span className="bg-green text-black px-2 text-xs font-bold rounded pb-1  lg:text-sm lg:pb-0 lg:font-semibold" key={index}>{lang}</span>
+                            <span className="bg-green text-black px-2 text-xs font-bold rounded pb-1 sm:pb-0  lg:text-sm lg:pb-0 lg:font-semibold" key={index}>{lang}</span>
                         ))
                     }
                 </div>
