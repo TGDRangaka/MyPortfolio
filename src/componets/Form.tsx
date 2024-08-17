@@ -14,11 +14,11 @@ export default function Form() {
 
     emailjs
       .sendForm(
-        import.meta.env.VITE_SERVICE_ID as string,
-        import.meta.env.VITE_TEMPLATE_ID as string,
+        import.meta.env.VITE_VERCEL_SERVICE_ID as string,
+        import.meta.env.VITE_VERCEL_TEMPLATE_ID as string,
         form.current as string | HTMLFormElement,
         {
-          publicKey: import.meta.env.VITE_PUBLIC_KEY as string,
+          publicKey: import.meta.env.VITE_VERCEL_PUBLIC_KEY as string,
         })
       .then(
         () => {
