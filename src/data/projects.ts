@@ -1,3 +1,5 @@
+import { platform } from "os";
+
 export default [
     {
         id: 2,
@@ -228,7 +230,7 @@ export default [
         name: 'Music Player',
         year: 2023,
         platform: 'Web',
-        description: 'A web-based music player designed with HTML, CSS, and JavaScript, offering a visually appealing and engaging gaming experience. Users can play songs, search for artists and albums, and create playlists.',
+        description: 'A java music player designed with JavaFX offering a visually appealing and engaging gaming experience. Users can play songs.',
         github: 'https://github.com/TGDRangaka/Music-Player-Java',
         livelink: '',
         languages: ['Java', 'JavaFX'],
@@ -292,6 +294,17 @@ export default [
         imageView: 'landscape',
         other: '',
         type: ['web','java'],
+    },
+    {
+        id: 25,
+        name: 'Microservice Architecture',
+        year: 2024,
+        platform: 'desktop',
+        description: 'Microservices architecture using Spring Boot, Spring Cloud, and for database MySQL. Utilzed Gateway, server-registery, config-server and other sub services.',
+        github: 'https://github.com/TGDRangaka/Assigntment-Microservice-Application',
+        livelink: '',
+        languages: ['Spring Boot', 'Spring Cloud', 'MySQL'],
+        image: '/projects/spring-boot-microservices.png',
     },
     {
         id: 23,
