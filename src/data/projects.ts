@@ -1,5 +1,3 @@
-import { platform } from "os";
-
 export default [
     {
         id: 2,
@@ -299,12 +297,15 @@ export default [
         id: 25,
         name: 'Microservice Architecture',
         year: 2024,
-        platform: 'desktop',
+        platform: 'Desktop',
         description: 'Microservices architecture using Spring Boot, Spring Cloud, and for database MySQL. Utilzed Gateway, server-registery, config-server and other sub services.',
         github: 'https://github.com/TGDRangaka/Assigntment-Microservice-Application',
         livelink: '',
         languages: ['Spring Boot', 'Spring Cloud', 'MySQL'],
         image: '/projects/spring-boot-microservices.png',
+        imageView: 'landscape',
+        other: '',
+        type: ['java'],
     },
     {
         id: 23,
