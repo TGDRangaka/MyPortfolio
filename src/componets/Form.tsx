@@ -37,10 +37,10 @@ export default function Form() {
 
   return (
     <form className="flex flex-col gap-2" ref={form} onSubmit={sendEmail}>
-      <input className={`${inputStyle} `} type="text" name="name" placeholder="Name" id="" />
-      <input className={`${inputStyle} `} type="email" name="email" placeholder="Email" id="" />
-      <input className={`${inputStyle} `} type="text" name="subject" placeholder="Subject" id="" />
-      <textarea className={`${inputStyle} h-20`} name="message" placeholder="Message" id=""></textarea>
+      <input className={`${inputStyle} `} type="text" name="name" placeholder="Name" id="" required/>
+      <input className={`${inputStyle} `} type="email" name="email" placeholder="Email" id="" required/>
+      <input className={`${inputStyle} `} type="text" name="subject" placeholder="Subject" id="" required/>
+      <textarea className={`${inputStyle} h-20`} name="message" placeholder="Message" id="" required></textarea>
       <button className=" py-2 text-black font-bold text-lg rounded-sm bg-green lg:text-2xl hover:scale-110 duration-150" type="submit">
         {
           isSubmiting ? <span className='animate-pulse text-black'>Submitting...</span>: isSubmit? 'Submitted!' : 'Submit'
