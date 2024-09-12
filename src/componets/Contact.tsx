@@ -14,7 +14,7 @@ export default function Contact() {
                 <div className="gradient w-400 aspect-square absolute rounded-full right-1/3 xl:w-800"></div>
                 <h3 className="mt-5 font-bold text-lg mb-2  lg:mt-14 lg:text-2xl">Write Me Something</h3>
                 <Contacts icon='/phone.png' text='(+94)77 053 1993' />
-                <Contacts icon='/email.png' text='tgdilshanrangaka2002@gmail.com' />
+                <Contacts icon='/email.png' text='dilshanrangaka@gmail.com' />
 
                 <Form />
             </div>
