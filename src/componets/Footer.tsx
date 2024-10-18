@@ -5,7 +5,7 @@ export default function Footer() {
         <footer className=" my-2">
             <hr className="border-green/20 mb-3" />
             <SocialIcons />
-            <p className="text-sm text-center my-2  lg:text-base">© Copyright 2024. Made by Dilshan Rangaka</p>
+            <p className="text-sm text-center my-2  lg:text-base">© Copyright {new Date().getFullYear()}. Made by Dilshan Rangaka</p>
         </footer>
     )
 }

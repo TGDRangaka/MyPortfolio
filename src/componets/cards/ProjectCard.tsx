@@ -11,6 +11,7 @@ interface Project {
     livelink: string | null,
     other: string | null,
     type: string[],
+    linkedin?: string,
 }
 
 interface Props {
@@ -19,7 +20,7 @@ interface Props {
 }
 
 export default function ProjectCard({ project, isLeft }: Props) {
-    const { name, year, description, github, languages, image, livelink} = project;
+    const { name, year, description, github, languages, image, livelink, other} = project;
 
     return (
         <div className={`border border-green/10 w-72 bg-black p-2 pl-3 relative flex flex-col gap-3  lg:flex-row lg:w-800 lg:items-center  ${isLeft ? 'lg:self-start' : 'lg:self-end'}`}
@@ -41,6 +42,7 @@ export default function ProjectCard({ project, isLeft }: Props) {
                 <div className="flex text-sm underline text-green mt-2 gap-5 lg:text-base">
                     {github && <a href={github} target="_blank" rel="noopener noreferrer">Github</a>}
                     {livelink && <a href={livelink} target="_blank" rel="noopener noreferrer">View</a>}
+                    {other && other.includes('linkedin') && <a href={other} target="_blank" rel="noopener noreferrer">LinkedIn</a>}
                 </div>
             </div>
 

@@ -10,7 +10,7 @@ export default function HomeSection() {
         <p className='text-4xl font-bold mt-28  xsm:text-5xl  sm:text-6xl lg:text-7xl  2xl:text-8xl'>Dilshan Rangaka</p>
         <div className='mt-2  xsm:text-xl  lg:mt-4 lg:text-xl  2xl:text-2xl'>
           <span className=' text-white/80'>Fullstack Developer</span>
-          <span className='border-l ml-4 pl-4 text-white/60'>Student</span>
+          <span className='border-l ml-4 pl-4 text-white/50'>Indie Game Developer</span>
         </div>
 
         <div className='mt-2 flex h-8 gap-2  sm:h-10 lg:h-10 items-center lg:mb-28 lg:gap-5 lg:mt-6'>
