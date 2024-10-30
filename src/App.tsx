@@ -9,35 +9,37 @@ import 'aos/dist/aos.css';
 import 'animate.css';
 import { useEffect, useState } from 'react';
 import PreLoader from './componets/PreLoader';
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
 
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-      Aos.init();
-      setTimeout(() => {
-        setLoading(false);
-      }, 1800);
-  },[])
+    Aos.init();
+    setTimeout(() => {
+      setLoading(false);
+    }, 1800);
+  }, [])
 
   return isLoading ? (
-    <PreLoader/>
+    <PreLoader />
   )
-  : (
-    <BrowserRouter>
-      <div className='w-screen overflow-hidden'>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-        </Routes>
-        {/* <Home /> */}
-        <Footer />
-      </div>
-    </BrowserRouter>
+    : (
+      <BrowserRouter>
+        <Analytics />
+        <div className='w-screen overflow-hidden'>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<Projects />} />
+          </Routes>
+          {/* <Home /> */}
+          <Footer />
+        </div>
+      </BrowserRouter>
 
-  )
+    )
 }
 
 export default App
