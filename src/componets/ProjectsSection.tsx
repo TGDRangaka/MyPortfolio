@@ -5,7 +5,7 @@ import Title from "./Title";
 
 export default function ProjectsSection() {
 
-  const latestProjectsIds = [23, 24, 22, 20]
+  const latestProjectsIds = [26, 22, 27, 23]
   const latestProjects = projects.filter(p => latestProjectsIds.includes(p.id));
 
   return (
