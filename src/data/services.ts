@@ -14,4 +14,9 @@ export default [
         title: 'Mobile Development',
         description: "High-performance mobile apps that connect with your audience, delivering seamless user experiences across all devices."
     },
+    {
+        icon: `/game.png`,
+        title: 'Web Games',
+        description: "Engaging browser games using WebGL, multiplayer logic, real-time interaction, and dynamic gameplay mechanics. How ever you want."
+    },
 ]
