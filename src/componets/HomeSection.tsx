@@ -1,3 +1,4 @@
+import Lightning from "./Lighting";
 import SocialIcons from "./SocialIcons";
 
 export default function HomeSection() {
@@ -26,6 +27,16 @@ export default function HomeSection() {
         <span className='gradient w-400 aspect-square absolute rounded-full -right-1/2 -bottom-1/2  md:left-1/2  lg:w-800 lg:left-52'></span>
 
         <img src="/home.png" alt="profile picture" className='w-72 h-fit  sm:w-80  lg:w-80 2xl:w-120' />
+      </div>
+
+      <div className="absolute top-0 left-0 w-full h-full -z-10">
+        <Lightning
+          hue={130}
+          xOffset={0}
+          speed={1}
+          intensity={0.3}
+          size={1}
+        />
       </div>
     </div>
   )
