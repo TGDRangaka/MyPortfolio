@@ -39,7 +39,7 @@ export default function Home() {
       <SEO 
         title="Dilshan Rangaka - Full Stack Developer & Software Engineer | Portfolio"
         description="Experienced Full Stack Developer specializing in React, Node.js, Java, and modern web technologies. View my portfolio showcasing innovative projects and software solutions."
-        keywords="Dilshan Rangaka, Full Stack Developer, Software Engineer, React Developer, Java Developer, Web Development, Mobile Development, Portfolio, Sri Lanka Developer, GDSE, Frontend Developer, Backend Developer"
+        keywords="Dilshan Rangaka, Full Stack Developer, Associate Software Engineer, Software Engineer, React Developer, Java Developer, Web Development, Mobile Development, Portfolio, Sri Lanka Developer, GDSE, Frontend Developer, Backend Developer"
         url="https://dilshan-rangaka.vercel.app/"
         structuredData={homeStructuredData}
       />
