@@ -37,23 +37,23 @@ export default function HomeSection() {
       <div className=' relative flex justify-center  lg:items-end lg:flex-grow  animate__animated animate__bounceInRight'>
 
         <span className='gradient w-400 aspect-square absolute rounded-full -right-1/2 -bottom-1/2  md:left-1/2  lg:w-800 lg:left-52'></span>
-
+        
         <img src="/home.png" alt="profile picture" className='w-72 h-fit  sm:w-80  lg:w-80 2xl:w-120' />
       </div>
 
-      <div className="absolute top-0 left-0 w-full h-full -z-10">
+      <div className="absolute top-0 left-0 w-full h-full -z-10 opacity-90">
         <Lightning
           hue={130}
           xOffset={0}
           speed={1}
-          intensity={0.3}
+          intensity={0.5}
           size={1}
         />
       </div>
-      
+
       {/* ZADO background text */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -z-10 pointer-events-none">
-        <h1 className="text-[12rem] sm:text-[16rem] lg:text-[20rem] xl:text-[24rem] 2xl:text-[28rem] font-black text-white/5 select-none">
+        <h1 className="text-[5rem] font-bruno sm:text-[8rem] lg:text-[16rem] xl:text-[20rem] 2xl:text-[24rem] font-black text-white opacity-[0.015] select-none">
           ZADO
         </h1>
       </div>
