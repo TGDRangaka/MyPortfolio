@@ -9,7 +9,8 @@ import 'aos/dist/aos.css';
 import 'animate.css';
 import { useEffect, useState } from 'react';
 import PreLoader from './componets/PreLoader';
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/react";
+import PerformanceOptimizer from './components/PerformanceOptimizer';
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
     : (
       <BrowserRouter>
         <Analytics />
+        <PerformanceOptimizer />
         <div className='w-screen overflow-hidden'>
           <Navbar />
           <Routes>
