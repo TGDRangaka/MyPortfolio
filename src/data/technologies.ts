@@ -71,8 +71,8 @@ export default [
         name: 'Ardiuno',
         image: `${path}/arduino.png`
     },
-    {
-        name: 'Unity',
-        image: `${path}/unity.png`
-    },
+    // {
+    //     name: 'Unity',
+    //     image: `${path}/unity.png`
+    // },
 ]

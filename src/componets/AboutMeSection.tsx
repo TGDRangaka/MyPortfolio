@@ -13,21 +13,21 @@ export default function AboutMeSection() {
           <hr className='-z-10 border-green/20 w-line lg:w-xline absolute -rotate-aboutme-line' />
           <div className="gradient w-120 aspect-square absolute rounded-full  md:w-400  lg:w-800 lg:-right-1/3 lg:-top-2/3"></div>
 
-          <img className='w-40  sm:w-52  md:w-72  lg:w-96  2xl:w-auto' src='/aboutme.png' alt='dilshan'  data-aos="flip-up" data-aos-offset="100"/>
+          <img className='w-40  sm:w-52  md:w-72  lg:w-96  2xl:w-auto brightness-75' src='/aboutme.jpeg' alt='dilshan'  data-aos="flip-up" data-aos-offset="100"/>
         </div>
 
         {/* info */}
         <div className='flex flex-col gap-5  lg:w-400 lg:justify-center lg:gap-10'  data-aos="fade-left">
-          <p className='text-sm font-thin  sm:text-base  xl:text-lg'>
-            <em className='text-black'>lorem</em> 
-            I'm Dilshan Rangaka, a versatile full-stack developer experienced in Java, web development and mobile development. I'm passionate about crafting innovative solutions and user-friendly experiences. My dedication to clean code and a user-centric approach sets me apart. Let's collaborate to turn your ideas into reality.
+          <p className='text-sm font-thin  sm:text-base  xl:text-lg text-white/80'>
+            <em className='text-black opacity-0'>lorem</em> 
+            I'm Dilshan Rangaka, a Software Engineer at DigiQuaters Pvt Ltd with 1.5+ years of experience in MERN full-stack development. I currently develop and manage a production product while also exploring web and game development. I have experience with Java, Spring Boot, microservices, and AI model development, and I hold a Software Engineering diploma from IJSE while pursuing my SE degree at ICBT. I focus on building scalable, clean, and user-focused solutions.
           </p>
 
           <hr className='border-2 rounded-sm border-white/50' />
 
-          <h3 className='text-lg font-bold  md:text-xl'>
+          <h3 className='text-lg font-bold  md:text-xl text-white/80'>
             Soft Skills
-            <ul className='list-disc ml-8 mt-2 font-normal text-base'>
+            <ul className='list-disc ml-8 mt-2 font-normal text-base text-white/80'>
               <li>Problem Solving</li>
               <li>Teamwork</li>
               <li>Good Communication</li>

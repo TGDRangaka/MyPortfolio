@@ -11,6 +11,7 @@ import { useEffect, useState } from 'react';
 import PreLoader from './componets/PreLoader';
 import { Analytics } from "@vercel/analytics/react";
 import PerformanceOptimizer from './components/PerformanceOptimizer';
+import Cursor from './components/Cursor';
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
       <BrowserRouter>
         <Analytics />
         <PerformanceOptimizer />
+        <Cursor />
         <div className='w-screen overflow-hidden'>
           <Navbar />
           <Routes>

@@ -6,20 +6,25 @@ html {
   scroll-behavior: smooth;
 }
 
-body{
+body {
   background: #000;
   overflow-x: hidden;
 }
 
 * {
   color: white;
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family:
+    ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .gradient {
   background: radial-gradient(rgba(48, 255, 103, 0.3), #0000 65%);
   z-index: -1;
-  animation: glow 4s ease-in-out infinite, float 5s infinite ease-in-out, move 6s infinite ease-in-out;
+  animation:
+    glow 4s ease-in-out infinite,
+    float 5s infinite ease-in-out,
+    move 6s infinite ease-in-out;
   /* animation-delay: 5s; */
 }
 
@@ -48,7 +53,6 @@ body{
 .glow {
   animation: glow 3s ease-in-out infinite;
 }
-
 
 @keyframes glow {
   0% {
@@ -106,29 +110,48 @@ body{
   }
 }
 
-
 /* swiper js */
 .swiper {
   /* width: 100%;
   height: 100%; */
 }
 
-.ani{
+.ani {
   animation: ani 1s ease-out reverse;
 }
 
 @keyframes ani {
   0% {
-      transform: scale(1);
+    transform: scale(1);
   }
   100% {
-      transform: scale(20);
+    transform: scale(20);
   }
 }
-
 
 .font-bruno {
   font-family: "Bruno Ace SC", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+/* Hide default cursor globally */
+body,
+a,
+button,
+input,
+[role="button"],
+.cursor-pointer {
+  cursor: none !important;
+}
+
+/* Ensure our custom cursor sits on top of everything */
+.cursor-container {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
 }
